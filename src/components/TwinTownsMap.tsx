@@ -1,10 +1,10 @@
 import { DeckGL } from "@deck.gl/react";
-import { type MapViewState } from "@deck.gl/core";
+import type { MapViewState } from "@deck.gl/core";
 import towns from "../data/towns";
 import { ArcLayer, ScatterplotLayer } from "@deck.gl/layers";
 import { Map } from "react-map-gl/maplibre";
 import arcs from "../data/twinning";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 interface Town {
   id: string;
@@ -35,49 +35,18 @@ const TwinTownsMap = () => {
   // const [selected, setSelected] = useState<Town | Country | null>(null);
   const [selected, setSelected] = useState<string>();
   const [visibleArcs, setVisibleArcs] = useState<Arc[]>([]);
-  // const [visibleArcs, setVisibleArcs] = useState([]);
-  const [viewState, setViewState] = useState({
-    longitude: 10,
-    latitude: 50,
-    zoom: 4,
-    pitch: 0,
-    bearing: 0,
-  });
+  const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
 
-  // console.log(visibleArcs);
-
-  // const visibleArcs = useMemo(() => {
-  //   if (!selected) return [];
-
-  //   return arcs.filter((a) => {
-  //     a.from === selected || a.to === selected;
-  //   });
-  // }, [arcs, selected]);
+  const onReset = useCallback(() => setViewState(INITIAL_VIEW_STATE), []);
 
   const townIndex = useMemo(
     () => Object.fromEntries(towns.map((t) => [t.id, t])),
     [towns],
   );
 
-  // console.log(townIndex);
-
-  // const getTown = ()
-
   const updateVisible = (info: string) => {
-    console.log(info);
     setSelected(info);
-    console.log(visibleArcs);
-    console.log(
-      arcs.filter((a) => {
-        a.from === info || a.to === info;
-      }),
-    );
-    setVisibleArcs(
-      arcs.filter((a) => {
-        a.from === info || a.to === info;
-      }),
-    );
-    console.log(visibleArcs);
+    setVisibleArcs(arcs.filter((a) => a.from === info || a.to === info));
   };
 
   const layers = [
@@ -90,43 +59,28 @@ const TwinTownsMap = () => {
       radiusMaxPixels: 4,
       getFillColor: [100, 100, 100],
       onClick: (info) => {
-        console.log(info);
         if (info.object) {
           updateVisible(info.object.id);
           setViewState((v) => ({
             ...v,
             longitude: info.object.coordinates[0],
             latitude: info.object.coordinates[1],
-            zoom: 4,
+            zoom: 3,
             transitionDuration: 800,
           }));
         }
-        // setSelected(info.object.id);
-        // if (info.object) {
-        // updateVisible(info);
-        // }
-        //   setSelected(info.object.id);
-        //   console.log(selected);
-        //   console.log(
-        //     arcs.filter((a) => {
-        //       a.from === info.object.id || a.to === info.object.id;
-        //     }),
-        //   );
-        //   console.log(info.object.id);
-        //   console.log(visibleArcs);
-        // }
       },
     }),
     new ArcLayer<Arc>({
       id: "arcs",
-      data: arcs,
+      data: visibleArcs,
       getSourcePosition: (d: Arc) =>
         townIndex[d.from].coordinates as [number, number],
       getTargetPosition: (d: Arc) =>
         townIndex[d.to].coordinates as [number, number],
       // getWidth: () => 2 + Math.sin(time) * 1.5,
-      getSourceColor: [255, 120, 120],
-      getTargetColor: [120, 120, 255],
+      getSourceColor: [23, 20, 201],
+      getTargetColor: [227, 186, 20],
       greatCircle: true,
     }),
   ];
@@ -135,7 +89,11 @@ const TwinTownsMap = () => {
     <DeckGL
       initialViewState={INITIAL_VIEW_STATE}
       viewState={viewState}
-      onViewStateChange={(e) => setViewState(e.viewState)}
+      onViewStateChange={({ viewState }) => {
+        if ("longitude" in viewState) {
+          setViewState(viewState);
+        }
+      }}
       controller
       layers={layers}
     >
