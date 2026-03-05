@@ -1926,15 +1926,6 @@ export default [
         ]
     },
     {
-        "id": "Q6627746",
-        "name": "Thessaloniki Municipality",
-        "country": "Greece",
-        "coordinates": [
-            22.95,
-            40.633333
-        ]
-    },
-    {
         "id": "Q16197",
         "name": "province of Lecce",
         "country": "Italy",
@@ -3665,7 +3656,7 @@ export default [
     {
         "id": "Q983543",
         "name": "Golden",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -105.210833333,
             39.746944444
@@ -4331,7 +4322,7 @@ export default [
     {
         "id": "Q2136238",
         "name": "West Carrollton",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -84.2481,
             39.6681
@@ -4452,15 +4443,6 @@ export default [
         "coordinates": [
             21.9531,
             43.8303
-        ]
-    },
-    {
-        "id": "Q1572127",
-        "name": "Negotin Municipality",
-        "country": "Serbia",
-        "coordinates": [
-            22.5291,
-            44.2262
         ]
     },
     {
@@ -5564,7 +5546,7 @@ export default [
     {
         "id": "Q2008706",
         "name": "Elkhart",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -85.9689,
             41.6831
@@ -5735,7 +5717,7 @@ export default [
     {
         "id": "Q852653",
         "name": "Cocoa Beach",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -80.626944444,
             28.331111111
@@ -5976,15 +5958,6 @@ export default [
         ]
     },
     {
-        "id": "Q208606",
-        "name": "Drama Regional Unit",
-        "country": "Greece",
-        "coordinates": [
-            24.16666667,
-            41.25
-        ]
-    },
-    {
         "id": "Q156828",
         "name": "Boles\u0142awiec",
         "country": "Poland",
@@ -6126,24 +6099,6 @@ export default [
         "coordinates": [
             33.044286,
             34.674997
-        ]
-    },
-    {
-        "id": "Q838616",
-        "name": "Sokobanja Municipality",
-        "country": "Serbia",
-        "coordinates": [
-            21.871198333,
-            43.6442975
-        ]
-    },
-    {
-        "id": "Q1250074",
-        "name": "Svrljig Municipality",
-        "country": "Serbia",
-        "coordinates": [
-            22.116666666,
-            43.416666666
         ]
     },
     {
@@ -6419,7 +6374,7 @@ export default [
     {
         "id": "Q989459",
         "name": "West Bend",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -88.183333333,
             43.425
@@ -6450,15 +6405,6 @@ export default [
         "coordinates": [
             28.321388888,
             54.094444444
-        ]
-    },
-    {
-        "id": "Q3595078",
-        "name": "Katerini Municipality",
-        "country": "Greece",
-        "coordinates": [
-            22.373333333,
-            40.278611111
         ]
     },
     {
@@ -6671,7 +6617,7 @@ export default [
     {
         "id": "Q328455",
         "name": "Elk Grove Village",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -87.9964,
             42.0031
@@ -7031,7 +6977,7 @@ export default [
     {
         "id": "Q123766",
         "name": "Charlottesville",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -78.479,
             38.0299
@@ -7265,7 +7211,7 @@ export default [
     {
         "id": "Q1759451",
         "name": "Winchester",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -73.13483,
             41.9001
@@ -7400,7 +7346,7 @@ export default [
     {
         "id": "Q38453",
         "name": "Columbia",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -81.044166666,
             34.000555555
@@ -8264,7 +8210,7 @@ export default [
     {
         "id": "Q754385",
         "name": "Kettering",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -76.7964,
             38.895
@@ -8613,15 +8559,6 @@ export default [
         ]
     },
     {
-        "id": "Q483083",
-        "name": "Yalova Province",
-        "country": "T\u00fcrkiye",
-        "coordinates": [
-            29.275,
-            40.655555555
-        ]
-    },
-    {
         "id": "Q521112",
         "name": "Gostivar Municipality",
         "country": "North Macedonia",
@@ -8637,15 +8574,6 @@ export default [
         "coordinates": [
             26.992777777,
             57.848611111
-        ]
-    },
-    {
-        "id": "Q19896642",
-        "name": "Xanthi Regional Unit",
-        "country": "Greece",
-        "coordinates": [
-            24.883333333,
-            41.133333333
         ]
     },
     {
@@ -9288,15 +9216,6 @@ export default [
         ]
     },
     {
-        "id": "Q2635137",
-        "name": "Maroneia-Sapes Municipality",
-        "country": "Greece",
-        "coordinates": [
-            25.7,
-            41.033333333
-        ]
-    },
-    {
         "id": "Q30022960",
         "name": "Borgaro Torinese",
         "country": "Italy",
@@ -9614,7 +9533,7 @@ export default [
     {
         "id": "Q496381",
         "name": "Waterloo",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -92.346161,
             42.492436
@@ -9893,7 +9812,7 @@ export default [
     {
         "id": "Q2222550",
         "name": "Abington Township",
-        "country": "United States",
+        "country": "United States of America",
         "coordinates": [
             -75.099722222,
             40.1

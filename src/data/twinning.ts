@@ -4563,4 +4563,4 @@ export default [
         "from": "Yambol",
         "to": "Q202357"
     }
-];
+]
