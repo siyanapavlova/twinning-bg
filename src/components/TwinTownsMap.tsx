@@ -73,6 +73,7 @@ const TwinTownsMap = () => {
   const [selectedTown, setSelectedTown] = useState<string | null>(null);
   const [hoveredTown, setHoveredTown] = useState<string | null>(null);
   const [activeTowns, setActiveTowns] = useState<string[]>([]);
+  const [allTownsActive, setAllTownsActive] = useState<boolean>(true);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [visibleArcs, setVisibleArcs] = useState<Arc[]>([]);
   const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
@@ -97,6 +98,7 @@ const TwinTownsMap = () => {
 
     setSelectedTown(townID);
     setSelectedCountry(null);
+    setAllTownsActive(false);
     setActiveTowns([...activeTowns, townID]);
     setVisibleArcs(visibleArcs);
   };
@@ -114,6 +116,7 @@ const TwinTownsMap = () => {
     const activeTowns = visibleArcs.map((a) => [a.to, a.from]).flat();
 
     setVisibleArcs(visibleArcs);
+    setAllTownsActive(false);
     setActiveTowns(activeTowns);
   };
 
@@ -137,6 +140,7 @@ const TwinTownsMap = () => {
       createTownsLayer({
         data: towns,
         activeTowns: activeTowns,
+        allTownsActive: allTownsActive,
         hoveredTown: hoveredTown,
         selectedTown: selectedTown,
         onClick: (town) => {
@@ -175,6 +179,7 @@ const TwinTownsMap = () => {
       hoveredTown,
       selectedTown,
       activeTowns,
+      allTownsActive,
     ],
   );
 
@@ -229,7 +234,8 @@ const TwinTownsMap = () => {
             setSelectedCountry(null);
             setSelectedTown(null);
             setVisibleArcs([]);
-            setActiveTowns(towns.map((t) => t.id));
+            setActiveTowns([]);
+            setAllTownsActive(true);
           }
         }}
       >
