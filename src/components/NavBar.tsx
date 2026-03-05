@@ -1,11 +1,8 @@
+import { Heading } from "@chakra-ui/react";
 import "./navbar.css";
 
 const NavBar = () => {
-  return (
-    <div className="heading">
-      <h1>This is my map app</h1>
-    </div>
-  );
+  return <Heading>Twinning BG</Heading>;
 };
 
 export default NavBar;
