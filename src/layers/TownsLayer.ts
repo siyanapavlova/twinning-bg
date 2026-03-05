@@ -45,7 +45,7 @@ const createTownsLayer = ({data, activeTowns, allTownsActive, hoveredTown, selec
       getFillColor: (town) => {
         if (town.id === hoveredTown || town.id === selectedTown) return [182, 55, 84];
         if (allTownsActive) return [100, 100, 100];
-        if (activeTowns.includes(town.id) && townSelection) return [247, 200, 96];
+        if (activeTowns.includes(town.id) && (townSelection || town.country === "Bulgaria")) return [247, 200, 96];
         if (activeTowns.includes(town.id) && countrySelection) return [182, 55, 84];
         return [100, 100, 100, DIM_ALPHA];
       },
