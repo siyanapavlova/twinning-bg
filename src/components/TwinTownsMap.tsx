@@ -13,6 +13,15 @@ import createCountriesLayer, {
 import Legend from "./Legend.tsx";
 import countryCounts from "../data/countryCounts.ts";
 
+const tooltipStyle = {
+  backgroundColor: "rgba(0,0,0,0.8)",
+  color: "white",
+  padding: "4px 8px",
+  borderRadius: "4px",
+  fontSize: "12px",
+  pointerEvents: "none",
+};
+
 const tealScale = (t: number): [number, number, number] => {
   // const min = [220, 240, 240]; // old
   // const min = [200, 220, 220]; // newer
@@ -159,11 +168,21 @@ const TwinTownsMap = () => {
           if (object.properties && object.properties.name) {
             const name = object.properties.name;
             if (countryCounts[name])
-              return name + ": " + countryCounts[name] + " twins";
-            else return name + ": no twins";
+              return {
+                html: `<b>${name}</b><br />Twins: ${countryCounts[name]}`,
+                style: tooltipStyle,
+              };
+            else
+              return {
+                html: `<b>${name}</b><br>No twins`,
+                style: tooltipStyle,
+              };
           }
           if (object.from)
-            return "BG town: " + object.from + "\nTwin town: " + object.to;
+            return {
+              html: `<b>BG town</b>: ${object.from}<br /><b>Twin town</b>: ${object.to}`,
+              style: tooltipStyle,
+            };
           // return object?.name;
           return null;
         }}
