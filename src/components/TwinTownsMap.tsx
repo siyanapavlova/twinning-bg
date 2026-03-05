@@ -2,7 +2,7 @@ import { DeckGL } from "@deck.gl/react";
 import type { MapViewState } from "@deck.gl/core";
 import rawTowns from "../data/towns";
 import arcs from "../data/twinning";
-import { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import createTownsLayer from "../layers/TownsLayer";
 import createTwinningLayer from "../layers/TwinningLayer";
 import countries from "../data/countries.ts";
@@ -72,7 +72,7 @@ const towns: Town[] = rawTowns.map((t) => ({
 
 const TwinTownsMap = () => {
   // const [selected, setSelected] = useState<Town | Country | null>(null);
-  const [selected, setSelected] = useState<string>();
+  const [selectedTown, setSelectedTown] = useState<string | null>(null);
   const [hoveredTown, setHoveredTown] = useState<string | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [visibleArcs, setVisibleArcs] = useState<Arc[]>([]);
@@ -80,16 +80,20 @@ const TwinTownsMap = () => {
   const [hoveredArc, setHoveredArc] = useState<Arc | null>(null);
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
 
-  const onReset = useCallback(() => setViewState(INITIAL_VIEW_STATE), []);
+  // to stop dragging after town click
+  const [dragBlocked, setDragBlocked] = useState(false);
+
+  // const onReset = useCallback(() => setViewState(INITIAL_VIEW_STATE), []);
 
   const townIndex = useMemo(
     () => Object.fromEntries(towns.map((t) => [t.id, t])),
     [towns],
   );
 
-  const updateVisible = (info: string) => {
-    setSelected(info);
-    setVisibleArcs(arcs.filter((a) => a.from === info || a.to === info));
+  const updateVisible = (townID: string) => {
+    setSelectedTown(townID);
+    setSelectedCountry(null);
+    setVisibleArcs(arcs.filter((a) => a.from === townID || a.to === townID));
   };
 
   const updateVisibleByCountry = (info: string) => {
@@ -113,6 +117,7 @@ const TwinTownsMap = () => {
         onClick: (country: CountryFeatureWithId) => {
           updateVisibleByCountry(country.id);
           setSelectedCountry(country.properties.name);
+          setSelectedTown(null);
         },
         onHover: (country: CountryFeature | null) => {
           setHoveredCountry(country?.properties.name ?? null);
@@ -122,7 +127,9 @@ const TwinTownsMap = () => {
       createTownsLayer({
         data: towns,
         hoveredTown: hoveredTown,
+        selectedTown: selectedTown,
         onClick: (town) => {
+          setDragBlocked(true);
           updateVisible(town.id);
           // setViewState((v) => ({
           //   ...v,
@@ -154,6 +161,7 @@ const TwinTownsMap = () => {
       hoveredArc,
       hoveredCountry,
       hoveredTown,
+      selectedTown,
     ],
   );
 
@@ -166,7 +174,15 @@ const TwinTownsMap = () => {
             setViewState(viewState);
           }
         }}
-        controller
+        controller={{
+          dragPan: !dragBlocked,
+          dragRotate: true,
+        }}
+        onInteractionStateChange={({ isDragging }) => {
+          if (!isDragging) {
+            setDragBlocked(false);
+          }
+        }}
         layers={layers}
         getTooltip={({ object }) => {
           if (!object) return null;
