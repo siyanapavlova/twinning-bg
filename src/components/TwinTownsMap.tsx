@@ -63,6 +63,7 @@ const TwinTownsMap = () => {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [visibleArcs, setVisibleArcs] = useState<Arc[]>([]);
   const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
+  const [hoveredArc, setHoveredArc] = useState<Arc | null>(null);
 
   const onReset = useCallback(() => setViewState(INITIAL_VIEW_STATE), []);
 
@@ -116,9 +117,13 @@ const TwinTownsMap = () => {
       createTwinningLayer({
         data: visibleArcs,
         townIndex: townIndex,
+        hoveredArc: hoveredArc,
+        onHover: (arc: Arc | null) => {
+          setHoveredArc(arc);
+        },
       }),
     ],
-    [countries, selectedCountry, visibleArcs, townIndex],
+    [countries, selectedCountry, visibleArcs, townIndex, hoveredArc],
   );
 
   return (

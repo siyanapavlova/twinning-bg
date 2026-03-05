@@ -56,9 +56,7 @@ const createCountriesLayer = ({data, selectedCountry, colorScale, onClick}: Prop
             const count = countryCounts[country.properties.name];
             return colorScale(logNormalize(count));
           }
-
           return [230, 230, 250];
-
         },
 
         updateTriggers: {
