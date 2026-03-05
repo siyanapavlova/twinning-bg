@@ -42,7 +42,7 @@ export interface Arc {
 const INITIAL_VIEW_STATE: MapViewState = {
   longitude: 10,
   latitude: 47,
-  zoom: 4,
+  zoom: 2,
   pitch: 0,
   bearing: 0,
 };
@@ -139,7 +139,7 @@ const TwinTownsMap = () => {
         mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
       ></Map> */}
       </DeckGL>
-      <Legend min={1} max={140} colorScale={tealScale} />
+      <Legend min={1} max={140} ticks={4} colorScale={tealScale} />
     </>
   );
 };
