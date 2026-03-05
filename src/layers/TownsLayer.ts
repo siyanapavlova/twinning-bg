@@ -1,6 +1,5 @@
 import { ScatterplotLayer } from "deck.gl";
 import type { Town } from "../components/TwinTownsMap";
-import type { CheckedState } from "@/components/DisplayCheckbox";
 
 interface Props {
     data: Town[],
@@ -8,9 +7,9 @@ interface Props {
     allTownsActive: boolean,
     hoveredTown: string | null,
     selectedTown: string | null,
-    townSelection: Boolean,
-    countrySelection: Boolean,
-    showAllTowns: CheckedState,
+    townSelection: boolean,
+    countrySelection: boolean,
+    showAllTowns: boolean,
     onClick: (town: Town) => void;
     onHover: (town: Town | null) => void;
 }

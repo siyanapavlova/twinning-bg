@@ -1,12 +1,10 @@
 import { Checkbox } from "@chakra-ui/react";
 
-export type CheckedState = boolean | "indeterminate";
-
 interface Props {
   id: string;
   label: string;
-  defaultChecked: CheckedState;
-  onChange: (checked: CheckedState) => void;
+  defaultChecked: boolean;
+  onChange: (checked: boolean) => void;
 }
 
 const DisplayCheckbox = ({ id, label, defaultChecked, onChange }: Props) => {
@@ -17,7 +15,7 @@ const DisplayCheckbox = ({ id, label, defaultChecked, onChange }: Props) => {
       colorPalette={"teal"}
       variant="solid"
       defaultChecked={defaultChecked}
-      onCheckedChange={({ checked }) => onChange(checked)}
+      onCheckedChange={({ checked }) => onChange(checked === true)}
     >
       <Checkbox.HiddenInput />
       <Checkbox.Control />

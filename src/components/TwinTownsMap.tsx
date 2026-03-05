@@ -13,7 +13,6 @@ import createCountriesLayer, {
 import Legend from "./Legend.tsx";
 import twinning from "../data/twinning";
 import DisplaySelection from "./DisplaySelection.tsx";
-import type { CheckedState } from "./DisplayCheckbox";
 // import countryCounts from "../data/countryCounts.ts";
 // import { Map } from "react-map-gl/maplibre";
 
@@ -111,10 +110,10 @@ const TwinTownsMap = () => {
   const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
   const [hoveredArc, setHoveredArc] = useState<Arc | null>(null);
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
-  const [townSelection, setTownSelection] = useState<Boolean>(false);
-  const [countrySelection, setCountrySelection] = useState<Boolean>(false);
-  const [showAllTowns, setShowAllTowns] = useState<CheckedState>(false);
-  const [showCountries, setShowCountries] = useState<CheckedState>(true);
+  const [townSelection, setTownSelection] = useState<boolean>(false);
+  const [countrySelection, setCountrySelection] = useState<boolean>(false);
+  const [showAllTowns, setShowAllTowns] = useState<boolean>(false);
+  const [showCountries, setShowCountries] = useState<boolean>(true);
 
   const updateVisible = (townID: string) => {
     const visibleArcs = arcs.filter(

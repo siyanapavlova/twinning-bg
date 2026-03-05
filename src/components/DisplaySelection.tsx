@@ -1,10 +1,9 @@
 import { Flex } from "@chakra-ui/react";
 import DisplayCheckbox from "./DisplayCheckbox";
-import type { CheckedState } from "./DisplayCheckbox";
 
 interface Props {
-  onChangeTownSelection: (checked: CheckedState) => void;
-  onChangeCountrySelection: (checked: CheckedState) => void;
+  onChangeTownSelection: (checked: boolean) => void;
+  onChangeCountrySelection: (checked: boolean) => void;
 }
 
 const DisplaySelection = ({
