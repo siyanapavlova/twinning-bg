@@ -6,6 +6,7 @@ import { Map } from "react-map-gl/maplibre";
 import arcs from "../data/twinning";
 import { useCallback, useMemo, useState } from "react";
 import createTownsLayer from "../layers/TownsLayer";
+import createTwinningLayer from "../layers/TwinningLayer";
 
 export interface Town {
   id: string;
@@ -76,17 +77,9 @@ const TwinTownsMap = () => {
         },
       }),
 
-      new ArcLayer<Arc>({
-        id: "arcs",
+      createTwinningLayer({
         data: visibleArcs,
-        getSourcePosition: (d: Arc) =>
-          townIndex[d.from].coordinates as [number, number],
-        getTargetPosition: (d: Arc) =>
-          townIndex[d.to].coordinates as [number, number],
-        // getWidth: () => 2 + Math.sin(time) * 1.5,
-        getSourceColor: [23, 20, 201],
-        getTargetColor: [227, 186, 20],
-        greatCircle: true,
+        townIndex: townIndex,
       }),
     ],
     [visibleArcs, townIndex],
