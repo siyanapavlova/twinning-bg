@@ -1,12 +1,14 @@
 import { DeckGL } from "@deck.gl/react";
 import type { MapViewState } from "@deck.gl/core";
 import rawTowns from "../data/towns";
-import { ArcLayer, ScatterplotLayer } from "@deck.gl/layers";
 import { Map } from "react-map-gl/maplibre";
 import arcs from "../data/twinning";
 import { useCallback, useMemo, useState } from "react";
 import createTownsLayer from "../layers/TownsLayer";
 import createTwinningLayer from "../layers/TwinningLayer";
+import { GeoJsonLayer } from "deck.gl";
+import countries from "../data/countries.ts";
+import createCountriesLayer from "../layers/CountriesLayer.ts";
 
 export interface Town {
   id: string;
@@ -63,6 +65,8 @@ const TwinTownsMap = () => {
 
   const layers = useMemo(
     () => [
+      createCountriesLayer({ data: countries }),
+
       createTownsLayer({
         data: towns,
         onClick: (town) => {
@@ -82,12 +86,11 @@ const TwinTownsMap = () => {
         townIndex: townIndex,
       }),
     ],
-    [visibleArcs, townIndex],
+    [countries, visibleArcs, townIndex],
   );
 
   return (
     <DeckGL
-      initialViewState={INITIAL_VIEW_STATE}
       viewState={viewState}
       onViewStateChange={({ viewState }) => {
         if ("longitude" in viewState) {
@@ -96,12 +99,13 @@ const TwinTownsMap = () => {
       }}
       controller
       layers={layers}
+      getTooltip={({ object }) => object?.name}
     >
-      <Map
+      {/* <Map
         id="map"
         initialViewState={INITIAL_VIEW_STATE}
         mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
-      ></Map>
+      ></Map> */}
     </DeckGL>
   );
 };
