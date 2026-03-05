@@ -72,6 +72,7 @@ const TwinTownsMap = () => {
   // const [selected, setSelected] = useState<Town | Country | null>(null);
   const [selectedTown, setSelectedTown] = useState<string | null>(null);
   const [hoveredTown, setHoveredTown] = useState<string | null>(null);
+  const [activeTowns, setActiveTowns] = useState<string[]>([]);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [visibleArcs, setVisibleArcs] = useState<Arc[]>([]);
   const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
@@ -89,20 +90,31 @@ const TwinTownsMap = () => {
   );
 
   const updateVisible = (townID: string) => {
+    const visibleArcs = arcs.filter(
+      (a) => a.from === townID || a.to === townID,
+    );
+    const activeTowns = visibleArcs.map((a) => a.to);
+
     setSelectedTown(townID);
     setSelectedCountry(null);
-    setVisibleArcs(arcs.filter((a) => a.from === townID || a.to === townID));
+    setActiveTowns([...activeTowns, townID]);
+    setVisibleArcs(visibleArcs);
   };
 
   const updateVisibleByCountry = (info: string) => {
     const townsFromCountry = towns
       .filter((t) => t.country === info)
       .map((t) => t.id);
+
     const visibleArcs = arcs.filter(
       (a) =>
         townsFromCountry.includes(a.from) || townsFromCountry.includes(a.to),
     );
+
+    const activeTowns = visibleArcs.map((a) => [a.to, a.from]).flat();
+
     setVisibleArcs(visibleArcs);
+    setActiveTowns(activeTowns);
   };
 
   const layers = useMemo(
@@ -124,6 +136,7 @@ const TwinTownsMap = () => {
 
       createTownsLayer({
         data: towns,
+        activeTowns: activeTowns,
         hoveredTown: hoveredTown,
         selectedTown: selectedTown,
         onClick: (town) => {
@@ -161,6 +174,7 @@ const TwinTownsMap = () => {
       hoveredCountry,
       hoveredTown,
       selectedTown,
+      activeTowns,
     ],
   );
 
@@ -215,6 +229,7 @@ const TwinTownsMap = () => {
             setSelectedCountry(null);
             setSelectedTown(null);
             setVisibleArcs([]);
+            setActiveTowns(towns.map((t) => t.id));
           }
         }}
       >
