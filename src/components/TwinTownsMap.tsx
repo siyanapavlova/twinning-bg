@@ -79,8 +79,6 @@ const townNumberPerCountry = towns
 
 delete townNumberPerCountry["Bulgaria"];
 
-console.log(townNumberPerCountry);
-
 const minTwins = Math.min.apply(null, Object.values(relationNumberPerCountry));
 const maxTwins = Math.max.apply(null, Object.values(relationNumberPerCountry));
 
