@@ -73,6 +73,7 @@ const towns: Town[] = rawTowns.map((t) => ({
 const TwinTownsMap = () => {
   // const [selected, setSelected] = useState<Town | Country | null>(null);
   const [selected, setSelected] = useState<string>();
+  const [hoveredTown, setHoveredTown] = useState<string | null>(null);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [visibleArcs, setVisibleArcs] = useState<Arc[]>([]);
   const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
@@ -120,15 +121,19 @@ const TwinTownsMap = () => {
 
       createTownsLayer({
         data: towns,
+        hoveredTown: hoveredTown,
         onClick: (town) => {
           updateVisible(town.id);
-          setViewState((v) => ({
-            ...v,
-            longitude: town.coordinates[0],
-            latitude: town.coordinates[1],
-            zoom: 3,
-            transitionDuration: 800,
-          }));
+          // setViewState((v) => ({
+          //   ...v,
+          //   longitude: town.coordinates[0],
+          //   latitude: town.coordinates[1],
+          //   zoom: 3,
+          //   transitionDuration: 800,
+          // }));
+        },
+        onHover: (town: Town | null) => {
+          setHoveredTown(town?.name ?? null);
         },
       }),
 
@@ -148,6 +153,7 @@ const TwinTownsMap = () => {
       townIndex,
       hoveredArc,
       hoveredCountry,
+      hoveredTown,
     ],
   );
 
@@ -183,7 +189,6 @@ const TwinTownsMap = () => {
               html: `<b>BG town</b>: ${object.from}<br /><b>Twin town</b>: ${object.to}`,
               style: tooltipStyle,
             };
-          // return object?.name;
           return null;
         }}
         onClick={(info) => {
