@@ -1,18 +1,33 @@
 import {GeoJsonLayer } from "deck.gl";
-import type { FeatureCollection, Geometry } from 'geojson';
+import type { FeatureCollection, Geometry, Feature } from 'geojson';
 
-interface Props {
-    data: FeatureCollection<Geometry>,
+export interface CountryProperties {
+  id: string;
+  name: string;
+  coordinates: number[]
 }
 
-const createCountriesLayer = ({data}: Props) => 
-    data && new GeoJsonLayer({
+export type CountryFeature =
+  Feature<Geometry, CountryProperties>;
+
+interface Props {
+  data: FeatureCollection<Geometry, CountryProperties>;
+  onClick: (country: CountryFeature) => void;
+}
+
+const createCountriesLayer = ({data, onClick}: Props) => 
+    new GeoJsonLayer<CountryFeature>({
         id: "arcs",
         data: data,
         stroked: false,
-            filled: true,
-            pickable: true,
-            getFillColor: [160, 160, 180, 200],
+        filled: true,
+        pickable: true,
+        getFillColor: [160, 160, 180, 200],
+        onClick: (info) => {
+          if (info.object) {
+            onClick(info.object);
+          }
+        },
     });
 
 export default createCountriesLayer;

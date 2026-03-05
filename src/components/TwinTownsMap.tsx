@@ -9,6 +9,7 @@ import createTwinningLayer from "../layers/TwinningLayer";
 import { GeoJsonLayer } from "deck.gl";
 import countries from "../data/countries.ts";
 import createCountriesLayer from "../layers/CountriesLayer.ts";
+import type { FeatureCollection, Geometry } from "geojson";
 
 export interface Town {
   id: string;
@@ -63,9 +64,26 @@ const TwinTownsMap = () => {
     setVisibleArcs(arcs.filter((a) => a.from === info || a.to === info));
   };
 
+  const updateVisibleByCountry = (info: string) => {
+    const townsFromCountry = towns
+      .filter((t) => t.country === info)
+      .map((t) => t.id);
+    const visibleArcs = arcs.filter(
+      (a) =>
+        townsFromCountry.includes(a.from) || townsFromCountry.includes(a.to),
+    );
+    setVisibleArcs(visibleArcs);
+  };
+
   const layers = useMemo(
     () => [
-      createCountriesLayer({ data: countries }),
+      createCountriesLayer({
+        data: countries,
+        onClick: (country) => {
+          console.log(country.id);
+          updateVisibleByCountry(country.id);
+        },
+      }),
 
       createTownsLayer({
         data: towns,
