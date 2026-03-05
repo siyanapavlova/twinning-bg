@@ -1,31 +1,3 @@
-// export default [
-//   {
-//     id: "paris",
-//     name: "Paris",
-//     country: "France",
-//     coordinates: [2.3522, 48.8566],
-//   },
-//   {
-//     id: "lyon",
-//     name: "Lyon",
-//     country: "France",
-//     coordinates: [4.8522, 45.8566],
-//   },
-//   {
-//     id: "rome",
-//     name: "Rome",
-//     country: "Italy",
-//     coordinates: [12.4964, 41.9028],
-//   },
-//   {
-//     id: "belene",
-//     name: "Belene",
-//     country: "Bulgaria",
-//     coordinates: [25.0, 43.5],
-//   },
-// ];
-
-
 export default [
     {
         "id": "Bansko",
@@ -42,7 +14,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             23.562883,
-            41.947846000000006
+            41.947846
         ]
     },
     {
@@ -275,7 +247,7 @@ export default [
         "name": "Devnya",
         "country": "Bulgaria",
         "coordinates": [
-            27.558020000000003,
+            27.55802,
             43.218029
         ]
     },
@@ -307,12 +279,21 @@ export default [
         ]
     },
     {
+        "id": "Suvorovo",
+        "name": "Suvorovo",
+        "country": "Bulgaria",
+        "coordinates": [
+            27.592431,
+            43.32832
+        ]
+    },
+    {
         "id": "Veliko Tarnovo",
         "name": "Veliko Tarnovo",
         "country": "Bulgaria",
         "coordinates": [
             25.628291,
-            43.078652000000005
+            43.078652
         ]
     },
     {
@@ -330,7 +311,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             25.878691,
-            42.929815000000005
+            42.929815
         ]
     },
     {
@@ -348,7 +329,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             25.307386,
-            43.237528000000005
+            43.237528
         ]
     },
     {
@@ -411,7 +392,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             22.874058,
-            43.988690000000005
+            43.98869
         ]
     },
     {
@@ -447,7 +428,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             23.945401,
-            43.468790000000006
+            43.46879
         ]
     },
     {
@@ -545,7 +526,7 @@ export default [
         "name": "General Toshevo",
         "country": "Bulgaria",
         "coordinates": [
-            28.036558000000003,
+            28.036558,
             43.700309
         ]
     },
@@ -645,7 +626,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             25.406391,
-            41.529703000000005
+            41.529703
         ]
     },
     {
@@ -734,8 +715,17 @@ export default [
         "name": "Berkovitsa",
         "country": "Bulgaria",
         "coordinates": [
-            23.125089000000003,
+            23.125089,
             43.237147
+        ]
+    },
+    {
+        "id": "Boychinovtsi",
+        "name": "Boychinovtsi",
+        "country": "Bulgaria",
+        "coordinates": [
+            23.336273,
+            43.474124
         ]
     },
     {
@@ -870,7 +860,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             22.650987,
-            42.836484000000006
+            42.836484
         ]
     },
     {
@@ -970,6 +960,15 @@ export default [
         "coordinates": [
             24.877295,
             42.008187
+        ]
+    },
+    {
+        "id": "Kaloyanovo",
+        "name": "Kaloyanovo",
+        "country": "Bulgaria",
+        "coordinates": [
+            24.731412,
+            42.355135
         ]
     },
     {
@@ -1077,7 +1076,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             26.500061,
-            43.796490000000006
+            43.79649
         ]
     },
     {
@@ -1096,6 +1095,15 @@ export default [
         "coordinates": [
             26.528818,
             43.540895
+        ]
+    },
+    {
+        "id": "Tsar Kaloyan",
+        "name": "Tsar Kaloyan",
+        "country": "Bulgaria",
+        "coordinates": [
+            26.239016,
+            43.607078
         ]
     },
     {
@@ -1216,12 +1224,21 @@ export default [
         ]
     },
     {
+        "id": "Nova Zagora",
+        "name": "Nova Zagora",
+        "country": "Bulgaria",
+        "coordinates": [
+            26.015992,
+            42.486009
+        ]
+    },
+    {
         "id": "Sliven",
         "name": "Sliven",
         "country": "Bulgaria",
         "coordinates": [
             26.325963,
-            42.678146000000005
+            42.678146
         ]
     },
     {
@@ -1230,7 +1247,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             25.897,
-            42.701834000000005
+            42.701834
         ]
     },
     {
@@ -1238,7 +1255,7 @@ export default [
         "name": "Banite",
         "country": "Bulgaria",
         "coordinates": [
-            25.016592000000003,
+            25.016592,
             41.620065
         ]
     },
@@ -1275,7 +1292,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             24.939703,
-            41.499190000000006
+            41.49919
         ]
     },
     {
@@ -1320,7 +1337,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             23.793661,
-            42.907278000000005
+            42.907278
         ]
     },
     {
@@ -1329,7 +1346,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             23.708875,
-            42.691784000000006
+            42.691784
         ]
     },
     {
@@ -1339,6 +1356,15 @@ export default [
         "coordinates": [
             23.760214,
             42.311111
+        ]
+    },
+    {
+        "id": "Dragoman",
+        "name": "Dragoman",
+        "country": "Bulgaria",
+        "coordinates": [
+            22.929661,
+            42.921714
         ]
     },
     {
@@ -1375,6 +1401,15 @@ export default [
         "coordinates": [
             23.815,
             42.44
+        ]
+    },
+    {
+        "id": "Kostenets",
+        "name": "Kostenets",
+        "country": "Bulgaria",
+        "coordinates": [
+            23.858087,
+            42.310216
         ]
     },
     {
@@ -1626,7 +1661,7 @@ export default [
         "country": "Bulgaria",
         "coordinates": [
             26.811977,
-            43.160509000000005
+            43.160509
         ]
     },
     {
@@ -1715,7 +1750,7 @@ export default [
         "name": "Yambol",
         "country": "Bulgaria",
         "coordinates": [
-            26.503753000000003,
+            26.503753,
             42.482419
         ]
     },
@@ -1729,12 +1764,12 @@ export default [
         ]
     },
     {
-        "id": "Q928405",
-        "name": "Vinica",
+        "id": "Q2479526",
+        "name": "Vinica Municipality",
         "country": "North Macedonia",
         "coordinates": [
-            22.509166666,
-            41.882777777
+            22.5,
+            41.9
         ]
     },
     {
@@ -1792,12 +1827,12 @@ export default [
         ]
     },
     {
-        "id": "Q932648",
-        "name": "Didymoteicho",
+        "id": "Q3557808",
+        "name": "Didymoteicho Municipality",
         "country": "Greece",
         "coordinates": [
-            26.5,
-            41.35
+            26.38976,
+            41.40402
         ]
     },
     {
@@ -1816,6 +1851,15 @@ export default [
         "coordinates": [
             22.935555555,
             40.640277777
+        ]
+    },
+    {
+        "id": "Q1625595",
+        "name": "Kavala Regional Unit",
+        "country": "Greece",
+        "coordinates": [
+            24.4167,
+            41.0
         ]
     },
     {
@@ -1864,12 +1908,12 @@ export default [
         ]
     },
     {
-        "id": "Q122803",
-        "name": "Erzurum",
+        "id": "Q376797",
+        "name": "Erzurum Province",
         "country": "T\u00fcrkiye",
         "coordinates": [
-            41.275555555,
-            39.909722222
+            41.566944444,
+            40.063055555
         ]
     },
     {
@@ -1882,12 +1926,12 @@ export default [
         ]
     },
     {
-        "id": "Q17151",
-        "name": "Thessaloniki",
+        "id": "Q6627746",
+        "name": "Thessaloniki Municipality",
         "country": "Greece",
         "coordinates": [
-            22.935555555,
-            40.640277777
+            22.95,
+            40.633333
         ]
     },
     {
@@ -1900,12 +1944,21 @@ export default [
         ]
     },
     {
-        "id": "Q157738",
-        "name": "Del\u010devo",
+        "id": "Q1323322",
+        "name": "Del\u010devo Municipality",
         "country": "North Macedonia",
         "coordinates": [
-            22.774722222,
-            41.966111111
+            22.7674,
+            41.9764
+        ]
+    },
+    {
+        "id": "Q211319",
+        "name": "Serres Regional Unit",
+        "country": "Greece",
+        "coordinates": [
+            23.55,
+            41.09
         ]
     },
     {
@@ -2044,12 +2097,21 @@ export default [
         ]
     },
     {
-        "id": "Q48814",
-        "name": "Strumica",
+        "id": "Q1779775",
+        "name": "Bosilovo Municipality",
         "country": "North Macedonia",
         "coordinates": [
-            22.643055555,
-            41.4375
+            22.75,
+            41.43
+        ]
+    },
+    {
+        "id": "Q2308287",
+        "name": "Strumica Municipality",
+        "country": "North Macedonia",
+        "coordinates": [
+            22.66,
+            41.43
         ]
     },
     {
@@ -2071,21 +2133,21 @@ export default [
         ]
     },
     {
-        "id": "Q24012535",
+        "id": "Q338174",
         "name": "Totana",
         "country": "Spain",
         "coordinates": [
-            -1.50229,
-            37.7688
+            -1.5001618,
+            37.7710024
         ]
     },
     {
-        "id": "Q20547398",
+        "id": "Q1113375",
         "name": "Cambre",
         "country": "Spain",
         "coordinates": [
-            -8.344500767,
-            43.292219399
+            -8.333333333,
+            43.283333333
         ]
     },
     {
@@ -2170,12 +2232,12 @@ export default [
         ]
     },
     {
-        "id": "Q320939",
-        "name": "M\u011bln\u00edk",
+        "id": "Q852463",
+        "name": "M\u011bln\u00edk District",
         "country": "Czechia",
         "coordinates": [
-            14.474193495,
-            50.350570679
+            14.474722222,
+            50.351944444
         ]
     },
     {
@@ -2188,6 +2250,15 @@ export default [
         ]
     },
     {
+        "id": "Q473919",
+        "name": "Lectoure",
+        "country": "France",
+        "coordinates": [
+            0.621111111,
+            43.934444444
+        ]
+    },
+    {
         "id": "Q3044293",
         "name": "Lipkovo",
         "country": "North Macedonia",
@@ -2197,12 +2268,12 @@ export default [
         ]
     },
     {
-        "id": "Q182009",
-        "name": "Tekirda\u011f",
+        "id": "Q129387",
+        "name": "Tekirda\u011f Province",
         "country": "T\u00fcrkiye",
         "coordinates": [
-            27.516666666,
-            40.983333333
+            27.518333333,
+            40.977777777
         ]
     },
     {
@@ -2215,12 +2286,12 @@ export default [
         ]
     },
     {
-        "id": "Q43387",
-        "name": "Edirne",
+        "id": "Q83102",
+        "name": "Edirne Province",
         "country": "T\u00fcrkiye",
         "coordinates": [
-            26.57361,
-            41.67304
+            26.520555555,
+            41.12
         ]
     },
     {
@@ -2248,6 +2319,15 @@ export default [
         "coordinates": [
             22.2375,
             41.816666666
+        ]
+    },
+    {
+        "id": "Q2532139",
+        "name": "Nea Zichni Municipality",
+        "country": "Greece",
+        "coordinates": [
+            23.8672,
+            41.0188
         ]
     },
     {
@@ -2377,12 +2457,12 @@ export default [
         ]
     },
     {
-        "id": "Q82174",
-        "name": "Bra\u0219ov",
+        "id": "Q182614",
+        "name": "Bra\u0219ov County",
         "country": "Romania",
         "coordinates": [
-            25.610555555,
-            45.652222222
+            25.28,
+            45.79
         ]
     },
     {
@@ -2422,6 +2502,15 @@ export default [
         ]
     },
     {
+        "id": "Q462400",
+        "name": "South-Western Administrative Okrug",
+        "country": "Russia",
+        "coordinates": [
+            37.53333333,
+            55.65
+        ]
+    },
+    {
         "id": "Q1957",
         "name": "Vologda",
         "country": "Russia",
@@ -2449,12 +2538,12 @@ export default [
         ]
     },
     {
-        "id": "Q205942",
-        "name": "Yalova",
+        "id": "Q483083",
+        "name": "Yalova Province",
         "country": "T\u00fcrkiye",
         "coordinates": [
-            29.275,
-            40.655555555
+            29.193611111,
+            40.644166666
         ]
     },
     {
@@ -2530,12 +2619,12 @@ export default [
         ]
     },
     {
-        "id": "Q1223508",
-        "name": "Ohrid",
+        "id": "Q1125333",
+        "name": "Ohrid Municipality",
         "country": "North Macedonia",
         "coordinates": [
-            20.801944444,
-            41.116944444
+            20.8025,
+            41.140555555
         ]
     },
     {
@@ -2545,6 +2634,15 @@ export default [
         "coordinates": [
             35.95,
             56.033333333
+        ]
+    },
+    {
+        "id": "Q6605",
+        "name": "Sakha",
+        "country": "Russia",
+        "coordinates": [
+            129.166666666,
+            66.4
         ]
     },
     {
@@ -2602,12 +2700,21 @@ export default [
         ]
     },
     {
-        "id": "Q10837286",
+        "id": "Q1642240",
+        "name": "Gorodetsky District",
+        "country": "Russia",
+        "coordinates": [
+            43.48333333,
+            56.65
+        ]
+    },
+    {
+        "id": "Q16380073",
         "name": "Yenice",
         "country": "T\u00fcrkiye",
         "coordinates": [
-            29.179722222,
-            39.305833333
+            43.035,
+            40.094166666
         ]
     },
     {
@@ -2617,6 +2724,15 @@ export default [
         "coordinates": [
             22.048055555,
             48.183611111
+        ]
+    },
+    {
+        "id": "Q583647",
+        "name": "Nea Anchialos",
+        "country": "Greece",
+        "coordinates": [
+            22.8186,
+            39.28
         ]
     },
     {
@@ -2647,6 +2763,15 @@ export default [
         ]
     },
     {
+        "id": "Q1049128",
+        "name": "Karachayevsky District",
+        "country": "Russia",
+        "coordinates": [
+            42.001388888,
+            43.498055555
+        ]
+    },
+    {
         "id": "Q6742654",
         "name": "Evrensekiz",
         "country": "T\u00fcrkiye",
@@ -2674,12 +2799,12 @@ export default [
         ]
     },
     {
-        "id": "Q205832",
-        "name": "Corfu",
+        "id": "Q842235",
+        "name": "Corfu Regional Unit",
         "country": "Greece",
         "coordinates": [
-            19.921388888,
-            39.623888888
+            19.75,
+            39.66666667
         ]
     },
     {
@@ -2698,6 +2823,15 @@ export default [
         "coordinates": [
             23.728055555,
             37.984166666
+        ]
+    },
+    {
+        "id": "Q3659144",
+        "name": "Soufli Municipality",
+        "country": "Greece",
+        "coordinates": [
+            26.15592,
+            41.18947
         ]
     },
     {
@@ -2728,6 +2862,24 @@ export default [
         ]
     },
     {
+        "id": "Q193001",
+        "name": "Sighi\u0219oara",
+        "country": "Romania",
+        "coordinates": [
+            24.791111111,
+            46.216944444
+        ]
+    },
+    {
+        "id": "Q364021",
+        "name": "Vize",
+        "country": "T\u00fcrkiye",
+        "coordinates": [
+            27.765277777,
+            41.573611111
+        ]
+    },
+    {
         "id": "Q1003885",
         "name": "P\u0131narhisar",
         "country": "T\u00fcrkiye",
@@ -2755,6 +2907,15 @@ export default [
         ]
     },
     {
+        "id": "Q2355897",
+        "name": "Kirovske Raion",
+        "country": "Russia",
+        "coordinates": [
+            35.2053,
+            45.2236
+        ]
+    },
+    {
         "id": "Q1014285",
         "name": "Alexandreia",
         "country": "Greece",
@@ -2773,12 +2934,12 @@ export default [
         ]
     },
     {
-        "id": "Q9183501",
-        "name": "B\u0142onie",
+        "id": "Q5005629",
+        "name": "B\u0142onie, Lesser Poland Voivodeship",
         "country": "Poland",
         "coordinates": [
-            22.21,
-            49.5578
+            20.9167,
+            49.9667
         ]
     },
     {
@@ -2815,6 +2976,24 @@ export default [
         "coordinates": [
             28.668888888,
             45.9
+        ]
+    },
+    {
+        "id": "Q15950",
+        "name": "Igualada",
+        "country": "Spain",
+        "coordinates": [
+            1.620833333,
+            41.581388888
+        ]
+    },
+    {
+        "id": "Q19946",
+        "name": "Cherasco",
+        "country": "Italy",
+        "coordinates": [
+            7.866666666,
+            44.65
         ]
     },
     {
@@ -2890,12 +3069,12 @@ export default [
         ]
     },
     {
-        "id": "Q497154",
-        "name": "Jastarnia",
+        "id": "Q28377478",
+        "name": "Gmina Jastarnia",
         "country": "Poland",
         "coordinates": [
-            18.666666666,
-            54.7
+            18.649722222,
+            54.708888888
         ]
     },
     {
@@ -3052,6 +3231,15 @@ export default [
         ]
     },
     {
+        "id": "Q462377",
+        "name": "Southern Administrative Okrug",
+        "country": "Russia",
+        "coordinates": [
+            37.66666667,
+            55.63333333
+        ]
+    },
+    {
         "id": "Q15760",
         "name": "Novorossiysk",
         "country": "Russia",
@@ -3178,12 +3366,12 @@ export default [
         ]
     },
     {
-        "id": "Q2452073",
+        "id": "Q20858514",
         "name": "Albota de Sus",
         "country": "Moldova",
         "coordinates": [
-            28.466666666,
-            45.966666666
+            28.4735,
+            45.9718
         ]
     },
     {
@@ -3259,12 +3447,30 @@ export default [
         ]
     },
     {
-        "id": "Q4241116",
+        "id": "Q4333195",
         "name": "Krynychne",
         "country": "Ukraine",
         "coordinates": [
-            36.7490971,
-            49.4465586
+            37.345555555,
+            47.275555555
+        ]
+    },
+    {
+        "id": "Q103842904",
+        "name": "Bolhrad Raion",
+        "country": "Ukraine",
+        "coordinates": [
+            29.052756,
+            46.008247
+        ]
+    },
+    {
+        "id": "Q622449",
+        "name": "Gr\u00fcnheide (Mark)",
+        "country": "Germany",
+        "coordinates": [
+            13.822805,
+            52.42552
         ]
     },
     {
@@ -3286,12 +3492,12 @@ export default [
         ]
     },
     {
-        "id": "Q11714712",
+        "id": "Q11714714",
         "name": "Izabelin",
         "country": "Poland",
         "coordinates": [
-            21.68027778,
-            52.23638889
+            19.26305556,
+            51.79666667
         ]
     },
     {
@@ -3322,6 +3528,15 @@ export default [
         ]
     },
     {
+        "id": "Q103842911",
+        "name": "Izmail Raion",
+        "country": "Ukraine",
+        "coordinates": [
+            29.210694444,
+            45.508305555
+        ]
+    },
+    {
         "id": "Q183394",
         "name": "Vagharshapat",
         "country": "Armenia",
@@ -3337,6 +3552,24 @@ export default [
         "coordinates": [
             45.412222222,
             39.208888888
+        ]
+    },
+    {
+        "id": "Q964130",
+        "name": "Colonia Tovar",
+        "country": "Venezuela",
+        "coordinates": [
+            -67.283333333,
+            10.416666666
+        ]
+    },
+    {
+        "id": "Q5836",
+        "name": "Toledo",
+        "country": "Spain",
+        "coordinates": [
+            -4.033333333,
+            39.866666666
         ]
     },
     {
@@ -3364,6 +3597,15 @@ export default [
         "coordinates": [
             108.942222222,
             34.261111111
+        ]
+    },
+    {
+        "id": "Q394681",
+        "name": "Dongcheng District",
+        "country": "China",
+        "coordinates": [
+            116.41006,
+            39.92718
         ]
     },
     {
@@ -3421,6 +3663,15 @@ export default [
         ]
     },
     {
+        "id": "Q983543",
+        "name": "Golden",
+        "country": "United States",
+        "coordinates": [
+            -105.210833333,
+            39.746944444
+        ]
+    },
+    {
         "id": "Q2288",
         "name": "Tver",
         "country": "Russia",
@@ -3466,6 +3717,15 @@ export default [
         ]
     },
     {
+        "id": "Q134674",
+        "name": "Bayonne",
+        "country": "France",
+        "coordinates": [
+            -1.476388888,
+            43.4925
+        ]
+    },
+    {
         "id": "Q3370",
         "name": "Zadar",
         "country": "Croatia",
@@ -3502,12 +3762,21 @@ export default [
         ]
     },
     {
-        "id": "Q156080",
-        "name": "Opava",
+        "id": "Q838320",
+        "name": "Opava District",
         "country": "Czechia",
         "coordinates": [
-            17.904444444,
-            49.938055555
+            17.9025,
+            49.938888888
+        ]
+    },
+    {
+        "id": "Q535164",
+        "name": "Hondouville",
+        "country": "France",
+        "coordinates": [
+            1.118333333,
+            49.139166666
         ]
     },
     {
@@ -3526,6 +3795,24 @@ export default [
         "coordinates": [
             12.683333333,
             53.516666666
+        ]
+    },
+    {
+        "id": "Q52038",
+        "name": "Statte",
+        "country": "Italy",
+        "coordinates": [
+            17.2,
+            40.566666666
+        ]
+    },
+    {
+        "id": "Q283104",
+        "name": "Ro\u0219iori de Vede",
+        "country": "Romania",
+        "coordinates": [
+            24.9655094,
+            44.065006
         ]
     },
     {
@@ -3574,12 +3861,12 @@ export default [
         ]
     },
     {
-        "id": "Q109332149",
+        "id": "Q21879719",
         "name": "Wolfsbach",
         "country": "Austria",
         "coordinates": [
-            15.663611111,
-            48.85
+            14.66517,
+            48.08526
         ]
     },
     {
@@ -3589,6 +3876,24 @@ export default [
         "coordinates": [
             20.76,
             47.619
+        ]
+    },
+    {
+        "id": "Q636831",
+        "name": "Crveni Krst City Municipality",
+        "country": "Serbia",
+        "coordinates": [
+            21.8357,
+            43.3976
+        ]
+    },
+    {
+        "id": "Q242784",
+        "name": "Ladispoli",
+        "country": "Italy",
+        "coordinates": [
+            12.074166666,
+            41.954444444
         ]
     },
     {
@@ -3682,12 +3987,21 @@ export default [
         ]
     },
     {
-        "id": "Q30030354",
+        "id": "Q59297",
         "name": "Sant'Elpidio a Mare",
         "country": "Italy",
         "coordinates": [
-            13.68819,
-            43.23024
+            13.686125,
+            43.229488888
+        ]
+    },
+    {
+        "id": "Q496557",
+        "name": "Gherla",
+        "country": "Romania",
+        "coordinates": [
+            23.9,
+            47.02
         ]
     },
     {
@@ -3700,12 +4014,12 @@ export default [
         ]
     },
     {
-        "id": "Q31910871",
+        "id": "Q213242",
         "name": "Barcelos",
         "country": "Portugal",
         "coordinates": [
-            -8.61505,
-            41.53876
+            -8.616666666,
+            41.533333333
         ]
     },
     {
@@ -3718,12 +4032,12 @@ export default [
         ]
     },
     {
-        "id": "Q157050",
-        "name": "Veles",
+        "id": "Q2088561",
+        "name": "Veles Municipality",
         "country": "North Macedonia",
         "coordinates": [
-            21.775277777,
-            41.715277777
+            21.78,
+            41.73
         ]
     },
     {
@@ -3790,12 +4104,12 @@ export default [
         ]
     },
     {
-        "id": "Q797036",
-        "name": "Prijepolje",
+        "id": "Q2500681",
+        "name": "Prijepolje Municipality",
         "country": "Serbia",
         "coordinates": [
-            19.651388888,
-            43.543888888
+            19.648657222,
+            43.389105277
         ]
     },
     {
@@ -3808,21 +4122,30 @@ export default [
         ]
     },
     {
-        "id": "Q924103",
-        "name": "Hrubiesz\u00f3w",
-        "country": "Poland",
+        "id": "Q55036",
+        "name": "Frigento",
+        "country": "Italy",
         "coordinates": [
-            23.916666666,
-            50.8
+            15.100555555,
+            41.012222222
         ]
     },
     {
-        "id": "Q135869",
+        "id": "Q2461299",
+        "name": "Gmina Hrubiesz\u00f3w",
+        "country": "Poland",
+        "coordinates": [
+            23.883333333,
+            50.816666666
+        ]
+    },
+    {
+        "id": "Q72536",
         "name": "Zheleznogorsk",
         "country": "Russia",
         "coordinates": [
-            93.533333333,
-            56.25
+            35.366666666,
+            52.333333333
         ]
     },
     {
@@ -3853,12 +4176,84 @@ export default [
         ]
     },
     {
+        "id": "Q998438",
+        "name": "Stawiguda",
+        "country": "Poland",
+        "coordinates": [
+            20.40041,
+            53.6572
+        ]
+    },
+    {
+        "id": "Q7849023",
+        "name": "Trzemeszno",
+        "country": "Poland",
+        "coordinates": [
+            17.5167,
+            51.8
+        ]
+    },
+    {
+        "id": "Q128139",
+        "name": "Priverno",
+        "country": "Italy",
+        "coordinates": [
+            13.183333333,
+            41.466666666
+        ]
+    },
+    {
+        "id": "Q52160",
+        "name": "Miggiano",
+        "country": "Italy",
+        "coordinates": [
+            18.316666666,
+            39.966666666
+        ]
+    },
+    {
+        "id": "Q32752662",
+        "name": "Wallenhorst",
+        "country": "Germany",
+        "coordinates": [
+            8.0115,
+            52.3486
+        ]
+    },
+    {
+        "id": "Q605343",
+        "name": "Xag\u0127ra",
+        "country": "Malta",
+        "coordinates": [
+            14.2675,
+            36.050277777
+        ]
+    },
+    {
+        "id": "Q283862",
+        "name": "B\u0103icoi",
+        "country": "Romania",
+        "coordinates": [
+            25.865833333,
+            45.045277777
+        ]
+    },
+    {
         "id": "Q344608",
         "name": "\u0136ekava",
         "country": "Latvia",
         "coordinates": [
             24.23,
             56.82662
+        ]
+    },
+    {
+        "id": "Q1277236",
+        "name": "Zadvarje",
+        "country": "Croatia",
+        "coordinates": [
+            16.8897,
+            43.4314
         ]
     },
     {
@@ -3871,12 +4266,21 @@ export default [
         ]
     },
     {
-        "id": "Q1011275",
-        "name": "Knja\u017eevac",
+        "id": "Q1348256",
+        "name": "Knja\u017eevac Municipality",
         "country": "Serbia",
         "coordinates": [
-            22.433333333,
-            43.5
+            22.255597,
+            43.564926
+        ]
+    },
+    {
+        "id": "Q2041788",
+        "name": "Mero\u0161ina Municipality",
+        "country": "Serbia",
+        "coordinates": [
+            21.72126,
+            43.28336
         ]
     },
     {
@@ -3940,6 +4344,15 @@ export default [
         "coordinates": [
             9.99155,
             48.39841
+        ]
+    },
+    {
+        "id": "Q16199",
+        "name": "Province of Lecco",
+        "country": "Italy",
+        "coordinates": [
+            9.4,
+            45.85
         ]
     },
     {
@@ -4015,12 +4428,12 @@ export default [
         ]
     },
     {
-        "id": "Q1550352",
+        "id": "Q12724820",
         "name": "Gruia",
         "country": "Romania",
         "coordinates": [
-            22.7,
-            44.27
+            22.71327,
+            44.272024
         ]
     },
     {
@@ -4033,21 +4446,21 @@ export default [
         ]
     },
     {
-        "id": "Q1419953",
-        "name": "Boljevac",
+        "id": "Q2047431",
+        "name": "Boljevac Municipality",
         "country": "Serbia",
         "coordinates": [
-            21.951944444,
-            43.824722222
+            21.9531,
+            43.8303
         ]
     },
     {
-        "id": "Q649168",
-        "name": "Negotin",
+        "id": "Q1572127",
+        "name": "Negotin Municipality",
         "country": "Serbia",
         "coordinates": [
-            22.516666666,
-            44.216666666
+            22.5291,
+            44.2262
         ]
     },
     {
@@ -4141,12 +4554,12 @@ export default [
         ]
     },
     {
-        "id": "Q462461",
-        "name": "Bor",
+        "id": "Q1780754",
+        "name": "Bor City",
         "country": "Serbia",
         "coordinates": [
-            22.103611111,
-            44.130277777
+            22.09814,
+            44.06489
         ]
     },
     {
@@ -4156,6 +4569,15 @@ export default [
         "coordinates": [
             34.799166666,
             50.906666666
+        ]
+    },
+    {
+        "id": "Q818297",
+        "name": "Villeneuve-les-Sablons",
+        "country": "France",
+        "coordinates": [
+            2.076666666,
+            49.237222222
         ]
     },
     {
@@ -4174,6 +4596,15 @@ export default [
         "coordinates": [
             22.466666666,
             42.5
+        ]
+    },
+    {
+        "id": "Q1012481",
+        "name": "Whitehaven",
+        "country": "United Kingdom",
+        "coordinates": [
+            -3.5855,
+            54.548
         ]
     },
     {
@@ -4222,12 +4653,30 @@ export default [
         ]
     },
     {
+        "id": "Q191065",
+        "name": "Dolj County",
+        "country": "Romania",
+        "coordinates": [
+            23.7,
+            44.17
+        ]
+    },
+    {
         "id": "Q747470",
         "name": "Dimitrovgrad",
         "country": "Serbia",
         "coordinates": [
             22.783333333,
             43.016666666
+        ]
+    },
+    {
+        "id": "Q945282",
+        "name": "Mojm\u00edrovce",
+        "country": "Slovakia",
+        "coordinates": [
+            18.06388889,
+            48.20694444
         ]
     },
     {
@@ -4276,6 +4725,15 @@ export default [
         ]
     },
     {
+        "id": "Q2727234",
+        "name": "Steblev\u00eb",
+        "country": "Albania",
+        "coordinates": [
+            20.469722222,
+            41.338333333
+        ]
+    },
+    {
         "id": "Q2153073",
         "name": "Aalst",
         "country": "Belgium",
@@ -4285,12 +4743,12 @@ export default [
         ]
     },
     {
-        "id": "Q54452",
-        "name": "Kumanovo",
+        "id": "Q2352376",
+        "name": "Kumanovo Municipality",
         "country": "North Macedonia",
         "coordinates": [
-            21.714444444,
-            42.132222222
+            21.77278,
+            42.08944
         ]
     },
     {
@@ -4339,12 +4797,12 @@ export default [
         ]
     },
     {
-        "id": "Q192119",
-        "name": "Sisak",
+        "id": "Q21486047",
+        "name": "Sisak Fortress",
         "country": "Croatia",
         "coordinates": [
-            16.376111111,
-            45.487222222
+            16.37388889,
+            45.48777778
         ]
     },
     {
@@ -4402,6 +4860,24 @@ export default [
         ]
     },
     {
+        "id": "Q889044",
+        "name": "Bocholt",
+        "country": "Belgium",
+        "coordinates": [
+            5.5794,
+            51.1722
+        ]
+    },
+    {
+        "id": "Q3804493",
+        "name": "Itamos Municipal Unit",
+        "country": "Greece",
+        "coordinates": [
+            21.8,
+            39.2
+        ]
+    },
+    {
         "id": "Q502272",
         "name": "Ma'ale Adumim",
         "country": "Palestine",
@@ -4411,12 +4887,30 @@ export default [
         ]
     },
     {
-        "id": "Q991318",
-        "name": "Radovi\u0161",
+        "id": "Q2738284",
+        "name": "Radovi\u0161 Municipality",
         "country": "North Macedonia",
         "coordinates": [
-            22.464444444,
-            41.638055555
+            21.012222222,
+            41.088888888
+        ]
+    },
+    {
+        "id": "Q928352",
+        "name": "Gmina Serock",
+        "country": "Poland",
+        "coordinates": [
+            21.0515,
+            52.517
+        ]
+    },
+    {
+        "id": "Q21504335",
+        "name": "Itamos",
+        "country": "Greece",
+        "coordinates": [
+            21.817202777,
+            39.219411111
         ]
     },
     {
@@ -4438,12 +4932,30 @@ export default [
         ]
     },
     {
+        "id": "Q31850379",
+        "name": "Nanhai",
+        "country": "China",
+        "coordinates": [
+            108.76,
+            29.6611
+        ]
+    },
+    {
         "id": "Q11870479",
         "name": "Vala\u0161sk\u00e9 Mezi\u0159\u00ed\u010d\u00ed",
         "country": "Czechia",
         "coordinates": [
             17.9667,
             49.4667
+        ]
+    },
+    {
+        "id": "Q65268",
+        "name": "Brienz",
+        "country": "Switzerland",
+        "coordinates": [
+            8.033333333,
+            46.749722222
         ]
     },
     {
@@ -4480,6 +4992,15 @@ export default [
         "coordinates": [
             18.633333333,
             49.75
+        ]
+    },
+    {
+        "id": "Q936166",
+        "name": "Bran",
+        "country": "Romania",
+        "coordinates": [
+            25.369444,
+            45.516111
         ]
     },
     {
@@ -4573,6 +5094,15 @@ export default [
         ]
     },
     {
+        "id": "Q2002645",
+        "name": "Bolhrad Raion",
+        "country": "Ukraine",
+        "coordinates": [
+            28.8,
+            45.76666667
+        ]
+    },
+    {
         "id": "Q5066192",
         "name": "Cump\u0103na",
         "country": "Romania",
@@ -4627,6 +5157,15 @@ export default [
         ]
     },
     {
+        "id": "Q1147602",
+        "name": "Nowy S\u0105cz County",
+        "country": "Poland",
+        "coordinates": [
+            20.697222222,
+            49.623888888
+        ]
+    },
+    {
         "id": "Q60037",
         "name": "Zalaegerszeg",
         "country": "Hungary",
@@ -4636,30 +5175,39 @@ export default [
         ]
     },
     {
-        "id": "Q158088",
-        "name": "Kavadarci",
+        "id": "Q6454722",
+        "name": "K\u0131rklareli",
+        "country": "T\u00fcrkiye",
+        "coordinates": [
+            27.5,
+            41.6667
+        ]
+    },
+    {
+        "id": "Q1155055",
+        "name": "Kavadarci Municipality",
         "country": "North Macedonia",
         "coordinates": [
-            22.011666666,
-            41.432777777
+            22.01,
+            41.44
         ]
     },
     {
-        "id": "Q16898202",
-        "name": "Constan\u021ba",
+        "id": "Q188505",
+        "name": "Constan\u021ba County",
         "country": "Romania",
         "coordinates": [
-            28.63432,
-            44.18073
+            28.31,
+            44.27
         ]
     },
     {
-        "id": "Q9009",
-        "name": "Schaffhausen",
+        "id": "Q12697",
+        "name": "Canton of Schaffhausen",
         "country": "Switzerland",
         "coordinates": [
-            8.63386,
-            47.69653
+            8.566666666,
+            47.716666666
         ]
     },
     {
@@ -4780,12 +5328,12 @@ export default [
         ]
     },
     {
-        "id": "Q6077184",
+        "id": "Q8077708",
         "name": "\u00c7iftlikk\u00f6y",
         "country": "T\u00fcrkiye",
         "coordinates": [
-            26.616388888,
-            41.247777777
+            29.738333333,
+            37.945
         ]
     },
     {
@@ -4807,12 +5355,30 @@ export default [
         ]
     },
     {
+        "id": "Q1117799",
+        "name": "Communaut\u00e9 de communes de la Petite Creuse",
+        "country": "France",
+        "coordinates": [
+            1.9919,
+            46.35067
+        ]
+    },
+    {
         "id": "Q19520",
         "name": "Podolsk",
         "country": "Russia",
         "coordinates": [
             37.545555555,
             55.431111111
+        ]
+    },
+    {
+        "id": "Q198388",
+        "name": "Shcherbinka",
+        "country": "Russia",
+        "coordinates": [
+            37.55972,
+            55.49972
         ]
     },
     {
@@ -4840,6 +5406,15 @@ export default [
         "coordinates": [
             22.4167,
             51.2
+        ]
+    },
+    {
+        "id": "Q243346",
+        "name": "San Cesareo",
+        "country": "Italy",
+        "coordinates": [
+            12.8,
+            41.816666666
         ]
     },
     {
@@ -4906,12 +5481,12 @@ export default [
         ]
     },
     {
-        "id": "Q10753870",
+        "id": "Q6807090",
         "name": "Dar\u0131ca",
         "country": "T\u00fcrkiye",
         "coordinates": [
-            27.858982,
-            40.021456833
+            29.863888888,
+            39.637222222
         ]
     },
     {
@@ -4924,12 +5499,21 @@ export default [
         ]
     },
     {
-        "id": "Q1023140",
+        "id": "Q109387217",
         "name": "Osmangazi",
         "country": "T\u00fcrkiye",
         "coordinates": [
-            29.041388888,
-            40.219166666
+            35.477,
+            38.795
+        ]
+    },
+    {
+        "id": "Q1278032",
+        "name": "East Staffordshire",
+        "country": "United Kingdom",
+        "coordinates": [
+            -1.6457,
+            52.808
         ]
     },
     {
@@ -4960,6 +5544,15 @@ export default [
         ]
     },
     {
+        "id": "Q1966785",
+        "name": "Tekirda\u011f",
+        "country": "T\u00fcrkiye",
+        "coordinates": [
+            27.5,
+            41.0
+        ]
+    },
+    {
         "id": "Q6732171",
         "name": "Gaziosmanpa\u015fa",
         "country": "T\u00fcrkiye",
@@ -4975,6 +5568,15 @@ export default [
         "coordinates": [
             -85.9689,
             41.6831
+        ]
+    },
+    {
+        "id": "Q272243",
+        "name": "Saint-Josse-ten-Noode",
+        "country": "Belgium",
+        "coordinates": [
+            4.369166666,
+            50.850833333
         ]
     },
     {
@@ -5005,12 +5607,21 @@ export default [
         ]
     },
     {
-        "id": "Q35997",
-        "name": "\u0130zmir",
+        "id": "Q344490",
+        "name": "\u0130zmir Province",
         "country": "T\u00fcrkiye",
         "coordinates": [
-            27.13838,
-            38.41273
+            27.129722222,
+            38.418888888
+        ]
+    },
+    {
+        "id": "Q16632494",
+        "name": "Iasmos",
+        "country": "Greece",
+        "coordinates": [
+            25.184444444,
+            41.1275
         ]
     },
     {
@@ -5020,6 +5631,15 @@ export default [
         "coordinates": [
             26.9092,
             40.7026
+        ]
+    },
+    {
+        "id": "Q2996335",
+        "name": "Menderes",
+        "country": "T\u00fcrkiye",
+        "coordinates": [
+            27.134,
+            38.254
         ]
     },
     {
@@ -5059,12 +5679,12 @@ export default [
         ]
     },
     {
-        "id": "Q431317",
-        "name": "Surdulica",
+        "id": "Q1264710",
+        "name": "Surdulica Municipality",
         "country": "Serbia",
         "coordinates": [
-            22.167222222,
-            42.695
+            22.17384,
+            42.69038
         ]
     },
     {
@@ -5074,6 +5694,15 @@ export default [
         "coordinates": [
             21.897222222,
             42.554166666
+        ]
+    },
+    {
+        "id": "Q51933",
+        "name": "Lucera",
+        "country": "Italy",
+        "coordinates": [
+            15.333333333,
+            41.5
         ]
     },
     {
@@ -5140,6 +5769,15 @@ export default [
         ]
     },
     {
+        "id": "Q51842",
+        "name": "Polignano a Mare",
+        "country": "Italy",
+        "coordinates": [
+            17.220277777,
+            40.996111111
+        ]
+    },
+    {
         "id": "Q1729",
         "name": "Erfurt",
         "country": "Germany",
@@ -5185,12 +5823,39 @@ export default [
         ]
     },
     {
+        "id": "Q496925",
+        "name": "Monforte San Giorgio",
+        "country": "Italy",
+        "coordinates": [
+            15.366666666,
+            38.166666666
+        ]
+    },
+    {
         "id": "Q24008502",
         "name": "Monforte del Cid",
         "country": "Spain",
         "coordinates": [
             -0.72989187,
             38.37928097
+        ]
+    },
+    {
+        "id": "Q473654",
+        "name": "Montfort-sur-Risle",
+        "country": "France",
+        "coordinates": [
+            0.664444444,
+            49.295277777
+        ]
+    },
+    {
+        "id": "Q184154",
+        "name": "Laval",
+        "country": "France",
+        "coordinates": [
+            -0.77,
+            48.072777777
         ]
     },
     {
@@ -5221,21 +5886,21 @@ export default [
         ]
     },
     {
-        "id": "Q2348288",
+        "id": "Q16425440",
         "name": "B\u0103bana",
         "country": "Romania",
         "coordinates": [
-            24.7,
-            44.9
+            24.704586,
+            44.869782
         ]
     },
     {
-        "id": "Q18447804",
+        "id": "Q128062",
         "name": "Castelforte",
         "country": "Italy",
         "coordinates": [
-            18.05828,
-            39.97992
+            13.833333333,
+            41.3
         ]
     },
     {
@@ -5275,6 +5940,33 @@ export default [
         ]
     },
     {
+        "id": "Q679389",
+        "name": "Hamm",
+        "country": "Germany",
+        "coordinates": [
+            6.418333333,
+            50.016666666
+        ]
+    },
+    {
+        "id": "Q842037",
+        "name": "Vigneux-sur-Seine",
+        "country": "France",
+        "coordinates": [
+            2.417222222,
+            48.700277777
+        ]
+    },
+    {
+        "id": "Q472574",
+        "name": "Pernes-les-Fontaines",
+        "country": "France",
+        "coordinates": [
+            5.059166666,
+            43.997777777
+        ]
+    },
+    {
         "id": "Q145638",
         "name": "Kashira",
         "country": "Russia",
@@ -5284,12 +5976,12 @@ export default [
         ]
     },
     {
-        "id": "Q212841",
-        "name": "Drama",
+        "id": "Q208606",
+        "name": "Drama Regional Unit",
         "country": "Greece",
         "coordinates": [
-            24.139166666,
-            41.151388888
+            24.16666667,
+            41.25
         ]
     },
     {
@@ -5311,6 +6003,15 @@ export default [
         ]
     },
     {
+        "id": "Q55084",
+        "name": "Quindici",
+        "country": "Italy",
+        "coordinates": [
+            14.65,
+            40.866666666
+        ]
+    },
+    {
         "id": "Q104712",
         "name": "Elbl\u0105g",
         "country": "Poland",
@@ -5329,12 +6030,12 @@ export default [
         ]
     },
     {
-        "id": "Q161827",
-        "name": "Resen",
+        "id": "Q740591",
+        "name": "Resen Municipality",
         "country": "North Macedonia",
         "coordinates": [
-            21.012222222,
-            41.088888888
+            21.0122,
+            41.0889
         ]
     },
     {
@@ -5347,12 +6048,39 @@ export default [
         ]
     },
     {
-        "id": "Q788026",
-        "name": "Babu\u0161nica",
+        "id": "Q15093698",
+        "name": "Babu\u0161nica Municipality",
         "country": "Serbia",
         "coordinates": [
-            22.401388888,
-            43.055833333
+            22.41271,
+            43.06569
+        ]
+    },
+    {
+        "id": "Q2041665",
+        "name": "Blace Municipality",
+        "country": "Serbia",
+        "coordinates": [
+            21.28333,
+            43.29889
+        ]
+    },
+    {
+        "id": "Q1011275",
+        "name": "Knja\u017eevac",
+        "country": "Serbia",
+        "coordinates": [
+            22.433333333,
+            43.5
+        ]
+    },
+    {
+        "id": "Q609044",
+        "name": "Caracal",
+        "country": "Romania",
+        "coordinates": [
+            24.333333333,
+            44.1
         ]
     },
     {
@@ -5374,21 +6102,21 @@ export default [
         ]
     },
     {
-        "id": "Q1027082",
-        "name": "Svrljig",
+        "id": "Q1250074",
+        "name": "Svrljig Municipality",
         "country": "Serbia",
         "coordinates": [
-            22.116666666,
-            43.416666666
+            22.16666667,
+            43.38333333
         ]
     },
     {
-        "id": "Q3856",
-        "name": "Nicosia",
+        "id": "Q59147",
+        "name": "Nicosia District",
         "country": "Cyprus",
         "coordinates": [
-            33.365,
-            35.1725
+            33.345541,
+            35.161749
         ]
     },
     {
@@ -5398,6 +6126,15 @@ export default [
         "coordinates": [
             33.044286,
             34.674997
+        ]
+    },
+    {
+        "id": "Q838616",
+        "name": "Sokobanja Municipality",
+        "country": "Serbia",
+        "coordinates": [
+            21.871198333,
+            43.6442975
         ]
     },
     {
@@ -5464,6 +6201,15 @@ export default [
         ]
     },
     {
+        "id": "Q101918",
+        "name": "Apeldoorn",
+        "country": "Netherlands",
+        "coordinates": [
+            5.95,
+            52.2167
+        ]
+    },
+    {
         "id": "Q41329",
         "name": "Linz",
         "country": "Austria",
@@ -5491,12 +6237,12 @@ export default [
         ]
     },
     {
-        "id": "Q180139",
-        "name": "Hradec Kr\u00e1lov\u00e9",
+        "id": "Q176082",
+        "name": "Hradec Kr\u00e1lov\u00e9 District",
         "country": "Czechia",
         "coordinates": [
-            15.831944444,
-            50.209166666
+            15.8325,
+            50.209444444
         ]
     },
     {
@@ -5527,12 +6273,21 @@ export default [
         ]
     },
     {
-        "id": "Q1782657",
+        "id": "Q9000",
+        "name": "Alpignano",
+        "country": "Italy",
+        "coordinates": [
+            7.525403,
+            45.095724
+        ]
+    },
+    {
+        "id": "Q1228523",
         "name": "Knowsley",
         "country": "United Kingdom",
         "coordinates": [
-            -2.8501,
-            53.4498
+            -2.851,
+            53.439
         ]
     },
     {
@@ -5542,6 +6297,33 @@ export default [
         "coordinates": [
             15.98751,
             54.00696
+        ]
+    },
+    {
+        "id": "Q17354589",
+        "name": "canton of Fontaine-Vercors",
+        "country": "France",
+        "coordinates": [
+            5.684722222,
+            45.193055555
+        ]
+    },
+    {
+        "id": "Q1275211",
+        "name": "Medijana City Municipality",
+        "country": "Serbia",
+        "coordinates": [
+            21.9,
+            43.316666666
+        ]
+    },
+    {
+        "id": "Q2459293",
+        "name": "Odintsovsky District",
+        "country": "Russia",
+        "coordinates": [
+            37.26666667,
+            55.66666667
         ]
     },
     {
@@ -5653,6 +6435,15 @@ export default [
         ]
     },
     {
+        "id": "Q130994",
+        "name": "Colmar",
+        "country": "France",
+        "coordinates": [
+            7.355,
+            48.081111111
+        ]
+    },
+    {
         "id": "Q200905",
         "name": "\u017dodzina",
         "country": "Belarus",
@@ -5662,12 +6453,12 @@ export default [
         ]
     },
     {
-        "id": "Q210470",
-        "name": "Katerini",
+        "id": "Q3595078",
+        "name": "Katerini Municipality",
         "country": "Greece",
         "coordinates": [
-            22.5084,
-            40.2711
+            22.373333333,
+            40.278611111
         ]
     },
     {
@@ -5824,6 +6615,15 @@ export default [
         ]
     },
     {
+        "id": "Q404261",
+        "name": "Ovar",
+        "country": "Portugal",
+        "coordinates": [
+            -8.633333333,
+            40.866666666
+        ]
+    },
+    {
         "id": "Q295538",
         "name": "Orosei",
         "country": "Italy",
@@ -5842,12 +6642,30 @@ export default [
         ]
     },
     {
+        "id": "Q57818",
+        "name": "Huai'an",
+        "country": "China",
+        "coordinates": [
+            119.01917,
+            33.58861
+        ]
+    },
+    {
         "id": "Q374748",
         "name": "Jenin",
         "country": "Palestine",
         "coordinates": [
             35.3,
             32.461111111
+        ]
+    },
+    {
+        "id": "Q288155",
+        "name": "Sardara",
+        "country": "Italy",
+        "coordinates": [
+            8.8215065,
+            39.6138876
         ]
     },
     {
@@ -5887,6 +6705,15 @@ export default [
         ]
     },
     {
+        "id": "Q34590",
+        "name": "Vigonza",
+        "country": "Italy",
+        "coordinates": [
+            11.983333333,
+            45.45
+        ]
+    },
+    {
         "id": "Q16898374",
         "name": "Pope\u0219ti-Leordeni",
         "country": "Romania",
@@ -5923,6 +6750,15 @@ export default [
         ]
     },
     {
+        "id": "Q1139878",
+        "name": "Belleville-sur-Loire",
+        "country": "France",
+        "coordinates": [
+            2.850555555,
+            47.506111111
+        ]
+    },
+    {
         "id": "Q1017287",
         "name": "L\u00e1zn\u011b B\u011blohrad",
         "country": "Czechia",
@@ -5938,6 +6774,15 @@ export default [
         "coordinates": [
             24.503333333,
             43.773611111
+        ]
+    },
+    {
+        "id": "Q2217077",
+        "name": "Azovsky District",
+        "country": "Russia",
+        "coordinates": [
+            39.41666667,
+            47.1
         ]
     },
     {
@@ -6004,12 +6849,21 @@ export default [
         ]
     },
     {
-        "id": "Q1754",
-        "name": "Stockholm",
+        "id": "Q104231",
+        "name": "Stockholm County",
         "country": "Sweden",
         "coordinates": [
-            18.068611111,
-            59.329444444
+            18.166666666,
+            59.333333333
+        ]
+    },
+    {
+        "id": "Q1045426",
+        "name": "Kalonda",
+        "country": "Slovakia",
+        "coordinates": [
+            19.655278,
+            48.259722
         ]
     },
     {
@@ -6019,6 +6873,15 @@ export default [
         "coordinates": [
             25.274722222,
             57.313055555
+        ]
+    },
+    {
+        "id": "Q30030285",
+        "name": "Santa Teresa di Riva",
+        "country": "Italy",
+        "coordinates": [
+            15.36671,
+            37.94635
         ]
     },
     {
@@ -6040,12 +6903,66 @@ export default [
         ]
     },
     {
+        "id": "Q17054",
+        "name": "Martinique",
+        "country": "France",
+        "coordinates": [
+            -61.015,
+            14.65
+        ]
+    },
+    {
         "id": "Q1435",
         "name": "Zagreb",
         "country": "Croatia",
         "coordinates": [
             15.977222222,
             45.813055555
+        ]
+    },
+    {
+        "id": "Q134892590",
+        "name": "Pinhel",
+        "country": "Portugal",
+        "coordinates": [
+            -7.069274348,
+            40.774302162
+        ]
+    },
+    {
+        "id": "Q20541497",
+        "name": "Negreira",
+        "country": "Spain",
+        "coordinates": [
+            -8.74273,
+            42.90402
+        ]
+    },
+    {
+        "id": "Q585187",
+        "name": "Msida",
+        "country": "Malta",
+        "coordinates": [
+            14.489444444,
+            35.897777777
+        ]
+    },
+    {
+        "id": "Q570146",
+        "name": "Athienou",
+        "country": "Cyprus",
+        "coordinates": [
+            33.54165645,
+            35.06182832
+        ]
+    },
+    {
+        "id": "Q1896924",
+        "name": "Poienarii de Arge\u0219",
+        "country": "Romania",
+        "coordinates": [
+            24.545002,
+            45.064679
         ]
     },
     {
@@ -6112,6 +7029,24 @@ export default [
         ]
     },
     {
+        "id": "Q123766",
+        "name": "Charlottesville",
+        "country": "United States",
+        "coordinates": [
+            -78.479,
+            38.0299
+        ]
+    },
+    {
+        "id": "Q208149",
+        "name": "Ponta Delgada",
+        "country": "Portugal",
+        "coordinates": [
+            -25.67,
+            37.74
+        ]
+    },
+    {
         "id": "Q41572",
         "name": "Mykolaiv",
         "country": "Ukraine",
@@ -6139,12 +7074,12 @@ export default [
         ]
     },
     {
-        "id": "Q188478",
-        "name": "Br\u0103ila",
+        "id": "Q188503",
+        "name": "Br\u0103ila County",
         "country": "Romania",
         "coordinates": [
-            27.9575,
-            45.269166666
+            27.68,
+            45.11
         ]
     },
     {
@@ -6157,12 +7092,21 @@ export default [
         ]
     },
     {
-        "id": "Q28996",
+        "id": "Q13867196",
         "name": "Jinzhou",
         "country": "China",
         "coordinates": [
-            121.129166666,
-            41.114444444
+            124.85446,
+            42.87607
+        ]
+    },
+    {
+        "id": "Q713989",
+        "name": "Yongchuan District",
+        "country": "China",
+        "coordinates": [
+            105.9065,
+            29.35636
         ]
     },
     {
@@ -6172,6 +7116,15 @@ export default [
         "coordinates": [
             22.9425,
             39.361111111
+        ]
+    },
+    {
+        "id": "Q33532",
+        "name": "Gandia",
+        "country": "Spain",
+        "coordinates": [
+            -0.182222222,
+            38.966666666
         ]
     },
     {
@@ -6364,6 +7317,24 @@ export default [
         ]
     },
     {
+        "id": "Q574429",
+        "name": "Seeheim-Jugenheim",
+        "country": "Germany",
+        "coordinates": [
+            8.65,
+            49.766666666
+        ]
+    },
+    {
+        "id": "Q807311",
+        "name": "Barbacena",
+        "country": "Brazil",
+        "coordinates": [
+            -43.773888888,
+            -21.225833333
+        ]
+    },
+    {
         "id": "Q1948420",
         "name": "Orhaneli district",
         "country": "T\u00fcrkiye",
@@ -6454,12 +7425,12 @@ export default [
         ]
     },
     {
-        "id": "Q2079",
-        "name": "Leipzig",
+        "id": "Q6308",
+        "name": "Landkreis Leipzig",
         "country": "Germany",
         "coordinates": [
-            12.3747329,
-            51.3406321
+            12.5,
+            51.116666666
         ]
     },
     {
@@ -6598,6 +7569,15 @@ export default [
         ]
     },
     {
+        "id": "Q35997",
+        "name": "\u0130zmir",
+        "country": "T\u00fcrkiye",
+        "coordinates": [
+            27.13838,
+            38.41273
+        ]
+    },
+    {
         "id": "Q20927",
         "name": "Daegu",
         "country": "South Korea",
@@ -6607,12 +7587,12 @@ export default [
         ]
     },
     {
-        "id": "Q200078",
-        "name": "Okayama",
+        "id": "Q132936",
+        "name": "Okayama Prefecture",
         "country": "Japan",
         "coordinates": [
-            133.919583333,
-            34.655111111
+            133.934722222,
+            34.661666666
         ]
     },
     {
@@ -6661,15 +7641,6 @@ export default [
         ]
     },
     {
-        "id": "Q283862",
-        "name": "B\u0103icoi",
-        "country": "Romania",
-        "coordinates": [
-            25.865833333,
-            45.045277777
-        ]
-    },
-    {
         "id": "Q353854",
         "name": "Agros",
         "country": "Cyprus",
@@ -6706,6 +7677,15 @@ export default [
         ]
     },
     {
+        "id": "Q857734",
+        "name": "Postira",
+        "country": "Croatia",
+        "coordinates": [
+            16.629825,
+            43.375669444
+        ]
+    },
+    {
         "id": "Q1632431",
         "name": "Pajares de Adaja",
         "country": "Spain",
@@ -6724,12 +7704,30 @@ export default [
         ]
     },
     {
-        "id": "Q47530410",
-        "name": "Aiane",
+        "id": "Q52209",
+        "name": "Taurisano",
+        "country": "Italy",
+        "coordinates": [
+            18.22000975,
+            39.95680185
+        ]
+    },
+    {
+        "id": "Q3560056",
+        "name": "Kozani Municipality",
         "country": "Greece",
         "coordinates": [
-            21.830611111,
-            40.175333333
+            21.834,
+            40.3236
+        ]
+    },
+    {
+        "id": "Q21380",
+        "name": "Hilsenheim",
+        "country": "France",
+        "coordinates": [
+            7.565277777,
+            48.288888888
         ]
     },
     {
@@ -6796,6 +7794,15 @@ export default [
         ]
     },
     {
+        "id": "Q6065993",
+        "name": "Ergene",
+        "country": "T\u00fcrkiye",
+        "coordinates": [
+            27.216666666,
+            38.466666666
+        ]
+    },
+    {
         "id": "Q10822044",
         "name": "Suba\u015f\u0131",
         "country": "T\u00fcrkiye",
@@ -6841,6 +7848,15 @@ export default [
         ]
     },
     {
+        "id": "Q47135",
+        "name": "Ch\u00e2lons-en-Champagne",
+        "country": "France",
+        "coordinates": [
+            4.364444444,
+            48.956666666
+        ]
+    },
+    {
         "id": "Q42007",
         "name": "Szombathely",
         "country": "Hungary",
@@ -6859,6 +7875,24 @@ export default [
         ]
     },
     {
+        "id": "Q6837",
+        "name": "Lutherstadt Wittenberg",
+        "country": "Germany",
+        "coordinates": [
+            12.6484,
+            51.8671
+        ]
+    },
+    {
+        "id": "Q2216474",
+        "name": "Bolkhovsky District",
+        "country": "Russia",
+        "coordinates": [
+            36.0,
+            53.43333333
+        ]
+    },
+    {
         "id": "Q5116838",
         "name": "Vedea",
         "country": "Romania",
@@ -6868,12 +7902,12 @@ export default [
         ]
     },
     {
-        "id": "Q2717356",
+        "id": "Q5117279",
         "name": "Gogo\u0219ari",
         "country": "Romania",
         "coordinates": [
-            25.7,
-            43.86666667
+            25.675266,
+            43.868086
         ]
     },
     {
@@ -6940,12 +7974,12 @@ export default [
         ]
     },
     {
-        "id": "Q834898",
+        "id": "Q5070404",
         "name": "Prundu B\u00e2rg\u0103ului",
         "country": "Romania",
         "coordinates": [
-            24.741652,
-            47.220214
+            24.7309446,
+            47.2343411
         ]
     },
     {
@@ -6994,12 +8028,21 @@ export default [
         ]
     },
     {
-        "id": "Q202351",
-        "name": "Giurgiu",
+        "id": "Q3463084",
+        "name": "Saint-Ouen",
+        "country": "France",
+        "coordinates": [
+            -0.378743,
+            49.1759
+        ]
+    },
+    {
+        "id": "Q193055",
+        "name": "Giurgiu County",
         "country": "Romania",
         "coordinates": [
-            25.966666666,
-            43.9
+            25.9,
+            44.16
         ]
     },
     {
@@ -7039,12 +8082,30 @@ export default [
         ]
     },
     {
-        "id": "Q207801",
-        "name": "Bijeljina",
+        "id": "Q15914",
+        "name": "Ru\u0161e",
+        "country": "Slovenia",
+        "coordinates": [
+            15.515277777,
+            46.538333333
+        ]
+    },
+    {
+        "id": "Q15622309",
+        "name": "City of Bijeljina",
         "country": "Bosnia and Herzegovina",
         "coordinates": [
-            19.215555555,
-            44.756666666
+            19.150833333,
+            44.765833333
+        ]
+    },
+    {
+        "id": "Q1982525",
+        "name": "Taraclia",
+        "country": "Moldova",
+        "coordinates": [
+            29.115555555,
+            46.570277777
         ]
     },
     {
@@ -7066,12 +8127,21 @@ export default [
         ]
     },
     {
-        "id": "Q216075",
+        "id": "Q11840144",
         "name": "C\u1ea7n Th\u01a1",
         "country": "Vietnam",
         "coordinates": [
-            105.5005357,
-            10.1547298
+            105.788333333,
+            10.037222222
+        ]
+    },
+    {
+        "id": "Q360178",
+        "name": "Huainan",
+        "country": "China",
+        "coordinates": [
+            117.016389,
+            32.483056
         ]
     },
     {
@@ -7192,12 +8262,21 @@ export default [
         ]
     },
     {
-        "id": "Q11538015",
+        "id": "Q754385",
+        "name": "Kettering",
+        "country": "United States",
+        "coordinates": [
+            -76.7964,
+            38.895
+        ]
+    },
+    {
+        "id": "Q17175862",
         "name": "Sakuragawa",
         "country": "Japan",
         "coordinates": [
-            139.675736111,
-            35.757316666
+            136.209805555,
+            35.064138888
         ]
     },
     {
@@ -7216,6 +8295,15 @@ export default [
         "coordinates": [
             26.898105,
             44.210658
+        ]
+    },
+    {
+        "id": "Q639014",
+        "name": "Kartal",
+        "country": "T\u00fcrkiye",
+        "coordinates": [
+            29.211111111,
+            40.906388888
         ]
     },
     {
@@ -7246,12 +8334,30 @@ export default [
         ]
     },
     {
+        "id": "Q12602",
+        "name": "Val d'Aran",
+        "country": "Spain",
+        "coordinates": [
+            0.837222222,
+            42.7225
+        ]
+    },
+    {
         "id": "Q2670181",
         "name": "Velime\u015fe",
         "country": "T\u00fcrkiye",
         "coordinates": [
             27.8833,
             41.25
+        ]
+    },
+    {
+        "id": "Q18468107",
+        "name": "Cascais e Estoril",
+        "country": "Portugal",
+        "coordinates": [
+            -9.42166667,
+            38.69916667
         ]
     },
     {
@@ -7336,12 +8442,12 @@ export default [
         ]
     },
     {
-        "id": "Q210296",
-        "name": "Xanthi",
+        "id": "Q19896642",
+        "name": "Xanthi Regional Unit",
         "country": "Greece",
         "coordinates": [
-            24.883333333,
-            41.133333333
+            24.8862688,
+            41.1380289
         ]
     },
     {
@@ -7363,12 +8469,12 @@ export default [
         ]
     },
     {
-        "id": "Q4295709",
-        "name": "Mirnenskoye rural municipal division",
+        "id": "Q1057721",
+        "name": "Mirny",
         "country": "Russia",
         "coordinates": [
-            45.5125,
-            47.79611111
+            54.872222222,
+            54.698333333
         ]
     },
     {
@@ -7399,12 +8505,30 @@ export default [
         ]
     },
     {
+        "id": "Q56254242",
+        "name": "National Park of Nestos Delta and lakes Vistonida-Ismarida",
+        "country": "Greece",
+        "coordinates": [
+            24.715,
+            40.985
+        ]
+    },
+    {
         "id": "Q1739185",
         "name": "Keramoti",
         "country": "Greece",
         "coordinates": [
             24.69833333,
             40.85555556
+        ]
+    },
+    {
+        "id": "Q1437611",
+        "name": "Rouill\u00e9",
+        "country": "France",
+        "coordinates": [
+            0.039722222,
+            46.420555555
         ]
     },
     {
@@ -7435,12 +8559,12 @@ export default [
         ]
     },
     {
-        "id": "Q49371886",
+        "id": "Q31190934",
         "name": "\u0130hsaniye",
         "country": "T\u00fcrkiye",
         "coordinates": [
-            29.834722222,
-            40.690833333
+            27.98621,
+            40.34933
         ]
     },
     {
@@ -7480,6 +8604,15 @@ export default [
         ]
     },
     {
+        "id": "Q24011335",
+        "name": "Motril",
+        "country": "Spain",
+        "coordinates": [
+            -3.47028,
+            36.73643
+        ]
+    },
+    {
         "id": "Q483083",
         "name": "Yalova Province",
         "country": "T\u00fcrkiye",
@@ -7516,6 +8649,15 @@ export default [
         ]
     },
     {
+        "id": "Q831737",
+        "name": "Kispest",
+        "country": "Hungary",
+        "coordinates": [
+            19.1478,
+            47.4522
+        ]
+    },
+    {
         "id": "Q51444",
         "name": "Controguerra",
         "country": "Italy",
@@ -7531,6 +8673,15 @@ export default [
         "coordinates": [
             27.55,
             53.016666666
+        ]
+    },
+    {
+        "id": "Q37801",
+        "name": "B\u0103l\u021bi",
+        "country": "Moldova",
+        "coordinates": [
+            27.928888888,
+            47.761666666
         ]
     },
     {
@@ -7579,6 +8730,15 @@ export default [
         ]
     },
     {
+        "id": "Q269978",
+        "name": "Beverino",
+        "country": "Italy",
+        "coordinates": [
+            9.768694444,
+            44.195925
+        ]
+    },
+    {
         "id": "Q2671052",
         "name": "Niepor\u0119t",
         "country": "Poland",
@@ -7606,6 +8766,15 @@ export default [
         ]
     },
     {
+        "id": "Q1061076",
+        "name": "Ni\u0161ava District",
+        "country": "Serbia",
+        "coordinates": [
+            21.9,
+            43.3
+        ]
+    },
+    {
         "id": "Q164001",
         "name": "Naro-Fominsk",
         "country": "Russia",
@@ -7615,12 +8784,12 @@ export default [
         ]
     },
     {
-        "id": "Q180290",
-        "name": "Kozarska Dubica",
+        "id": "Q15774707",
+        "name": "Kozarska Dubica Municipality",
         "country": "Bosnia and Herzegovina",
         "coordinates": [
-            16.8,
-            45.183333333
+            16.82444,
+            45.12472
         ]
     },
     {
@@ -7669,12 +8838,12 @@ export default [
         ]
     },
     {
-        "id": "Q134772472",
-        "name": "\u00cdlhavo",
+        "id": "Q2070944",
+        "name": "\u00cdlhavo (S\u00e3o Salvador)",
         "country": "Portugal",
         "coordinates": [
-            -8.667137741,
-            40.600279502
+            -8.671111111,
+            40.603611111
         ]
     },
     {
@@ -7684,6 +8853,15 @@ export default [
         "coordinates": [
             37.533333333,
             55.366666666
+        ]
+    },
+    {
+        "id": "Q432621",
+        "name": "Dmitrov Municipal Okrug",
+        "country": "Russia",
+        "coordinates": [
+            37.53333333,
+            56.35
         ]
     },
     {
@@ -7705,21 +8883,30 @@ export default [
         ]
     },
     {
-        "id": "Q30029920",
-        "name": "San Giorgio del Sannio",
-        "country": "Italy",
+        "id": "Q973673",
+        "name": "Palilula City Municipality",
+        "country": "Serbia",
         "coordinates": [
-            14.85322,
-            41.06844
+            20.516111111,
+            44.811666666
         ]
     },
     {
-        "id": "Q49289417",
+        "id": "Q55958",
+        "name": "San Giorgio del Sannio",
+        "country": "Italy",
+        "coordinates": [
+            14.85,
+            41.066666666
+        ]
+    },
+    {
+        "id": "Q550963",
         "name": "Serpa",
         "country": "Portugal",
         "coordinates": [
-            -7.5975,
-            37.945833333
+            -7.583333333,
+            37.933333333
         ]
     },
     {
@@ -7741,6 +8928,15 @@ export default [
         ]
     },
     {
+        "id": "Q490863",
+        "name": "Partinico",
+        "country": "Italy",
+        "coordinates": [
+            13.116666666,
+            38.05
+        ]
+    },
+    {
         "id": "Q3087537",
         "name": "Petrovec",
         "country": "North Macedonia",
@@ -7750,12 +8946,30 @@ export default [
         ]
     },
     {
+        "id": "Q782928",
+        "name": "Stupava",
+        "country": "Slovakia",
+        "coordinates": [
+            17.033333333,
+            48.283333333
+        ]
+    },
+    {
         "id": "Q826511",
         "name": "Montijo",
         "country": "Portugal",
         "coordinates": [
             -8.973888888,
             38.706666666
+        ]
+    },
+    {
+        "id": "Q7938",
+        "name": "Kirishi",
+        "country": "Russia",
+        "coordinates": [
+            32.008611111,
+            59.449722222
         ]
     },
     {
@@ -7786,12 +9000,21 @@ export default [
         ]
     },
     {
-        "id": "Q19689",
-        "name": "Tirana",
+        "id": "Q229892",
+        "name": "Tirana County",
         "country": "Albania",
         "coordinates": [
-            19.818055555,
-            41.328333333
+            19.75,
+            41.25
+        ]
+    },
+    {
+        "id": "Q16289",
+        "name": "Trentino",
+        "country": "Italy",
+        "coordinates": [
+            11.1257601,
+            46.0664228
         ]
     },
     {
@@ -7858,12 +9081,30 @@ export default [
         ]
     },
     {
-        "id": "Q34796912",
+        "id": "Q1117389",
         "name": "Couff\u00e9",
         "country": "France",
         "coordinates": [
-            -1.293333333,
-            47.391111111
+            -1.292777777,
+            47.391388888
+        ]
+    },
+    {
+        "id": "Q1021363",
+        "name": "Gr\u00e2ces",
+        "country": "France",
+        "coordinates": [
+            -3.185,
+            48.555833333
+        ]
+    },
+    {
+        "id": "Q273922",
+        "name": "Saint-Herblain",
+        "country": "France",
+        "coordinates": [
+            -1.651111111,
+            47.211388888
         ]
     },
     {
@@ -7894,12 +9135,12 @@ export default [
         ]
     },
     {
-        "id": "Q34664",
-        "name": "Hiroshima",
+        "id": "Q617375",
+        "name": "Hiroshima Prefecture",
         "country": "Japan",
         "coordinates": [
-            132.455305555,
-            34.38525
+            132.459722222,
+            34.396388888
         ]
     },
     {
@@ -7912,12 +9153,12 @@ export default [
         ]
     },
     {
-        "id": "Q216990",
-        "name": "Blida",
+        "id": "Q233637",
+        "name": "Blida Province",
         "country": "Algeria",
         "coordinates": [
-            2.833333333,
-            36.472222222
+            2.816666666,
+            36.466666666
         ]
     },
     {
@@ -7939,12 +9180,21 @@ export default [
         ]
     },
     {
-        "id": "Q183551",
-        "name": "Waterford",
+        "id": "Q184594",
+        "name": "County Waterford",
         "country": "Ireland",
         "coordinates": [
-            -7.119,
-            52.2583
+            -7.5,
+            52.25
+        ]
+    },
+    {
+        "id": "Q1280",
+        "name": "Umbria",
+        "country": "Italy",
+        "coordinates": [
+            12.566666666,
+            42.983333333
         ]
     },
     {
@@ -7957,12 +9207,12 @@ export default [
         ]
     },
     {
-        "id": "Q126540850",
+        "id": "Q110484710",
         "name": "Viladecans",
         "country": "Spain",
         "coordinates": [
-            2.01824715,
-            41.31732529
+            2.165275,
+            42.047397
         ]
     },
     {
@@ -7993,6 +9243,24 @@ export default [
         ]
     },
     {
+        "id": "Q50444",
+        "name": "Jungnang District",
+        "country": "South Korea",
+        "coordinates": [
+            127.09263,
+            37.606395
+        ]
+    },
+    {
+        "id": "Q103867",
+        "name": "Cazzago San Martino",
+        "country": "Italy",
+        "coordinates": [
+            10.025833333,
+            45.581666666
+        ]
+    },
+    {
         "id": "Q201722",
         "name": "Veria",
         "country": "Greece",
@@ -8002,12 +9270,30 @@ export default [
         ]
     },
     {
+        "id": "Q932648",
+        "name": "Didymoteicho",
+        "country": "Greece",
+        "coordinates": [
+            26.5,
+            41.35
+        ]
+    },
+    {
         "id": "Q188673",
         "name": "T\u00e2rgovi\u0219te",
         "country": "Romania",
         "coordinates": [
             25.457222222,
             44.924444444
+        ]
+    },
+    {
+        "id": "Q2635137",
+        "name": "Maroneia-Sapes Municipality",
+        "country": "Greece",
+        "coordinates": [
+            25.7,
+            41.033333333
         ]
     },
     {
@@ -8026,6 +9312,15 @@ export default [
         "coordinates": [
             39.499444444,
             50.982222222
+        ]
+    },
+    {
+        "id": "Q58581",
+        "name": "Curti",
+        "country": "Italy",
+        "coordinates": [
+            14.28039,
+            41.07616
         ]
     },
     {
@@ -8056,6 +9351,15 @@ export default [
         ]
     },
     {
+        "id": "Q3364",
+        "name": "Dr\u00f4me",
+        "country": "France",
+        "coordinates": [
+            5.166666666,
+            44.75
+        ]
+    },
+    {
         "id": "Q201442",
         "name": "Kru\u0161evac",
         "country": "Serbia",
@@ -8074,12 +9378,12 @@ export default [
         ]
     },
     {
-        "id": "Q279",
-        "name": "Modena",
+        "id": "Q16209",
+        "name": "Province of Modena",
         "country": "Italy",
         "coordinates": [
-            10.92572,
-            44.64582
+            10.883333333,
+            44.55
         ]
     },
     {
@@ -8101,12 +9405,12 @@ export default [
         ]
     },
     {
-        "id": "Q178405",
-        "name": "Larissa",
+        "id": "Q578879",
+        "name": "Larissa Regional Unit",
         "country": "Greece",
         "coordinates": [
-            22.413061,
-            39.638493
+            22.5,
+            39.66666667
         ]
     },
     {
@@ -8173,25 +9477,25 @@ export default [
         ]
     },
     {
-        "id": "Q30027547",
+        "id": "Q52161",
         "name": "Minervino di Lecce",
         "country": "Italy",
         "coordinates": [
-            18.42139,
-            40.09025
+            18.41395955,
+            40.0833539
         ]
     },
     {
-        "id": "Q164954",
+        "id": "Q3136745",
         "name": "Negotino",
         "country": "North Macedonia",
         "coordinates": [
-            22.089166666,
-            41.483888888
+            20.88389,
+            41.87861
         ]
     },
     {
-        "id": "Q16898097",
+        "id": "Q736296",
         "name": "C\u00e2mpulung",
         "country": "Romania",
         "coordinates": [
@@ -8281,12 +9585,30 @@ export default [
         ]
     },
     {
+        "id": "Q564813",
+        "name": "Santa Maria da Feira",
+        "country": "Portugal",
+        "coordinates": [
+            -8.533333333,
+            40.933333333
+        ]
+    },
+    {
         "id": "Q2337",
         "name": "Smolensk",
         "country": "Russia",
         "coordinates": [
             32.045277777,
             54.782777777
+        ]
+    },
+    {
+        "id": "Q193929",
+        "name": "Suresnes",
+        "country": "France",
+        "coordinates": [
+            2.226944444,
+            48.871111111
         ]
     },
     {
@@ -8332,6 +9654,15 @@ export default [
         "coordinates": [
             20.645555555,
             48.253055555
+        ]
+    },
+    {
+        "id": "Q33453356",
+        "name": "Kutina",
+        "country": "Croatia",
+        "coordinates": [
+            16.781944444,
+            45.475
         ]
     },
     {
@@ -8389,6 +9720,15 @@ export default [
         ]
     },
     {
+        "id": "Q6716",
+        "name": "Grosseto",
+        "country": "Italy",
+        "coordinates": [
+            11.108888888,
+            42.772222222
+        ]
+    },
+    {
         "id": "Q747508",
         "name": "Kyprinos",
         "country": "Greece",
@@ -8398,12 +9738,30 @@ export default [
         ]
     },
     {
+        "id": "Q313538",
+        "name": "Longueau",
+        "country": "France",
+        "coordinates": [
+            2.356111111,
+            49.870277777
+        ]
+    },
+    {
         "id": "Q610751",
         "name": "Enez",
         "country": "T\u00fcrkiye",
         "coordinates": [
             26.0825,
             40.72472
+        ]
+    },
+    {
+        "id": "Q15963247",
+        "name": "Babaeski district",
+        "country": "T\u00fcrkiye",
+        "coordinates": [
+            27.1,
+            41.4333
         ]
     },
     {
@@ -8497,6 +9855,15 @@ export default [
         ]
     },
     {
+        "id": "Q470682",
+        "name": "Ch\u00e2tillon-sur-Indre",
+        "country": "France",
+        "coordinates": [
+            1.173611111,
+            46.987777777
+        ]
+    },
+    {
         "id": "Q198190",
         "name": "Shatura",
         "country": "Russia",
@@ -8530,6 +9897,24 @@ export default [
         "coordinates": [
             -75.099722222,
             40.1
+        ]
+    },
+    {
+        "id": "Q1137454",
+        "name": "Tokachi Subprefecture",
+        "country": "Japan",
+        "coordinates": [
+            143.208278,
+            42.929625
+        ]
+    },
+    {
+        "id": "Q1769929",
+        "name": "Enguera",
+        "country": "Spain",
+        "coordinates": [
+            -0.6891945,
+            38.9802279
         ]
     },
     {
@@ -8569,21 +9954,30 @@ export default [
         ]
     },
     {
-        "id": "Q146317",
-        "name": "Veszpr\u00e9m",
-        "country": "Hungary",
+        "id": "Q273525",
+        "name": "Viseu",
+        "country": "Portugal",
         "coordinates": [
-            17.916666666,
-            47.1
+            -7.913888888,
+            40.656944444
         ]
     },
     {
-        "id": "Q104036",
-        "name": "Ventspils",
+        "id": "Q188890",
+        "name": "Veszpr\u00e9m County",
+        "country": "Hungary",
+        "coordinates": [
+            17.75,
+            47.166666666
+        ]
+    },
+    {
+        "id": "Q858852",
+        "name": "Ventspils District",
         "country": "Latvia",
         "coordinates": [
-            21.564444444,
-            57.389722222
+            21.533333333,
+            57.416666666
         ]
     },
     {
@@ -8623,21 +10017,21 @@ export default [
         ]
     },
     {
-        "id": "Q4333195",
-        "name": "Krynychne",
-        "country": "Ukraine",
-        "coordinates": [
-            37.345555555,
-            47.275555555
-        ]
-    },
-    {
         "id": "Q464970",
         "name": "Mala Pereshchepina",
         "country": "Ukraine",
         "coordinates": [
             34.579178217,
             49.389327983
+        ]
+    },
+    {
+        "id": "Q50090",
+        "name": "Corfinio",
+        "country": "Italy",
+        "coordinates": [
+            13.8425,
+            42.124722222
         ]
     },
     {
@@ -8686,6 +10080,15 @@ export default [
         ]
     },
     {
+        "id": "Q370118",
+        "name": "Vyssa Municipal Unit",
+        "country": "Greece",
+        "coordinates": [
+            26.5833,
+            41.5333
+        ]
+    },
+    {
         "id": "Q1019887",
         "name": "Kof\u00e7az",
         "country": "T\u00fcrkiye",
@@ -8704,12 +10107,12 @@ export default [
         ]
     },
     {
-        "id": "Q1015437",
-        "name": "Lalapa\u015fa",
+        "id": "Q49106067",
+        "name": "Lalapa\u015fa district",
         "country": "T\u00fcrkiye",
         "coordinates": [
-            26.733333333,
-            41.833333333
+            26.748611111,
+            41.850555555
         ]
     },
     {
@@ -8749,12 +10152,30 @@ export default [
         ]
     },
     {
+        "id": "Q597789",
+        "name": "Mangualde",
+        "country": "Portugal",
+        "coordinates": [
+            -7.766666666,
+            40.6
+        ]
+    },
+    {
         "id": "Q808036",
         "name": "Bardo",
         "country": "Poland",
         "coordinates": [
             16.739722222,
             50.505833333
+        ]
+    },
+    {
+        "id": "Q128466",
+        "name": "Villejuif",
+        "country": "France",
+        "coordinates": [
+            2.361111111,
+            48.793888888
         ]
     },
     {

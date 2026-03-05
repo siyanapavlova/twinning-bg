@@ -11,7 +11,7 @@ interface Props {
     onHover: (town: Town | null) => void;
 }
 
-const ACTIVE_ALPHA = 255;
+// const ACTIVE_ALPHA = 255;
 const DIM_ALPHA = 100;
 
 const createTownsLayer = ({data, activeTowns, allTownsActive, hoveredTown, selectedTown, onHover, onClick}: Props) => {return [

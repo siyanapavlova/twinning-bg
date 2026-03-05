@@ -1,10 +1,3 @@
-// export default [
-//   { from: "belene", to: "paris" },
-//   { from: "rome", to: "belene" },
-//   { from: "paris", to: "rome" },
-//   { from: "lyon", to: "belene"}
-// ];
-
 export default [
     {
         "from": "Bansko",
@@ -12,7 +5,7 @@ export default [
     },
     {
         "from": "Bansko",
-        "to": "Q928405"
+        "to": "Q2479526"
     },
     {
         "from": "Bansko",
@@ -40,7 +33,7 @@ export default [
     },
     {
         "from": "Bansko",
-        "to": "Q932648"
+        "to": "Q3557808"
     },
     {
         "from": "Bansko",
@@ -49,6 +42,10 @@ export default [
     {
         "from": "Bansko",
         "to": "Q6627746"
+    },
+    {
+        "from": "Bansko",
+        "to": "Q1625595"
     },
     {
         "from": "Bansko",
@@ -72,7 +69,7 @@ export default [
     },
     {
         "from": "Bansko",
-        "to": "Q122803"
+        "to": "Q376797"
     },
     {
         "from": "Belitsa",
@@ -80,7 +77,7 @@ export default [
     },
     {
         "from": "Blagoevgrad",
-        "to": "Q17151"
+        "to": "Q6627746"
     },
     {
         "from": "Blagoevgrad",
@@ -88,15 +85,19 @@ export default [
     },
     {
         "from": "Blagoevgrad",
-        "to": "Q157738"
+        "to": "Q1323322"
     },
     {
         "from": "Blagoevgrad",
-        "to": "Q206957"
+        "to": "Q211319"
     },
     {
         "from": "Blagoevgrad",
         "to": "Q130212"
+    },
+    {
+        "from": "Blagoevgrad",
+        "to": "Q206957"
     },
     {
         "from": "Blagoevgrad",
@@ -140,6 +141,10 @@ export default [
     },
     {
         "from": "Gotse Delchev",
+        "to": "Q1625595"
+    },
+    {
+        "from": "Gotse Delchev",
         "to": "Q177908"
     },
     {
@@ -156,11 +161,15 @@ export default [
     },
     {
         "from": "Garmen",
+        "to": "Q1779775"
+    },
+    {
+        "from": "Garmen",
         "to": "Q557754"
     },
     {
         "from": "Petrich",
-        "to": "Q48814"
+        "to": "Q2308287"
     },
     {
         "from": "Petrich",
@@ -176,11 +185,11 @@ export default [
     },
     {
         "from": "Razlog",
-        "to": "Q24012535"
+        "to": "Q338174"
     },
     {
         "from": "Razlog",
-        "to": "Q20547398"
+        "to": "Q1113375"
     },
     {
         "from": "Razlog",
@@ -224,7 +233,7 @@ export default [
     },
     {
         "from": "Sandanski",
-        "to": "Q320939"
+        "to": "Q852463"
     },
     {
         "from": "Satovcha",
@@ -236,11 +245,15 @@ export default [
     },
     {
         "from": "Satovcha",
+        "to": "Q473919"
+    },
+    {
+        "from": "Satovcha",
         "to": "Q3044293"
     },
     {
         "from": "Satovcha",
-        "to": "Q182009"
+        "to": "Q129387"
     },
     {
         "from": "Satovcha",
@@ -248,7 +261,7 @@ export default [
     },
     {
         "from": "Satovcha",
-        "to": "Q43387"
+        "to": "Q83102"
     },
     {
         "from": "Simitli",
@@ -261,6 +274,10 @@ export default [
     {
         "from": "Simitli",
         "to": "Q1346554"
+    },
+    {
+        "from": "Simitli",
+        "to": "Q2532139"
     },
     {
         "from": "Simitli",
@@ -280,7 +297,15 @@ export default [
     },
     {
         "from": "Strumyani",
+        "to": "Q1625595"
+    },
+    {
+        "from": "Strumyani",
         "to": "Q21080110"
+    },
+    {
+        "from": "Strumyani",
+        "to": "Q2532139"
     },
     {
         "from": "Strumyani",
@@ -332,7 +357,7 @@ export default [
     },
     {
         "from": "Burgas",
-        "to": "Q82174"
+        "to": "Q182614"
     },
     {
         "from": "Burgas",
@@ -352,6 +377,10 @@ export default [
     },
     {
         "from": "Burgas",
+        "to": "Q462400"
+    },
+    {
+        "from": "Burgas",
         "to": "Q1957"
     },
     {
@@ -364,7 +393,7 @@ export default [
     },
     {
         "from": "Burgas",
-        "to": "Q205942"
+        "to": "Q483083"
     },
     {
         "from": "Burgas",
@@ -400,11 +429,15 @@ export default [
     },
     {
         "from": "Nesebar",
-        "to": "Q1223508"
+        "to": "Q1125333"
     },
     {
         "from": "Nesebar",
         "to": "Q102152"
+    },
+    {
+        "from": "Nesebar",
+        "to": "Q6605"
     },
     {
         "from": "Nesebar",
@@ -432,11 +465,19 @@ export default [
     },
     {
         "from": "Pomorie",
-        "to": "Q10837286"
+        "to": "Q1642240"
+    },
+    {
+        "from": "Pomorie",
+        "to": "Q16380073"
     },
     {
         "from": "Pomorie",
         "to": "Q554250"
+    },
+    {
+        "from": "Pomorie",
+        "to": "Q583647"
     },
     {
         "from": "Pomorie",
@@ -449,6 +490,10 @@ export default [
     {
         "from": "Ruen",
         "to": "Q7690521"
+    },
+    {
+        "from": "Ruen",
+        "to": "Q1049128"
     },
     {
         "from": "Ruen",
@@ -472,7 +517,7 @@ export default [
     },
     {
         "from": "Sozopol",
-        "to": "Q205832"
+        "to": "Q842235"
     },
     {
         "from": "Sozopol",
@@ -484,7 +529,11 @@ export default [
     },
     {
         "from": "Sozopol",
-        "to": "Q17151"
+        "to": "Q3659144"
+    },
+    {
+        "from": "Sozopol",
+        "to": "Q6627746"
     },
     {
         "from": "Sozopol",
@@ -497,6 +546,14 @@ export default [
     {
         "from": "Sozopol",
         "to": "Q155426"
+    },
+    {
+        "from": "Sozopol",
+        "to": "Q193001"
+    },
+    {
+        "from": "Sozopol",
+        "to": "Q364021"
     },
     {
         "from": "Sredets",
@@ -512,6 +569,10 @@ export default [
     },
     {
         "from": "Tsarevo",
+        "to": "Q2355897"
+    },
+    {
+        "from": "Tsarevo",
         "to": "Q1014285"
     },
     {
@@ -524,7 +585,7 @@ export default [
     },
     {
         "from": "Avren",
-        "to": "Q9183501"
+        "to": "Q5005629"
     },
     {
         "from": "Avren",
@@ -541,6 +602,14 @@ export default [
     {
         "from": "Aksakovo",
         "to": "Q2006121"
+    },
+    {
+        "from": "Aksakovo",
+        "to": "Q15950"
+    },
+    {
+        "from": "Aksakovo",
+        "to": "Q19946"
     },
     {
         "from": "Aksakovo",
@@ -576,7 +645,7 @@ export default [
     },
     {
         "from": "Byala",
-        "to": "Q497154"
+        "to": "Q28377478"
     },
     {
         "from": "Byala",
@@ -632,6 +701,10 @@ export default [
     },
     {
         "from": "Varna",
+        "to": "Q1625595"
+    },
+    {
+        "from": "Varna",
         "to": "Q42780"
     },
     {
@@ -645,6 +718,10 @@ export default [
     {
         "from": "Varna",
         "to": "Q1492"
+    },
+    {
+        "from": "Varna",
+        "to": "Q462377"
     },
     {
         "from": "Varna",
@@ -708,7 +785,7 @@ export default [
     },
     {
         "from": "Vetrino",
-        "to": "Q2452073"
+        "to": "Q20858514"
     },
     {
         "from": "Vetrino",
@@ -744,11 +821,19 @@ export default [
     },
     {
         "from": "Dolni chiflik",
-        "to": "Q4241116"
+        "to": "Q4333195"
     },
     {
         "from": "Dolni chiflik",
         "to": "Q999916"
+    },
+    {
+        "from": "Dolni chiflik",
+        "to": "Q103842904"
+    },
+    {
+        "from": "Dolni chiflik",
+        "to": "Q622449"
     },
     {
         "from": "Dolni chiflik",
@@ -760,7 +845,7 @@ export default [
     },
     {
         "from": "Dolni chiflik",
-        "to": "Q11714712"
+        "to": "Q11714714"
     },
     {
         "from": "Dalgopol",
@@ -775,6 +860,10 @@ export default [
         "to": "Q890311"
     },
     {
+        "from": "Suvorovo",
+        "to": "Q103842911"
+    },
+    {
         "from": "Veliko Tarnovo",
         "to": "Q183394"
     },
@@ -784,7 +873,15 @@ export default [
     },
     {
         "from": "Veliko Tarnovo",
+        "to": "Q964130"
+    },
+    {
+        "from": "Veliko Tarnovo",
         "to": "Q206957"
+    },
+    {
+        "from": "Veliko Tarnovo",
+        "to": "Q5836"
     },
     {
         "from": "Veliko Tarnovo",
@@ -800,11 +897,15 @@ export default [
     },
     {
         "from": "Veliko Tarnovo",
+        "to": "Q394681"
+    },
+    {
+        "from": "Veliko Tarnovo",
         "to": "Q31572"
     },
     {
         "from": "Veliko Tarnovo",
-        "to": "Q1223508"
+        "to": "Q1125333"
     },
     {
         "from": "Veliko Tarnovo",
@@ -825,6 +926,10 @@ export default [
     {
         "from": "Veliko Tarnovo",
         "to": "Q46852"
+    },
+    {
+        "from": "Veliko Tarnovo",
+        "to": "Q983543"
     },
     {
         "from": "Veliko Tarnovo",
@@ -852,6 +957,10 @@ export default [
     },
     {
         "from": "Veliko Tarnovo",
+        "to": "Q134674"
+    },
+    {
+        "from": "Veliko Tarnovo",
         "to": "Q3370"
     },
     {
@@ -868,7 +977,11 @@ export default [
     },
     {
         "from": "Veliko Tarnovo",
-        "to": "Q156080"
+        "to": "Q838320"
+    },
+    {
+        "from": "Veliko Tarnovo",
+        "to": "Q535164"
     },
     {
         "from": "Gorna Oryahovitsa",
@@ -877,6 +990,14 @@ export default [
     {
         "from": "Gorna Oryahovitsa",
         "to": "Q4346"
+    },
+    {
+        "from": "Gorna Oryahovitsa",
+        "to": "Q52038"
+    },
+    {
+        "from": "Gorna Oryahovitsa",
+        "to": "Q283104"
     },
     {
         "from": "Gorna Oryahovitsa",
@@ -900,11 +1021,19 @@ export default [
     },
     {
         "from": "Elena",
-        "to": "Q109332149"
+        "to": "Q21879719"
     },
     {
         "from": "Lyaskovets",
         "to": "Q903177"
+    },
+    {
+        "from": "Lyaskovets",
+        "to": "Q636831"
+    },
+    {
+        "from": "Lyaskovets",
+        "to": "Q242784"
     },
     {
         "from": "Lyaskovets",
@@ -948,7 +1077,11 @@ export default [
     },
     {
         "from": "Polski Trambesh",
-        "to": "Q30030354"
+        "to": "Q59297"
+    },
+    {
+        "from": "Polski Trambesh",
+        "to": "Q496557"
     },
     {
         "from": "Svishtov",
@@ -956,7 +1089,7 @@ export default [
     },
     {
         "from": "Svishtov",
-        "to": "Q31910871"
+        "to": "Q213242"
     },
     {
         "from": "Svishtov",
@@ -964,7 +1097,7 @@ export default [
     },
     {
         "from": "Svishtov",
-        "to": "Q157050"
+        "to": "Q2088561"
     },
     {
         "from": "Svishtov",
@@ -996,7 +1129,7 @@ export default [
     },
     {
         "from": "Svishtov",
-        "to": "Q797036"
+        "to": "Q2500681"
     },
     {
         "from": "Svishtov",
@@ -1004,11 +1137,15 @@ export default [
     },
     {
         "from": "Svishtov",
-        "to": "Q924103"
+        "to": "Q55036"
     },
     {
         "from": "Svishtov",
-        "to": "Q135869"
+        "to": "Q2461299"
+    },
+    {
+        "from": "Svishtov",
+        "to": "Q72536"
     },
     {
         "from": "Strazhitsa",
@@ -1024,7 +1161,39 @@ export default [
     },
     {
         "from": "Suhindol",
+        "to": "Q998438"
+    },
+    {
+        "from": "Suhindol",
+        "to": "Q7849023"
+    },
+    {
+        "from": "Suhindol",
+        "to": "Q128139"
+    },
+    {
+        "from": "Suhindol",
+        "to": "Q52160"
+    },
+    {
+        "from": "Suhindol",
+        "to": "Q32752662"
+    },
+    {
+        "from": "Suhindol",
+        "to": "Q605343"
+    },
+    {
+        "from": "Suhindol",
+        "to": "Q283862"
+    },
+    {
+        "from": "Suhindol",
         "to": "Q344608"
+    },
+    {
+        "from": "Suhindol",
+        "to": "Q1277236"
     },
     {
         "from": "Suhindol",
@@ -1032,7 +1201,11 @@ export default [
     },
     {
         "from": "Belogradchik",
-        "to": "Q1011275"
+        "to": "Q1348256"
+    },
+    {
+        "from": "Belogradchik",
+        "to": "Q2041788"
     },
     {
         "from": "Belogradchik",
@@ -1061,6 +1234,10 @@ export default [
     {
         "from": "Vidin",
         "to": "Q3012"
+    },
+    {
+        "from": "Vidin",
+        "to": "Q16199"
     },
     {
         "from": "Vidin",
@@ -1096,7 +1273,7 @@ export default [
     },
     {
         "from": "Dimovo",
-        "to": "Q1550352"
+        "to": "Q12724820"
     },
     {
         "from": "Dimovo",
@@ -1104,11 +1281,11 @@ export default [
     },
     {
         "from": "Kula",
-        "to": "Q1419953"
+        "to": "Q2047431"
     },
     {
         "from": "Kula",
-        "to": "Q1011275"
+        "to": "Q1348256"
     },
     {
         "from": "Kula",
@@ -1116,7 +1293,7 @@ export default [
     },
     {
         "from": "Novo selo",
-        "to": "Q649168"
+        "to": "Q1572127"
     },
     {
         "from": "Byala Slatina",
@@ -1164,11 +1341,15 @@ export default [
     },
     {
         "from": "Vratsa",
-        "to": "Q462461"
+        "to": "Q1780754"
     },
     {
         "from": "Vratsa",
         "to": "Q156752"
+    },
+    {
+        "from": "Vratsa",
+        "to": "Q818297"
     },
     {
         "from": "Vratsa",
@@ -1181,6 +1362,10 @@ export default [
     {
         "from": "Vratsa",
         "to": "Q239124"
+    },
+    {
+        "from": "Kozloduy",
+        "to": "Q1012481"
     },
     {
         "from": "Kozloduy",
@@ -1220,6 +1405,10 @@ export default [
     },
     {
         "from": "Mizia",
+        "to": "Q191065"
+    },
+    {
+        "from": "Mizia",
         "to": "Q168057"
     },
     {
@@ -1229,6 +1418,10 @@ export default [
     {
         "from": "Mizia",
         "to": "Q129259"
+    },
+    {
+        "from": "Mizia",
+        "to": "Q945282"
     },
     {
         "from": "Mizia",
@@ -1251,12 +1444,16 @@ export default [
         "to": "Q2542534"
     },
     {
+        "from": "Roman",
+        "to": "Q2727234"
+    },
+    {
         "from": "Gabrovo",
         "to": "Q2153073"
     },
     {
         "from": "Gabrovo",
-        "to": "Q54452"
+        "to": "Q2352376"
     },
     {
         "from": "Gabrovo",
@@ -1280,7 +1477,7 @@ export default [
     },
     {
         "from": "Gabrovo",
-        "to": "Q192119"
+        "to": "Q21486047"
     },
     {
         "from": "Gabrovo",
@@ -1308,11 +1505,27 @@ export default [
     },
     {
         "from": "Dryanovo",
+        "to": "Q889044"
+    },
+    {
+        "from": "Dryanovo",
+        "to": "Q3804493"
+    },
+    {
+        "from": "Dryanovo",
         "to": "Q502272"
     },
     {
         "from": "Dryanovo",
-        "to": "Q991318"
+        "to": "Q2738284"
+    },
+    {
+        "from": "Dryanovo",
+        "to": "Q928352"
+    },
+    {
+        "from": "Dryanovo",
+        "to": "Q21504335"
     },
     {
         "from": "Sevlievo",
@@ -1328,7 +1541,15 @@ export default [
     },
     {
         "from": "Sevlievo",
+        "to": "Q31850379"
+    },
+    {
+        "from": "Sevlievo",
         "to": "Q11870479"
+    },
+    {
+        "from": "Tryavna",
+        "to": "Q65268"
     },
     {
         "from": "Tryavna",
@@ -1340,7 +1561,7 @@ export default [
     },
     {
         "from": "Tryavna",
-        "to": "Q928405"
+        "to": "Q2479526"
     },
     {
         "from": "Tryavna",
@@ -1349,6 +1570,10 @@ export default [
     {
         "from": "Balchik",
         "to": "Q321197"
+    },
+    {
+        "from": "Balchik",
+        "to": "Q936166"
     },
     {
         "from": "Balchik",
@@ -1399,6 +1624,10 @@ export default [
         "to": "Q2631126"
     },
     {
+        "from": "General Toshevo",
+        "to": "Q2002645"
+    },
+    {
         "from": "Dobrich-selska",
         "to": "Q5066192"
     },
@@ -1424,19 +1653,23 @@ export default [
     },
     {
         "from": "Dobrich",
+        "to": "Q1147602"
+    },
+    {
+        "from": "Dobrich",
         "to": "Q60037"
     },
     {
         "from": "Dobrich",
-        "to": "Q206903"
+        "to": "Q6454722"
     },
     {
         "from": "Dobrich",
-        "to": "Q158088"
+        "to": "Q1155055"
     },
     {
         "from": "Dobrich",
-        "to": "Q16898202"
+        "to": "Q188505"
     },
     {
         "from": "Dobrich",
@@ -1444,7 +1677,7 @@ export default [
     },
     {
         "from": "Dobrich",
-        "to": "Q9009"
+        "to": "Q12697"
     },
     {
         "from": "Dobrich",
@@ -1512,7 +1745,7 @@ export default [
     },
     {
         "from": "Kavarna",
-        "to": "Q6077184"
+        "to": "Q8077708"
     },
     {
         "from": "Kavarna",
@@ -1524,7 +1757,15 @@ export default [
     },
     {
         "from": "Kavarna",
+        "to": "Q1117799"
+    },
+    {
+        "from": "Kavarna",
         "to": "Q19520"
+    },
+    {
+        "from": "Kavarna",
+        "to": "Q198388"
     },
     {
         "from": "Kavarna",
@@ -1537,6 +1778,10 @@ export default [
     {
         "from": "Shabla",
         "to": "Q7702314"
+    },
+    {
+        "from": "Shabla",
+        "to": "Q243346"
     },
     {
         "from": "Ardino",
@@ -1568,7 +1813,7 @@ export default [
     },
     {
         "from": "Krumovgrad",
-        "to": "Q10753870"
+        "to": "Q6807090"
     },
     {
         "from": "Krumovgrad",
@@ -1584,11 +1829,15 @@ export default [
     },
     {
         "from": "Krumovgrad",
-        "to": "Q1023140"
+        "to": "Q109387217"
     },
     {
         "from": "Kardzhali",
         "to": "Q5239"
+    },
+    {
+        "from": "Kardzhali",
+        "to": "Q1278032"
     },
     {
         "from": "Kardzhali",
@@ -1604,7 +1853,7 @@ export default [
     },
     {
         "from": "Kardzhali",
-        "to": "Q182009"
+        "to": "Q1966785"
     },
     {
         "from": "Kardzhali",
@@ -1620,7 +1869,11 @@ export default [
     },
     {
         "from": "Kardzhali",
-        "to": "Q43387"
+        "to": "Q83102"
+    },
+    {
+        "from": "Kardzhali",
+        "to": "Q272243"
     },
     {
         "from": "Kardzhali",
@@ -1636,11 +1889,15 @@ export default [
     },
     {
         "from": "Kardzhali",
-        "to": "Q48814"
+        "to": "Q2308287"
     },
     {
         "from": "Kardzhali",
-        "to": "Q35997"
+        "to": "Q344490"
+    },
+    {
+        "from": "Momchilgrad",
+        "to": "Q16632494"
     },
     {
         "from": "Momchilgrad",
@@ -1649,6 +1906,10 @@ export default [
     {
         "from": "Momchilgrad",
         "to": "Q6857497"
+    },
+    {
+        "from": "Momchilgrad",
+        "to": "Q2996335"
     },
     {
         "from": "Momchilgrad",
@@ -1664,7 +1925,7 @@ export default [
     },
     {
         "from": "Dupnitsa",
-        "to": "Q54452"
+        "to": "Q2352376"
     },
     {
         "from": "Dupnitsa",
@@ -1676,7 +1937,7 @@ export default [
     },
     {
         "from": "Dupnitsa",
-        "to": "Q431317"
+        "to": "Q1264710"
     },
     {
         "from": "Dupnitsa",
@@ -1685,6 +1946,10 @@ export default [
     {
         "from": "Dupnitsa",
         "to": "Q239124"
+    },
+    {
+        "from": "Dupnitsa",
+        "to": "Q51933"
     },
     {
         "from": "Kyustendil",
@@ -1728,6 +1993,10 @@ export default [
     },
     {
         "from": "Sapareva Banya",
+        "to": "Q51842"
+    },
+    {
+        "from": "Sapareva Banya",
         "to": "Q1003885"
     },
     {
@@ -1756,7 +2025,19 @@ export default [
     },
     {
         "from": "Lovech",
+        "to": "Q496925"
+    },
+    {
+        "from": "Lovech",
         "to": "Q24008502"
+    },
+    {
+        "from": "Lovech",
+        "to": "Q473654"
+    },
+    {
+        "from": "Lovech",
+        "to": "Q184154"
     },
     {
         "from": "Lovech",
@@ -1772,11 +2053,15 @@ export default [
     },
     {
         "from": "Lukovit",
-        "to": "Q2348288"
+        "to": "Q16425440"
     },
     {
         "from": "Lukovit",
-        "to": "Q18447804"
+        "to": "Q128062"
+    },
+    {
+        "from": "Teteven",
+        "to": "Q242784"
     },
     {
         "from": "Teteven",
@@ -1788,7 +2073,7 @@ export default [
     },
     {
         "from": "Teteven",
-        "to": "Q991318"
+        "to": "Q2738284"
     },
     {
         "from": "Teteven",
@@ -1800,11 +2085,23 @@ export default [
     },
     {
         "from": "Troyan",
+        "to": "Q679389"
+    },
+    {
+        "from": "Troyan",
+        "to": "Q842037"
+    },
+    {
+        "from": "Troyan",
+        "to": "Q472574"
+    },
+    {
+        "from": "Troyan",
         "to": "Q145638"
     },
     {
         "from": "Troyan",
-        "to": "Q212841"
+        "to": "Q208606"
     },
     {
         "from": "Troyan",
@@ -1816,6 +2113,10 @@ export default [
     },
     {
         "from": "Berkovitsa",
+        "to": "Q55084"
+    },
+    {
+        "from": "Berkovitsa",
         "to": "Q104712"
     },
     {
@@ -1824,7 +2125,7 @@ export default [
     },
     {
         "from": "Berkovitsa",
-        "to": "Q161827"
+        "to": "Q740591"
     },
     {
         "from": "Berkovitsa",
@@ -1832,7 +2133,11 @@ export default [
     },
     {
         "from": "Berkovitsa",
-        "to": "Q788026"
+        "to": "Q15093698"
+    },
+    {
+        "from": "Berkovitsa",
+        "to": "Q2041665"
     },
     {
         "from": "Berkovitsa",
@@ -1851,6 +2156,14 @@ export default [
         "to": "Q1011275"
     },
     {
+        "from": "Berkovitsa",
+        "to": "Q2041788"
+    },
+    {
+        "from": "Boychinovtsi",
+        "to": "Q609044"
+    },
+    {
         "from": "Brusartsi",
         "to": "Q846082"
     },
@@ -1860,15 +2173,19 @@ export default [
     },
     {
         "from": "Brusartsi",
-        "to": "Q1027082"
+        "to": "Q1250074"
     },
     {
         "from": "Varshets",
-        "to": "Q3856"
+        "to": "Q59147"
     },
     {
         "from": "Varshets",
         "to": "Q185632"
+    },
+    {
+        "from": "Varshets",
+        "to": "Q838616"
     },
     {
         "from": "Lom",
@@ -1877,6 +2194,10 @@ export default [
     {
         "from": "Lom",
         "to": "Q1250074"
+    },
+    {
+        "from": "Lom",
+        "to": "Q191065"
     },
     {
         "from": "Lom",
@@ -1908,11 +2229,19 @@ export default [
     },
     {
         "from": "Lom",
+        "to": "Q101918"
+    },
+    {
+        "from": "Lom",
         "to": "Q41329"
     },
     {
         "from": "Montana",
         "to": "Q309343"
+    },
+    {
+        "from": "Montana",
+        "to": "Q609044"
     },
     {
         "from": "Montana",
@@ -1928,7 +2257,7 @@ export default [
     },
     {
         "from": "Montana",
-        "to": "Q180139"
+        "to": "Q176082"
     },
     {
         "from": "Montana",
@@ -1948,11 +2277,27 @@ export default [
     },
     {
         "from": "Montana",
-        "to": "Q1782657"
+        "to": "Q9000"
+    },
+    {
+        "from": "Montana",
+        "to": "Q1228523"
     },
     {
         "from": "Montana",
         "to": "Q161919"
+    },
+    {
+        "from": "Montana",
+        "to": "Q17354589"
+    },
+    {
+        "from": "Montana",
+        "to": "Q1275211"
+    },
+    {
+        "from": "Belovo",
+        "to": "Q2459293"
     },
     {
         "from": "Belovo",
@@ -2012,11 +2357,15 @@ export default [
     },
     {
         "from": "Panagyurishte",
+        "to": "Q130994"
+    },
+    {
+        "from": "Panagyurishte",
         "to": "Q200905"
     },
     {
         "from": "Panagyurishte",
-        "to": "Q210470"
+        "to": "Q3595078"
     },
     {
         "from": "Panagyurishte",
@@ -2028,7 +2377,7 @@ export default [
     },
     {
         "from": "Panagyurishte",
-        "to": "Q158088"
+        "to": "Q1155055"
     },
     {
         "from": "Peshtera",
@@ -2060,7 +2409,7 @@ export default [
     },
     {
         "from": "Strelcha",
-        "to": "Q48814"
+        "to": "Q2308287"
     },
     {
         "from": "Strelcha",
@@ -2100,6 +2449,10 @@ export default [
     },
     {
         "from": "Pernik",
+        "to": "Q404261"
+    },
+    {
+        "from": "Pernik",
         "to": "Q129259"
     },
     {
@@ -2108,7 +2461,7 @@ export default [
     },
     {
         "from": "Pernik",
-        "to": "Q158088"
+        "to": "Q1155055"
     },
     {
         "from": "Pernik",
@@ -2120,7 +2473,15 @@ export default [
     },
     {
         "from": "Pernik",
+        "to": "Q57818"
+    },
+    {
+        "from": "Pernik",
         "to": "Q374748"
+    },
+    {
+        "from": "Pernik",
+        "to": "Q288155"
     },
     {
         "from": "Pernik",
@@ -2139,12 +2500,16 @@ export default [
         "to": "Q3448747"
     },
     {
-        "from": "Tran",
-        "to": "Q431317"
+        "from": "Breznik",
+        "to": "Q288155"
     },
     {
         "from": "Tran",
-        "to": "Q788026"
+        "to": "Q1264710"
+    },
+    {
+        "from": "Tran",
+        "to": "Q15093698"
     },
     {
         "from": "Tran",
@@ -2157,6 +2522,10 @@ export default [
     {
         "from": "Tran",
         "to": "Q129259"
+    },
+    {
+        "from": "Belene",
+        "to": "Q34590"
     },
     {
         "from": "Belene",
@@ -2176,6 +2545,10 @@ export default [
     },
     {
         "from": "Belene",
+        "to": "Q1139878"
+    },
+    {
+        "from": "Belene",
         "to": "Q1017287"
     },
     {
@@ -2185,6 +2558,10 @@ export default [
     {
         "from": "Dolna Mitropolia",
         "to": "Q754721"
+    },
+    {
+        "from": "Dolna Mitropolia",
+        "to": "Q2217077"
     },
     {
         "from": "Dolni Dabnik",
@@ -2220,11 +2597,19 @@ export default [
     },
     {
         "from": "Knezha",
-        "to": "Q1754"
+        "to": "Q104231"
+    },
+    {
+        "from": "Knezha",
+        "to": "Q1045426"
     },
     {
         "from": "Knezha",
         "to": "Q107582"
+    },
+    {
+        "from": "Knezha",
+        "to": "Q30030285"
     },
     {
         "from": "Knezha",
@@ -2236,11 +2621,35 @@ export default [
     },
     {
         "from": "Knezha",
-        "to": "Q17151"
+        "to": "Q17054"
+    },
+    {
+        "from": "Knezha",
+        "to": "Q6627746"
     },
     {
         "from": "Knezha",
         "to": "Q1435"
+    },
+    {
+        "from": "Knezha",
+        "to": "Q134892590"
+    },
+    {
+        "from": "Knezha",
+        "to": "Q20541497"
+    },
+    {
+        "from": "Knezha",
+        "to": "Q585187"
+    },
+    {
+        "from": "Knezha",
+        "to": "Q570146"
+    },
+    {
+        "from": "Knezha",
+        "to": "Q1896924"
     },
     {
         "from": "Levski",
@@ -2280,6 +2689,14 @@ export default [
     },
     {
         "from": "Pleven",
+        "to": "Q123766"
+    },
+    {
+        "from": "Pleven",
+        "to": "Q208149"
+    },
+    {
+        "from": "Pleven",
         "to": "Q41572"
     },
     {
@@ -2288,7 +2705,7 @@ export default [
     },
     {
         "from": "Pleven",
-        "to": "Q158088"
+        "to": "Q1155055"
     },
     {
         "from": "Pleven",
@@ -2304,7 +2721,7 @@ export default [
     },
     {
         "from": "Pleven",
-        "to": "Q188478"
+        "to": "Q188503"
     },
     {
         "from": "Pleven",
@@ -2312,11 +2729,19 @@ export default [
     },
     {
         "from": "Pleven",
-        "to": "Q28996"
+        "to": "Q13867196"
+    },
+    {
+        "from": "Pleven",
+        "to": "Q713989"
     },
     {
         "from": "Pleven",
         "to": "Q200036"
+    },
+    {
+        "from": "Pleven",
+        "to": "Q33532"
     },
     {
         "from": "Pleven",
@@ -2371,6 +2796,10 @@ export default [
         "to": "Q11506"
     },
     {
+        "from": "Kaloyanovo",
+        "to": "Q103842904"
+    },
+    {
         "from": "Karlovo",
         "to": "Q237655"
     },
@@ -2416,7 +2845,15 @@ export default [
     },
     {
         "from": "Karlovo",
+        "to": "Q574429"
+    },
+    {
+        "from": "Karlovo",
         "to": "Q2684"
+    },
+    {
+        "from": "Karlovo",
+        "to": "Q807311"
     },
     {
         "from": "Karlovo",
@@ -2436,7 +2873,7 @@ export default [
     },
     {
         "from": "Plovdiv",
-        "to": "Q17151"
+        "to": "Q6627746"
     },
     {
         "from": "Plovdiv",
@@ -2456,11 +2893,11 @@ export default [
     },
     {
         "from": "Plovdiv",
-        "to": "Q54452"
+        "to": "Q2352376"
     },
     {
         "from": "Plovdiv",
-        "to": "Q1223508"
+        "to": "Q1125333"
     },
     {
         "from": "Plovdiv",
@@ -2476,7 +2913,7 @@ export default [
     },
     {
         "from": "Plovdiv",
-        "to": "Q2079"
+        "to": "Q6308"
     },
     {
         "from": "Plovdiv",
@@ -2560,7 +2997,7 @@ export default [
     },
     {
         "from": "Plovdiv",
-        "to": "Q200078"
+        "to": "Q132936"
     },
     {
         "from": "Plovdiv",
@@ -2592,7 +3029,7 @@ export default [
     },
     {
         "from": "Rakovski",
-        "to": "Q48814"
+        "to": "Q2308287"
     },
     {
         "from": "Rakovski",
@@ -2612,7 +3049,7 @@ export default [
     },
     {
         "from": "Sadovo",
-        "to": "Q205832"
+        "to": "Q842235"
     },
     {
         "from": "Sadovo",
@@ -2632,6 +3069,10 @@ export default [
     },
     {
         "from": "Sadovo",
+        "to": "Q857734"
+    },
+    {
+        "from": "Sadovo",
         "to": "Q1632431"
     },
     {
@@ -2639,8 +3080,16 @@ export default [
         "to": "Q1044023"
     },
     {
+        "from": "Sadovo",
+        "to": "Q52209"
+    },
+    {
         "from": "Hisarya",
-        "to": "Q47530410"
+        "to": "Q3560056"
+    },
+    {
+        "from": "Hisarya",
+        "to": "Q21380"
     },
     {
         "from": "Hisarya",
@@ -2673,6 +3122,10 @@ export default [
     {
         "from": "Kubrat",
         "to": "Q162698"
+    },
+    {
+        "from": "Kubrat",
+        "to": "Q6065993"
     },
     {
         "from": "Kubrat",
@@ -2712,6 +3165,10 @@ export default [
     },
     {
         "from": "Razgrad",
+        "to": "Q47135"
+    },
+    {
+        "from": "Razgrad",
         "to": "Q42007"
     },
     {
@@ -2720,7 +3177,15 @@ export default [
     },
     {
         "from": "Razgrad",
+        "to": "Q6837"
+    },
+    {
+        "from": "Razgrad",
         "to": "Q658437"
+    },
+    {
+        "from": "Tsar Kaloyan",
+        "to": "Q2216474"
     },
     {
         "from": "Borovo",
@@ -2728,7 +3193,7 @@ export default [
     },
     {
         "from": "Borovo",
-        "to": "Q2717356"
+        "to": "Q5117279"
     },
     {
         "from": "Vetovo",
@@ -2768,7 +3233,7 @@ export default [
     },
     {
         "from": "Dve Mogili",
-        "to": "Q834898"
+        "to": "Q5070404"
     },
     {
         "from": "Dve Mogili",
@@ -2792,11 +3257,15 @@ export default [
     },
     {
         "from": "Ruse",
+        "to": "Q3463084"
+    },
+    {
+        "from": "Ruse",
         "to": "Q163973"
     },
     {
         "from": "Ruse",
-        "to": "Q202351"
+        "to": "Q193055"
     },
     {
         "from": "Ruse",
@@ -2820,7 +3289,15 @@ export default [
     },
     {
         "from": "Ruse",
-        "to": "Q207801"
+        "to": "Q15914"
+    },
+    {
+        "from": "Ruse",
+        "to": "Q15622309"
+    },
+    {
+        "from": "Ruse",
+        "to": "Q1982525"
     },
     {
         "from": "Ruse",
@@ -2832,7 +3309,11 @@ export default [
     },
     {
         "from": "Ruse",
-        "to": "Q216075"
+        "to": "Q11840144"
+    },
+    {
+        "from": "Ruse",
+        "to": "Q360178"
     },
     {
         "from": "Ruse",
@@ -2867,6 +3348,10 @@ export default [
         "to": "Q5053057"
     },
     {
+        "from": "Kaynardzha",
+        "to": "Q188505"
+    },
+    {
         "from": "Silistra",
         "to": "Q156717"
     },
@@ -2888,7 +3373,7 @@ export default [
     },
     {
         "from": "Silistra",
-        "to": "Q157050"
+        "to": "Q2088561"
     },
     {
         "from": "Silistra",
@@ -2904,7 +3389,11 @@ export default [
     },
     {
         "from": "Silistra",
-        "to": "Q11538015"
+        "to": "Q754385"
+    },
+    {
+        "from": "Silistra",
+        "to": "Q17175862"
     },
     {
         "from": "Silistra",
@@ -2916,7 +3405,7 @@ export default [
     },
     {
         "from": "Sitovo",
-        "to": "Q10777727"
+        "to": "Q639014"
     },
     {
         "from": "Sitovo",
@@ -2936,11 +3425,19 @@ export default [
     },
     {
         "from": "Kotel",
+        "to": "Q12602"
+    },
+    {
+        "from": "Kotel",
         "to": "Q5116838"
     },
     {
         "from": "Kotel",
         "to": "Q2670181"
+    },
+    {
+        "from": "Nova Zagora",
+        "to": "Q18468107"
     },
     {
         "from": "Sliven",
@@ -2968,7 +3465,7 @@ export default [
     },
     {
         "from": "Sliven",
-        "to": "Q182009"
+        "to": "Q129387"
     },
     {
         "from": "Sliven",
@@ -3004,7 +3501,7 @@ export default [
     },
     {
         "from": "Banite",
-        "to": "Q210296"
+        "to": "Q19896642"
     },
     {
         "from": "Banite",
@@ -3020,7 +3517,7 @@ export default [
     },
     {
         "from": "Banite",
-        "to": "Q4295709"
+        "to": "Q1057721"
     },
     {
         "from": "Borino",
@@ -3048,11 +3545,23 @@ export default [
     },
     {
         "from": "Zlatograd",
+        "to": "Q56254242"
+    },
+    {
+        "from": "Zlatograd",
         "to": "Q2072599"
     },
     {
         "from": "Madan",
+        "to": "Q56254242"
+    },
+    {
+        "from": "Madan",
         "to": "Q1739185"
+    },
+    {
+        "from": "Madan",
+        "to": "Q1437611"
     },
     {
         "from": "Madan",
@@ -3072,7 +3581,7 @@ export default [
     },
     {
         "from": "Madan",
-        "to": "Q49371886"
+        "to": "Q31190934"
     },
     {
         "from": "Nedelino",
@@ -3084,7 +3593,7 @@ export default [
     },
     {
         "from": "Rudozem",
-        "to": "Q210296"
+        "to": "Q19896642"
     },
     {
         "from": "Smolyan",
@@ -3093,6 +3602,10 @@ export default [
     {
         "from": "Smolyan",
         "to": "Q14891"
+    },
+    {
+        "from": "Smolyan",
+        "to": "Q24011335"
     },
     {
         "from": "Smolyan",
@@ -3112,6 +3625,10 @@ export default [
     },
     {
         "from": "Smolyan",
+        "to": "Q831737"
+    },
+    {
+        "from": "Smolyan",
         "to": "Q51444"
     },
     {
@@ -3121,6 +3638,10 @@ export default [
     {
         "from": "Smolyan",
         "to": "Q857056"
+    },
+    {
+        "from": "Smolyan",
+        "to": "Q37801"
     },
     {
         "from": "Smolyan",
@@ -3147,6 +3668,10 @@ export default [
         "to": "Q754721"
     },
     {
+        "from": "Gorna Malina",
+        "to": "Q269978"
+    },
+    {
         "from": "Dolna banya",
         "to": "Q2671052"
     },
@@ -3159,6 +3684,10 @@ export default [
         "to": "Q846434"
     },
     {
+        "from": "Dragoman",
+        "to": "Q1061076"
+    },
+    {
         "from": "Elin Pelin",
         "to": "Q164001"
     },
@@ -3168,7 +3697,7 @@ export default [
     },
     {
         "from": "Etropole",
-        "to": "Q180290"
+        "to": "Q15774707"
     },
     {
         "from": "Etropole",
@@ -3196,11 +3725,15 @@ export default [
     },
     {
         "from": "Ihtiman",
-        "to": "Q134772472"
+        "to": "Q2070944"
     },
     {
         "from": "Ihtiman",
         "to": "Q153684"
+    },
+    {
+        "from": "Kostenets",
+        "to": "Q432621"
     },
     {
         "from": "Kostinbrod",
@@ -3208,11 +3741,15 @@ export default [
     },
     {
         "from": "Kostinbrod",
-        "to": "Q788026"
+        "to": "Q15093698"
     },
     {
         "from": "Pirdop",
         "to": "Q135572"
+    },
+    {
+        "from": "Pirdop",
+        "to": "Q973673"
     },
     {
         "from": "Pravets",
@@ -3220,11 +3757,11 @@ export default [
     },
     {
         "from": "Pravets",
-        "to": "Q30029920"
+        "to": "Q55958"
     },
     {
         "from": "Pravets",
-        "to": "Q49289417"
+        "to": "Q550963"
     },
     {
         "from": "Pravets",
@@ -3240,11 +3777,27 @@ export default [
     },
     {
         "from": "Samokov",
+        "to": "Q490863"
+    },
+    {
+        "from": "Samokov",
         "to": "Q3087537"
     },
     {
         "from": "Svoge",
+        "to": "Q973673"
+    },
+    {
+        "from": "Svoge",
+        "to": "Q782928"
+    },
+    {
+        "from": "Svoge",
         "to": "Q826511"
+    },
+    {
+        "from": "Svoge",
+        "to": "Q7938"
     },
     {
         "from": "Svoge",
@@ -3268,11 +3821,15 @@ export default [
     },
     {
         "from": "Slivnitsa",
-        "to": "Q788026"
+        "to": "Q15093698"
     },
     {
         "from": "Stolichna Municipality",
-        "to": "Q19689"
+        "to": "Q229892"
+    },
+    {
+        "from": "Stolichna Municipality",
+        "to": "Q16289"
     },
     {
         "from": "Stolichna Municipality",
@@ -3324,7 +3881,19 @@ export default [
     },
     {
         "from": "Gurkovo",
-        "to": "Q34796912"
+        "to": "Q1117389"
+    },
+    {
+        "from": "Gurkovo",
+        "to": "Q269978"
+    },
+    {
+        "from": "Kazanlak",
+        "to": "Q1021363"
+    },
+    {
+        "from": "Kazanlak",
+        "to": "Q273922"
     },
     {
         "from": "Kazanlak",
@@ -3344,7 +3913,7 @@ export default [
     },
     {
         "from": "Kazanlak",
-        "to": "Q34664"
+        "to": "Q617375"
     },
     {
         "from": "Kazanlak",
@@ -3352,7 +3921,7 @@ export default [
     },
     {
         "from": "Kazanlak",
-        "to": "Q216990"
+        "to": "Q233637"
     },
     {
         "from": "Kazanlak",
@@ -3368,7 +3937,11 @@ export default [
     },
     {
         "from": "Kazanlak",
-        "to": "Q183551"
+        "to": "Q184594"
+    },
+    {
+        "from": "Kazanlak",
+        "to": "Q1280"
     },
     {
         "from": "Kazanlak",
@@ -3376,7 +3949,7 @@ export default [
     },
     {
         "from": "Kazanlak",
-        "to": "Q126540850"
+        "to": "Q110484710"
     },
     {
         "from": "Kazanlak",
@@ -3392,11 +3965,27 @@ export default [
     },
     {
         "from": "Kazanlak",
+        "to": "Q50444"
+    },
+    {
+        "from": "Kazanlak",
+        "to": "Q103867"
+    },
+    {
+        "from": "Kazanlak",
         "to": "Q201722"
     },
     {
         "from": "Kazanlak",
+        "to": "Q932648"
+    },
+    {
+        "from": "Kazanlak",
         "to": "Q188673"
+    },
+    {
+        "from": "Maglizh",
+        "to": "Q2635137"
     },
     {
         "from": "Maglizh",
@@ -3420,6 +4009,10 @@ export default [
     },
     {
         "from": "Pavel banya",
+        "to": "Q58581"
+    },
+    {
+        "from": "Pavel banya",
         "to": "Q24019982"
     },
     {
@@ -3432,6 +4025,10 @@ export default [
     },
     {
         "from": "Stara Zagora",
+        "to": "Q3364"
+    },
+    {
+        "from": "Stara Zagora",
         "to": "Q201442"
     },
     {
@@ -3440,7 +4037,7 @@ export default [
     },
     {
         "from": "Stara Zagora",
-        "to": "Q279"
+        "to": "Q16209"
     },
     {
         "from": "Stara Zagora",
@@ -3452,7 +4049,7 @@ export default [
     },
     {
         "from": "Stara Zagora",
-        "to": "Q178405"
+        "to": "Q578879"
     },
     {
         "from": "Stara Zagora",
@@ -3484,15 +4081,15 @@ export default [
     },
     {
         "from": "Popovo",
-        "to": "Q30027547"
+        "to": "Q52161"
     },
     {
         "from": "Popovo",
-        "to": "Q164954"
+        "to": "Q3136745"
     },
     {
         "from": "Popovo",
-        "to": "Q16898097"
+        "to": "Q736296"
     },
     {
         "from": "Popovo",
@@ -3540,6 +4137,10 @@ export default [
     },
     {
         "from": "Targovishte",
+        "to": "Q564813"
+    },
+    {
+        "from": "Targovishte",
         "to": "Q188673"
     },
     {
@@ -3552,6 +4153,10 @@ export default [
     },
     {
         "from": "Targovishte",
+        "to": "Q193929"
+    },
+    {
+        "from": "Targovishte",
         "to": "Q180176"
     },
     {
@@ -3560,7 +4165,7 @@ export default [
     },
     {
         "from": "Dimitrovgrad",
-        "to": "Q216990"
+        "to": "Q233637"
     },
     {
         "from": "Dimitrovgrad",
@@ -3588,6 +4193,10 @@ export default [
     },
     {
         "from": "Dimitrovgrad",
+        "to": "Q33453356"
+    },
+    {
+        "from": "Dimitrovgrad",
         "to": "Q235571"
     },
     {
@@ -3596,7 +4205,7 @@ export default [
     },
     {
         "from": "Dimitrovgrad",
-        "to": "Q43387"
+        "to": "Q83102"
     },
     {
         "from": "Dimitrovgrad",
@@ -3604,7 +4213,7 @@ export default [
     },
     {
         "from": "Dimitrovgrad",
-        "to": "Q182009"
+        "to": "Q129387"
     },
     {
         "from": "Dimitrovgrad",
@@ -3623,8 +4232,16 @@ export default [
         "to": "Q775225"
     },
     {
+        "from": "Dimitrovgrad",
+        "to": "Q6716"
+    },
+    {
         "from": "Ivaylovgrad",
         "to": "Q747508"
+    },
+    {
+        "from": "Ivaylovgrad",
+        "to": "Q313538"
     },
     {
         "from": "Lyubimets",
@@ -3636,11 +4253,11 @@ export default [
     },
     {
         "from": "Lyubimets",
-        "to": "Q268619"
+        "to": "Q15963247"
     },
     {
         "from": "Lyubimets",
-        "to": "Q17151"
+        "to": "Q6627746"
     },
     {
         "from": "Mineralni bani",
@@ -3668,11 +4285,15 @@ export default [
     },
     {
         "from": "Svilengrad",
-        "to": "Q43387"
+        "to": "Q83102"
     },
     {
         "from": "Svilengrad",
-        "to": "Q932648"
+        "to": "Q3557808"
+    },
+    {
+        "from": "Svilengrad",
+        "to": "Q3659144"
     },
     {
         "from": "Svilengrad",
@@ -3724,6 +4345,10 @@ export default [
     },
     {
         "from": "Haskovo",
+        "to": "Q470682"
+    },
+    {
+        "from": "Haskovo",
         "to": "Q198190"
     },
     {
@@ -3737,6 +4362,14 @@ export default [
     {
         "from": "Haskovo",
         "to": "Q2222550"
+    },
+    {
+        "from": "Haskovo",
+        "to": "Q1137454"
+    },
+    {
+        "from": "Haskovo",
+        "to": "Q1769929"
     },
     {
         "from": "Haskovo",
@@ -3760,7 +4393,11 @@ export default [
     },
     {
         "from": "Haskovo",
-        "to": "Q43387"
+        "to": "Q273525"
+    },
+    {
+        "from": "Haskovo",
+        "to": "Q83102"
     },
     {
         "from": "Haskovo",
@@ -3768,11 +4405,11 @@ export default [
     },
     {
         "from": "Haskovo",
-        "to": "Q146317"
+        "to": "Q188890"
     },
     {
         "from": "Haskovo",
-        "to": "Q104036"
+        "to": "Q858852"
     },
     {
         "from": "Veliki Preslav",
@@ -3804,6 +4441,10 @@ export default [
     },
     {
         "from": "Kaspichan",
+        "to": "Q50090"
+    },
+    {
+        "from": "Kaspichan",
         "to": "Q2083559"
     },
     {
@@ -3820,7 +4461,7 @@ export default [
     },
     {
         "from": "Shumen",
-        "to": "Q188478"
+        "to": "Q188503"
     },
     {
         "from": "Shumen",
@@ -3844,6 +4485,10 @@ export default [
     },
     {
         "from": "Bolyarovo",
+        "to": "Q370118"
+    },
+    {
+        "from": "Bolyarovo",
         "to": "Q1019887"
     },
     {
@@ -3864,7 +4509,7 @@ export default [
     },
     {
         "from": "Elhovo",
-        "to": "Q1015437"
+        "to": "Q49106067"
     },
     {
         "from": "Straldzha",
@@ -3888,7 +4533,15 @@ export default [
     },
     {
         "from": "Tundzha",
+        "to": "Q597789"
+    },
+    {
+        "from": "Tundzha",
         "to": "Q808036"
+    },
+    {
+        "from": "Yambol",
+        "to": "Q128466"
     },
     {
         "from": "Yambol",
@@ -3904,7 +4557,7 @@ export default [
     },
     {
         "from": "Yambol",
-        "to": "Q43387"
+        "to": "Q83102"
     },
     {
         "from": "Yambol",

@@ -11,6 +11,7 @@ import createCountriesLayer, {
   type CountryFeatureWithId,
 } from "../layers/CountriesLayer.ts";
 import Legend from "./Legend.tsx";
+import twinning from "../data/twinning";
 // import countryCounts from "../data/countryCounts.ts";
 // import { Map } from "react-map-gl/maplibre";
 
@@ -68,8 +69,10 @@ const towns: Town[] = rawTowns.map((t) => ({
   coordinates: [t.coordinates[0], t.coordinates[1]],
 }));
 
-const countryCounts = towns
-  .map((t) => t.country)
+const townIndex = Object.fromEntries(towns.map((t) => [t.id, t]));
+
+const countryCountryByRelationNumber = twinning
+  .map((t) => townIndex[t.to].country)
   .reduce(
     (occurences, item) => {
       occurences[item] = (occurences[item] || 0) + 1;
@@ -77,6 +80,22 @@ const countryCounts = towns
     },
     {} as { [k: string]: number },
   );
+
+console.log(countryCountryByRelationNumber);
+
+// console.log(countryCountryByRelationNumber);
+
+// const countryCounts = towns
+//   .map((t) => t.country)
+//   .reduce(
+//     (occurences, item) => {
+//       occurences[item] = (occurences[item] || 0) + 1;
+//       return occurences;
+//     },
+//     {} as { [k: string]: number },
+//   );
+
+const countryCounts = countryCountryByRelationNumber;
 
 delete countryCounts["Bulgaria"];
 
@@ -94,11 +113,6 @@ const TwinTownsMap = () => {
   const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
   const [hoveredArc, setHoveredArc] = useState<Arc | null>(null);
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
-
-  const townIndex = useMemo(
-    () => Object.fromEntries(towns.map((t) => [t.id, t])),
-    [towns],
-  );
 
   const updateVisible = (townID: string) => {
     const visibleArcs = arcs.filter(
