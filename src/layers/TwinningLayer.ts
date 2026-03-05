@@ -1,5 +1,5 @@
 import { ArcLayer } from "deck.gl";
-import type { Arc, Town } from "../components/TwinTownsMap";
+import type { Arc, Town } from "@/types.ts";
 
 interface Props {
     data: Arc[],

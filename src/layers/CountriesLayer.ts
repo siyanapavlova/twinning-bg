@@ -1,17 +1,7 @@
+import type { CountryFeature, CountryFeatureWithId, CountryProperties } from "@/types";
 import {GeoJsonLayer } from "deck.gl";
-import type { FeatureCollection, Geometry, Feature } from 'geojson';
+import type { FeatureCollection, Geometry } from 'geojson';
 
-export interface CountryProperties {
-  id: string;
-  name: string;
-  coordinates: number[],
-}
-
-export type CountryFeature =
-  Feature<Geometry, CountryProperties>;
-
-export type CountryFeatureWithId =
-  Feature<Geometry, CountryProperties> & { id: string };
 
 interface Props {
   data: FeatureCollection<Geometry, CountryProperties>;

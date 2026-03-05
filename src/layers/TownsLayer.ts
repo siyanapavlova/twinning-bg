@@ -1,5 +1,5 @@
 import { ScatterplotLayer } from "deck.gl";
-import type { Town } from "../components/TwinTownsMap";
+import type { Town } from "@/types.ts";
 import "../index.css";
 
 interface Props {

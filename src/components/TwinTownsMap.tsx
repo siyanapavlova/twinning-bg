@@ -6,10 +6,13 @@ import { useEffect, useMemo, useState } from "react";
 import createTownsLayer from "../layers/TownsLayer";
 import createTwinningLayer from "../layers/TwinningLayer";
 import countries from "../data/countries.ts";
-import createCountriesLayer, {
-  type CountryFeature,
-  type CountryFeatureWithId,
-} from "../layers/CountriesLayer.ts";
+import createCountriesLayer from "../layers/CountriesLayer.ts";
+import type {
+  CountryFeature,
+  CountryFeatureWithId,
+  Town,
+  Arc,
+} from "@/types.ts";
 import Legend from "./Legend.tsx";
 import twinning from "../data/twinning";
 import DisplaySelection from "./DisplaySelection.tsx";
@@ -39,23 +42,6 @@ const tealScale = (t: number): [number, number, number] => {
     Math.round(min[2] + t * (max[2] - min[2])),
   ];
 };
-
-export interface Town {
-  id: string;
-  name: string;
-  country: string;
-  coordinates: [number, number];
-}
-
-export interface Country {
-  id: string;
-  name: string;
-}
-
-export interface Arc {
-  from: string;
-  to: string;
-}
 
 const INITIAL_VIEW_STATE: MapViewState = {
   longitude: 10,
