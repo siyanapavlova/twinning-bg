@@ -97,6 +97,9 @@ const createCountriesLayer = ({data, selectedCountry, hoveredCountry, colorScale
 
           onClick(info.object);
         },
+        transitions: {
+          getFillColor: 100,
+        }
     });
 
 export default createCountriesLayer;
