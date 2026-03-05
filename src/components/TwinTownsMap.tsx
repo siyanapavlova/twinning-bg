@@ -2,7 +2,7 @@ import { DeckGL } from "@deck.gl/react";
 import type { MapViewState } from "@deck.gl/core";
 import rawTowns from "../data/towns";
 import arcs from "../data/twinning";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import createTownsLayer from "../layers/TownsLayer";
 import createTwinningLayer from "../layers/TwinningLayer";
 import countries from "../data/countries.ts";
@@ -115,6 +115,14 @@ const TwinTownsMap = () => {
   const [showAllTowns, setShowAllTowns] = useState<boolean>(false);
   const [showCountries, setShowCountries] = useState<boolean>(true);
 
+  const [fontReady, setFontReady] = useState<boolean>(false);
+
+  useEffect(() => {
+    document.fonts.load('12px "RobotoDeckGL"').then(() => {
+      setFontReady(true);
+    });
+  }, []);
+
   const updateVisible = (townID: string) => {
     const visibleArcs = arcs.filter(
       (a) => a.from === townID || a.to === townID,
@@ -172,7 +180,7 @@ const TwinTownsMap = () => {
       }),
 
       createTownsLayer({
-        townData: towns,
+        data: towns,
         activeTowns: activeTowns,
         allTownsActive: allTownsActive,
         hoveredTown: hoveredTown,
@@ -180,6 +188,8 @@ const TwinTownsMap = () => {
         townSelection: townSelection,
         countrySelection: countrySelection,
         showAllTowns: showAllTowns,
+        zoom: viewState.zoom,
+        fontReady: fontReady,
         onClick: (town) => {
           updateVisible(town.id);
           setTownSelection(true);
@@ -218,6 +228,8 @@ const TwinTownsMap = () => {
       activeTowns,
       allTownsActive,
       showAllTowns,
+      viewState.zoom,
+      fontReady,
     ],
   );
 

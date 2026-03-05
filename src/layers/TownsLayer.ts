@@ -1,8 +1,9 @@
 import { ScatterplotLayer } from "deck.gl";
 import type { Town } from "../components/TwinTownsMap";
+import "../index.css";
 
 interface Props {
-    townData: Town[],
+    data: Town[],
     activeTowns: Town[],
     allTownsActive: boolean,
     hoveredTown: string | null,
@@ -10,6 +11,8 @@ interface Props {
     townSelection: boolean,
     countrySelection: boolean,
     showAllTowns: boolean,
+    zoom: number,
+    fontReady: boolean,
     onClick: (town: Town) => void;
     onHover: (town: Town | null) => void;
 }
@@ -18,7 +21,7 @@ interface Props {
 const DIM_ALPHA = 100;
 
 const createTownsLayer = ({
-    townData,
+    data,
     activeTowns,
     allTownsActive,
     hoveredTown,
@@ -26,13 +29,22 @@ const createTownsLayer = ({
     townSelection,
     countrySelection,
     showAllTowns,
+    zoom,
+    fontReady,
     onHover,
     onClick
-  }: Props) => {return [
+  }: Props) => {
+    
+    // const labelCharset = Array.from(
+    //   new Set(data.flatMap(t => [...t.name]))
+    // ).join("");
 
+    // console.log(labelCharset);
+    
+    return [
     new ScatterplotLayer({
         id: "towns-pick",
-        data: showAllTowns ? townData : activeTowns,
+        data: showAllTowns ? data : activeTowns,
         pickable: true,
         pickingRadius: 100,
         getPosition: (t) => t.coordinates,
@@ -46,7 +58,7 @@ const createTownsLayer = ({
     }),
     new ScatterplotLayer({
       id: "towns-render",
-      data: showAllTowns ? townData : activeTowns,
+      data: showAllTowns ? data : activeTowns,
       pickable: false,
       getPosition: (t) => t.coordinates,
       getRadius: (town) => {
@@ -71,7 +83,35 @@ const createTownsLayer = ({
         getFillColor: 100,
         getRadius: 150,
       }
-    })
+    }),
+
+    
+
+    // fontReady && new TextLayer({
+    //   id: "town-labels",
+    //   data,
+    //   getPosition: (t) => t.coordinates,
+    //   getText: (t) => t.name,
+
+    //   // fontFamily: "RobotoDeckGL, Arial Unicode MS, sans-serif",
+    //   fontFamily: "Arial Unicode MS", 
+
+    //   fontSettings: {
+    //     // fontFamily: "RobotoDeckGL",
+    //     characterSet: "auto",
+    //   //   buffer: 3,
+    //     sdf: true,
+    //   },
+
+    //   getSize: () => Math.max(20, zoom * 1.5),
+    //   getColor: [30, 30, 30],
+    //   getTextAnchor: "start",
+    //   getAlignmentBaseline: "center",
+    //   getPixelOffset: [8, 0],
+    //   sizeUnits: "pixels",
+    //   billboard: true,
+    //   visible: zoom > 7,
+    // })
   ]}
 
 
