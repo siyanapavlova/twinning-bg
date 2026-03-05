@@ -1,4 +1,4 @@
-import TwinMap from "./components/TwinMap";
+import TwinTownsMap from "./components/TwinTownsMap";
 import NavBar from "./components//NavBar";
 import "./App.css";
 
@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="App">
       <NavBar></NavBar>
-      <TwinMap />
+      <TwinTownsMap />
     </div>
   );
 };

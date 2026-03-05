@@ -1,1 +1,5 @@
-export default [{ from: "paris", to: "rome" }];
+export default [
+  { from: "belene", to: "paris" },
+  { from: "rome", to: "belene" },
+  { from: "paris", to: "rome" },
+];
