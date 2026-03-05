@@ -1,7 +1,6 @@
 import { ScatterplotLayer } from "deck.gl";
 import type { Town } from "../components/TwinTownsMap";
 
-
 interface Props {
     data: Town[],
     activeTowns: string[],
@@ -26,21 +25,9 @@ const createTownsLayer = ({data, activeTowns, allTownsActive, hoveredTown, selec
         radiusUnits: "pixels",
         getFillColor: [0,0,0,0],
 
-        onClick: (info, event) => {
-          if (info.object) {
-            onClick(info.object);
-            event.stopPropagation();
-          }
-        },
+        onClick: (info) => onClick(info.object ?? null),
 
-        onHover: (info, event) => {
-          onHover(info.object ?? null);
-          if (info.object) {
-            event.stopPropagation();  // <- stop drag when hovering town
-          }
-          // event.stopPropagation();
-          // onHover(info.object ? info.object : null);
-        },
+        onHover: (info) => onHover(info.object ?? null),
     }),
     new ScatterplotLayer({
       id: "towns-render",
