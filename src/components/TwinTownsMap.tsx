@@ -20,6 +20,8 @@ const tooltipStyle = {
   borderRadius: "4px",
   fontSize: "12px",
   pointerEvents: "none",
+  top: "12px",
+  left: "12px",
 };
 
 const tealScale = (t: number): [number, number, number] => {
