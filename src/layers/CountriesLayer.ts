@@ -15,6 +15,7 @@ interface Props {
   data: FeatureCollection<Geometry, CountryProperties>;
   selectedCountry: string;
   onClick: (country: CountryFeature) => void;
+  colorScale: (t: number) => [number, number, number];
 }
 
 const counts = Object.values(countryCounts);
@@ -40,18 +41,7 @@ const logNormalize = (value: number): number => {
 //   return [v, v, v];
 // }
 
-const tealScale = (t: number): [number, number, number] => {
-  const min = [220, 240, 240];
-  const max = [0, 120, 120];
-
-  return [
-    Math.round(min[0] + t * (max[0] - min[0])),
-    Math.round(min[1] + t * (max[1] - min[1])),
-    Math.round(min[2] + t * (max[2] - min[2])),
-  ];
-};
-
-const createCountriesLayer = ({data, selectedCountry, onClick}: Props) =>
+const createCountriesLayer = ({data, selectedCountry, colorScale, onClick}: Props) =>
     new GeoJsonLayer<CountryProperties>({
         id: "countries",
         data: data,
@@ -64,7 +54,7 @@ const createCountriesLayer = ({data, selectedCountry, onClick}: Props) =>
           if (country.properties.name === selectedCountry) return [255, 255, 150];
           if (countryCounts[country.properties.name]) {
             const count = countryCounts[country.properties.name];
-            return tealScale(logNormalize(count));
+            return colorScale(logNormalize(count));
           }
 
           return [230, 230, 250];

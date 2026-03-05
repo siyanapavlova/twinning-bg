@@ -92,6 +92,7 @@ const TwinTownsMap = () => {
       createCountriesLayer({
         data: countries,
         selectedCountry: selectedCountry ? selectedCountry : "",
+        colorScale: tealScale,
         onClick: (country: CountryFeature) => {
           updateVisibleByCountry(country.id);
           setSelectedCountry(country.properties.name);
