@@ -16,7 +16,7 @@ interface Props {
   selectedCountry: string | null;
   hoveredCountry: string | null;
   onClick: (country: CountryFeature) => void;
-  onHover: (country: CountryFeature) => void;
+  onHover: (country: CountryFeature | null) => void;
   colorScale: (t: number) => [number, number, number];
 }
 
@@ -71,13 +71,18 @@ const createCountriesLayer = ({data, selectedCountry, hoveredCountry, colorScale
         lineWidthUnits: "pixels",
 
         onHover: info => {
-          const name = info.object?.properties.name;
+          if (info.object) {
+            const name = info.object?.properties.name;
 
-          if (!name || !countryCounts[name]) {
-            return;
+            if (!name || !countryCounts[name]) {
+              onHover(null);
+              return;
+            }
+
+            onHover(info.object);
+          } else {
+            onHover(null);
           }
-
-          onHover(info.object);
         },
 
         onClick: (info) => {

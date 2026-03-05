@@ -101,9 +101,8 @@ const TwinTownsMap = () => {
           updateVisibleByCountry(country.id);
           setSelectedCountry(country.properties.name);
         },
-        onHover: (country: CountryFeature) => {
-          console.log(country.properties.name);
-          setHoveredCountry(country.properties.name);
+        onHover: (country: CountryFeature | null) => {
+          setHoveredCountry(country?.properties.name ?? null);
         },
       }),
 
