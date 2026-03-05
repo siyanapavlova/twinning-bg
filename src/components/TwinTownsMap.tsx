@@ -166,6 +166,7 @@ const TwinTownsMap = () => {
         maxCount: maxTwins,
         selectedCountry: selectedCountry ? selectedCountry : "",
         hoveredCountry: hoveredCountry,
+        showCountries: showCountries,
         colorScale: tealScale,
         onClick: (country: CountryFeatureWithId) => {
           updateVisibleByCountry(country.properties.name);
@@ -228,6 +229,7 @@ const TwinTownsMap = () => {
       activeTowns,
       allTownsActive,
       showAllTowns,
+      showCountries,
       viewState.zoom,
       fontReady,
     ],
@@ -299,7 +301,14 @@ const TwinTownsMap = () => {
         onChangeTownSelection={(checked) => setShowAllTowns(checked)}
         onChangeCountrySelection={(checked) => setShowCountries(checked)}
       ></DisplaySelection>
-      <Legend min={minTwins} max={maxTwins} ticks={4} colorScale={tealScale} />
+      {showCountries && (
+        <Legend
+          min={minTwins}
+          max={maxTwins}
+          ticks={4}
+          colorScale={tealScale}
+        />
+      )}
     </>
   );
 };

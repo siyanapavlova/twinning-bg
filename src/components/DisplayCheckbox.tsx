@@ -16,6 +16,7 @@ const DisplayCheckbox = ({ id, label, defaultChecked, onChange }: Props) => {
       variant="solid"
       defaultChecked={defaultChecked}
       onCheckedChange={({ checked }) => onChange(checked === true)}
+      marginX={2}
     >
       <Checkbox.HiddenInput />
       <Checkbox.Control />

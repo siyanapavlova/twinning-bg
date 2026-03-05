@@ -20,6 +20,7 @@ interface Props {
   maxCount: number,
   selectedCountry: string | null;
   hoveredCountry: string | null;
+  showCountries: boolean,
   onClick: (country: CountryFeatureWithId) => void;
   onHover: (country: CountryFeature | null) => void;
   colorScale: (t: number) => [number, number, number];
@@ -34,7 +35,7 @@ interface Props {
 //   return [v, v, v];
 // }
 
-const createCountriesLayer = ({data, countryCounts, minCount, maxCount, selectedCountry, hoveredCountry, colorScale, onClick, onHover}: Props) => {
+const createCountriesLayer = ({data, countryCounts, minCount, maxCount, selectedCountry, hoveredCountry, showCountries, colorScale, onClick, onHover}: Props) => {
   const logNormalize = (value: number): number => {
   // Safety check
   if (value <= 0) return 0;
@@ -57,6 +58,7 @@ const createCountriesLayer = ({data, countryCounts, minCount, maxCount, selected
         getFillColor: (country) => {
           if (country.properties.name === selectedCountry) return [247, 200, 96];
           if (country.properties.name === hoveredCountry) return [240, 240, 200];
+          if (!showCountries) return [200, 200, 220];
           if (countryCounts[country.properties.name]) {
             const count = countryCounts[country.properties.name];
             return colorScale(logNormalize(count));
@@ -65,7 +67,7 @@ const createCountriesLayer = ({data, countryCounts, minCount, maxCount, selected
         },
 
         updateTriggers: {
-          getFillColor: [selectedCountry, hoveredCountry]
+          getFillColor: [selectedCountry, hoveredCountry, showCountries]
         },
 
         getLineColor: [255, 255, 255],
