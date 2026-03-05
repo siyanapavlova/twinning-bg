@@ -8,6 +8,12 @@ interface Props {
     onHover: (arc: Arc | null) => void;
 }
 
+const BASE_WIDTH = 1;
+const HOVER_WIDTH = 4;
+
+const ACTIVE_ALPHA = 255;
+const DIM_ALPHA = 150;
+
 const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) => 
     new ArcLayer({
         id: "arcs",
@@ -17,15 +23,39 @@ const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) =>
         getTargetPosition: (d: Arc) =>
           townIndex[d.to].coordinates as [number, number],
 
-        getWidth: d => hoveredArc && d.from === hoveredArc.from && d.to === hoveredArc.to ? 4 : 1,
+        getWidth: d => hoveredArc && d.from === hoveredArc.from && d.to === hoveredArc.to ? HOVER_WIDTH : BASE_WIDTH,
         widthUnits: "pixels",
 
         updateTriggers: {
-          getWidth: hoveredArc
+          getWidth: hoveredArc,
+          getSourceColor: hoveredArc,
+  getTargetColor: hoveredArc
         },
 
-        getSourceColor: [23, 20, 201],
-        getTargetColor: [227, 186, 20],
+        getSourceColor: d => {
+
+          const alpha =
+            hoveredArc === null
+              ? ACTIVE_ALPHA
+              : d.from === hoveredArc.from && d.to === hoveredArc.to
+                ? ACTIVE_ALPHA
+                : DIM_ALPHA;
+
+          // return [182, 55, 84, alpha]; // magenta-ish
+          return [96, 63, 132, alpha]; // purple
+        },
+        getTargetColor:  d => {
+          const alpha =
+            hoveredArc === null
+              ? ACTIVE_ALPHA
+              : d.from === hoveredArc.from && d.to === hoveredArc.to
+                ? ACTIVE_ALPHA
+                : DIM_ALPHA;
+          
+          // return [182, 55, 84, alpha]; // magenta-ish
+          return [96, 63, 132, alpha]; // purple
+
+        },
         greatCircle: true,
         pickable: true,
         onHover: (info) => onHover(info.object ?? null),

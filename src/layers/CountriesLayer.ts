@@ -51,7 +51,7 @@ const createCountriesLayer = ({data, selectedCountry, colorScale, onClick}: Prop
 
         // getFillColor: [160, 160, 180, 200],
         getFillColor: (country) => {
-          if (country.properties.name === selectedCountry) return [255, 255, 150];
+          if (country.properties.name === selectedCountry) return [247, 200, 96];
           if (countryCounts[country.properties.name]) {
             const count = countryCounts[country.properties.name];
             return colorScale(logNormalize(count));
