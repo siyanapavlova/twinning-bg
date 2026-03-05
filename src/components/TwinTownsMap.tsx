@@ -1,24 +1,25 @@
 import { DeckGL } from "@deck.gl/react";
 import type { MapViewState } from "@deck.gl/core";
-import towns from "../data/towns";
+import rawTowns from "../data/towns";
 import { ArcLayer, ScatterplotLayer } from "@deck.gl/layers";
 import { Map } from "react-map-gl/maplibre";
 import arcs from "../data/twinning";
 import { useCallback, useMemo, useState } from "react";
+import createTownsLayer from "../layers/TownsLayer";
 
-interface Town {
+export interface Town {
   id: string;
   name: string;
   country: string;
   coordinates: [number, number];
 }
 
-interface Country {
+export interface Country {
   id: string;
   name: string;
 }
 
-interface Arc {
+export interface Arc {
   from: string;
   to: string;
 }
@@ -30,6 +31,16 @@ const INITIAL_VIEW_STATE: MapViewState = {
   pitch: 0,
   bearing: 0,
 };
+
+// to ensure towns.coodinates is typed correctly
+// because otherwise the import assumes a type based on the data
+// and infers coordinates to be numbers[], but that causes issues later
+// in the Arcs layer because its getSourcePosition prop expects something
+// that is explicitly typed as [number, number]
+const towns: Town[] = rawTowns.map((t) => ({
+  ...t,
+  coordinates: [t.coordinates[0], t.coordinates[1]],
+}));
 
 const TwinTownsMap = () => {
   // const [selected, setSelected] = useState<Town | Country | null>(null);
@@ -51,27 +62,20 @@ const TwinTownsMap = () => {
 
   const layers = useMemo(
     () => [
-      new ScatterplotLayer({
-        id: "towns",
+      createTownsLayer({
         data: towns,
-        pickable: true,
-        getPosition: (t) => t.coordinates,
-        getRadius: 50000,
-        radiusMaxPixels: 4,
-        getFillColor: [100, 100, 100],
-        onClick: (info) => {
-          if (info.object) {
-            updateVisible(info.object.id);
-            setViewState((v) => ({
-              ...v,
-              longitude: info.object.coordinates[0],
-              latitude: info.object.coordinates[1],
-              zoom: 3,
-              transitionDuration: 800,
-            }));
-          }
+        onClick: (town) => {
+          updateVisible(town.id);
+          setViewState((v) => ({
+            ...v,
+            longitude: town.coordinates[0],
+            latitude: town.coordinates[1],
+            zoom: 3,
+            transitionDuration: 800,
+          }));
         },
       }),
+
       new ArcLayer<Arc>({
         id: "arcs",
         data: visibleArcs,

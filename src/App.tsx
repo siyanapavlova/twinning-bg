@@ -1,11 +1,11 @@
 import TwinTownsMap from "./components/TwinTownsMap";
-import NavBar from "./components//NavBar";
+// import NavBar from "./components//NavBar";
 import "./App.css";
 
 const App = () => {
   return (
     <div className="App">
-      <NavBar></NavBar>
+      {/* <NavBar></NavBar> */}
       <TwinTownsMap />
     </div>
   );
