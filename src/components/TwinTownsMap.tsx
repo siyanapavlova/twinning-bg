@@ -8,19 +8,19 @@ import createTwinningLayer from "../layers/TwinningLayer";
 import countries from "../data/countries.ts";
 import createCountriesLayer, {
   type CountryFeature,
-  type CountryProperties,
 } from "../layers/CountriesLayer.ts";
+import Legend from "./Legend.tsx";
 
-// const tealScale = (t: number): [number, number, number] => {
-//   const min = [220, 240, 240];
-//   const max = [0, 120, 120];
+const tealScale = (t: number): [number, number, number] => {
+  const min = [220, 240, 240];
+  const max = [0, 120, 120];
 
-//   return [
-//     Math.round(min[0] + t * (max[0] - min[0])),
-//     Math.round(min[1] + t * (max[1] - min[1])),
-//     Math.round(min[2] + t * (max[2] - min[2])),
-//   ];
-// };
+  return [
+    Math.round(min[0] + t * (max[0] - min[0])),
+    Math.round(min[1] + t * (max[1] - min[1])),
+    Math.round(min[2] + t * (max[2] - min[2])),
+  ];
+};
 
 export interface Town {
   id: string;
@@ -121,23 +121,26 @@ const TwinTownsMap = () => {
   );
 
   return (
-    <DeckGL
-      viewState={viewState}
-      onViewStateChange={({ viewState }) => {
-        if ("longitude" in viewState) {
-          setViewState(viewState);
-        }
-      }}
-      controller
-      layers={layers}
-      getTooltip={({ object }) => object?.name}
-    >
-      {/* <Map
+    <>
+      <DeckGL
+        viewState={viewState}
+        onViewStateChange={({ viewState }) => {
+          if ("longitude" in viewState) {
+            setViewState(viewState);
+          }
+        }}
+        controller
+        layers={layers}
+        getTooltip={({ object }) => object?.name}
+      >
+        {/* <Map
         id="map"
         initialViewState={INITIAL_VIEW_STATE}
         mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
       ></Map> */}
-    </DeckGL>
+      </DeckGL>
+      <Legend min={1} max={140} colorScale={tealScale} />
+    </>
   );
 };
 
