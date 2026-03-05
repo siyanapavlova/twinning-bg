@@ -7,6 +7,8 @@ interface Props {
     allTownsActive: boolean,
     hoveredTown: string | null,
     selectedTown: string | null,
+    townSelection: Boolean,
+    countrySelection: Boolean,
     onClick: (town: Town) => void;
     onHover: (town: Town | null) => void;
 }
@@ -14,7 +16,7 @@ interface Props {
 // const ACTIVE_ALPHA = 255;
 const DIM_ALPHA = 100;
 
-const createTownsLayer = ({data, activeTowns, allTownsActive, hoveredTown, selectedTown, onHover, onClick}: Props) => {return [
+const createTownsLayer = ({data, activeTowns, allTownsActive, hoveredTown, selectedTown, townSelection, countrySelection, onHover, onClick}: Props) => {return [
     new ScatterplotLayer({
         id: "towns-pick",
         data,
@@ -43,7 +45,8 @@ const createTownsLayer = ({data, activeTowns, allTownsActive, hoveredTown, selec
       getFillColor: (town) => {
         if (town.id === hoveredTown || town.id === selectedTown) return [182, 55, 84];
         if (allTownsActive) return [100, 100, 100];
-        if (activeTowns.includes(town.id)) return [247, 200, 96];
+        if (activeTowns.includes(town.id) && townSelection) return [247, 200, 96];
+        if (activeTowns.includes(town.id) && countrySelection) return [182, 55, 84];
         return [100, 100, 100, DIM_ALPHA];
       },
       updateTriggers: {

@@ -111,6 +111,8 @@ const TwinTownsMap = () => {
   const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
   const [hoveredArc, setHoveredArc] = useState<Arc | null>(null);
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
+  const [townSelection, setTownSelection] = useState<Boolean>(false);
+  const [countrySelection, setCountrySelection] = useState<Boolean>(false);
 
   const updateVisible = (townID: string) => {
     const visibleArcs = arcs.filter(
@@ -156,6 +158,8 @@ const TwinTownsMap = () => {
           updateVisibleByCountry(country.properties.name);
           setSelectedCountry(country.properties.name);
           setSelectedTown(null);
+          setCountrySelection(true);
+          setTownSelection(false);
         },
         onHover: (country: CountryFeature | null) => {
           setHoveredCountry(country?.properties.name ?? null);
@@ -168,8 +172,12 @@ const TwinTownsMap = () => {
         allTownsActive: allTownsActive,
         hoveredTown: hoveredTown,
         selectedTown: selectedTown,
+        townSelection: townSelection,
+        countrySelection: countrySelection,
         onClick: (town) => {
           updateVisible(town.id);
+          setTownSelection(true);
+          setCountrySelection(false);
           // setViewState((v) => ({
           //   ...v,
           //   longitude: town.coordinates[0],
@@ -257,6 +265,8 @@ const TwinTownsMap = () => {
             setVisibleArcs([]);
             setActiveTowns([]);
             setAllTownsActive(true);
+            setTownSelection(false);
+            setCountrySelection(false);
           }
         }}
       >
