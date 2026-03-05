@@ -14,9 +14,23 @@ const HOVER_WIDTH = 4;
 const ACTIVE_ALPHA = 255;
 const DIM_ALPHA = 150;
 
-const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) => 
+const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) => {return [
+  new ArcLayer({
+        id: "arcs-pick",
+        data: data,
+        getSourcePosition: (d: Arc) =>
+          townIndex[d.from].coordinates as [number, number],
+        getTargetPosition: (d: Arc) =>
+          townIndex[d.to].coordinates as [number, number],
+        getWidth: 10,
+        getSourceColor: [0,0,0,0],
+        getTargetColor: [0,0,0,0],
+        greatCircle: true,
+        pickable: true,
+        onHover: (info) => onHover(info.object ?? null),
+    }),
     new ArcLayer({
-        id: "arcs",
+        id: "arcs-render",
         data: data,
         getSourcePosition: (d: Arc) =>
           townIndex[d.from].coordinates as [number, number],
@@ -57,12 +71,11 @@ const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) =>
 
         },
         greatCircle: true,
-        pickable: true,
-        onHover: (info) => onHover(info.object ?? null),
-        autoHighlight: true,
+        pickable: false,
         transitions: {
           getWidth: 150
         }
-    });
+    })
+];}
 
 export default createTwinningLayer;
