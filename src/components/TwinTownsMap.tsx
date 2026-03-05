@@ -100,6 +100,7 @@ const TwinTownsMap = () => {
   };
 
   const updateVisibleByCountry = (info: string) => {
+    console.log(info);
     const townsFromCountry = towns
       .filter((t) => t.country === info)
       .map((t) => t.id);
@@ -118,7 +119,7 @@ const TwinTownsMap = () => {
         hoveredCountry: hoveredCountry,
         colorScale: tealScale,
         onClick: (country: CountryFeatureWithId) => {
-          updateVisibleByCountry(country.id);
+          updateVisibleByCountry(country.properties.name);
           setSelectedCountry(country.properties.name);
           setSelectedTown(null);
         },
