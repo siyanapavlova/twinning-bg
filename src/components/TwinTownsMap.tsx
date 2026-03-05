@@ -153,7 +153,20 @@ const TwinTownsMap = () => {
         }}
         controller
         layers={layers}
-        getTooltip={({ object }) => object?.name}
+        getTooltip={({ object }) => {
+          if (!object) return null;
+          if (object.name) return object.name;
+          if (object.properties && object.properties.name) {
+            const name = object.properties.name;
+            if (countryCounts[name])
+              return name + ": " + countryCounts[name] + " twins";
+            else return name + ": no twins";
+          }
+          if (object.from)
+            return "BG town: " + object.from + "\nTwin town: " + object.to;
+          // return object?.name;
+          return null;
+        }}
         onClick={(info) => {
           if (!info.object || !countryCounts[info.object.properties.name]) {
             setSelectedCountry(null);

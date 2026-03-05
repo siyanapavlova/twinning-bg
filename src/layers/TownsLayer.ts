@@ -14,7 +14,7 @@ const createTownsLayer = ({data, onClick}: Props) =>
         pickable: true,
         getPosition: (t) => t.coordinates,
         getRadius: 50000,
-        radiusMaxPixels: 4,
+        radiusMaxPixels: 3,
         getFillColor: [100, 100, 100],
         onClick: (info) => {
           if (info.object) {
