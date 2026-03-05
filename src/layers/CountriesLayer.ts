@@ -13,8 +13,10 @@ export type CountryFeature =
 
 interface Props {
   data: FeatureCollection<Geometry, CountryProperties>;
-  selectedCountry: string;
+  selectedCountry: string | null;
+  hoveredCountry: string | null;
   onClick: (country: CountryFeature) => void;
+  onHover: (country: CountryFeature) => void;
   colorScale: (t: number) => [number, number, number];
 }
 
@@ -41,7 +43,7 @@ const logNormalize = (value: number): number => {
 //   return [v, v, v];
 // }
 
-const createCountriesLayer = ({data, selectedCountry, colorScale, onClick}: Props) =>
+const createCountriesLayer = ({data, selectedCountry, hoveredCountry, colorScale, onClick, onHover}: Props) =>
     new GeoJsonLayer<CountryProperties>({
         id: "countries",
         data: data,
@@ -52,6 +54,7 @@ const createCountriesLayer = ({data, selectedCountry, colorScale, onClick}: Prop
         // getFillColor: [160, 160, 180, 200],
         getFillColor: (country) => {
           if (country.properties.name === selectedCountry) return [247, 200, 96];
+          if (country.properties.name === hoveredCountry) return [240, 240, 200];
           if (countryCounts[country.properties.name]) {
             const count = countryCounts[country.properties.name];
             return colorScale(logNormalize(count));
@@ -60,29 +63,31 @@ const createCountriesLayer = ({data, selectedCountry, colorScale, onClick}: Prop
         },
 
         updateTriggers: {
-          getFillColor: selectedCountry,
+          getFillColor: [selectedCountry, hoveredCountry]
         },
 
         getLineColor: [255, 255, 255],
         getLineWidth: 1,
         lineWidthUnits: "pixels",
-        autoHighlight: true,
-        highlightColor: [240, 240, 200],
+
+        onHover: info => {
+          const name = info.object?.properties.name;
+
+          if (!name || !countryCounts[name]) {
+            return;
+          }
+
+          onHover(info.object);
+        },
 
         onClick: (info) => {
-                    const name = info.object?.properties.name;
+          const name = info.object?.properties.name;
 
           if (!name || !countryCounts[name]) {
             return; // ignore
           }
 
           onClick(info.object);
-
-
-
-          // if (info.object) {
-          //   onClick(info.object);
-          // }
         },
     });
 

@@ -65,6 +65,7 @@ const TwinTownsMap = () => {
   const [visibleArcs, setVisibleArcs] = useState<Arc[]>([]);
   const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
   const [hoveredArc, setHoveredArc] = useState<Arc | null>(null);
+  const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
 
   const onReset = useCallback(() => setViewState(INITIAL_VIEW_STATE), []);
 
@@ -94,10 +95,15 @@ const TwinTownsMap = () => {
       createCountriesLayer({
         data: countries,
         selectedCountry: selectedCountry ? selectedCountry : "",
+        hoveredCountry: hoveredCountry,
         colorScale: tealScale,
         onClick: (country: CountryFeature) => {
           updateVisibleByCountry(country.id);
           setSelectedCountry(country.properties.name);
+        },
+        onHover: (country: CountryFeature) => {
+          console.log(country.properties.name);
+          setHoveredCountry(country.properties.name);
         },
       }),
 
@@ -124,7 +130,14 @@ const TwinTownsMap = () => {
         },
       }),
     ],
-    [countries, selectedCountry, visibleArcs, townIndex, hoveredArc],
+    [
+      countries,
+      selectedCountry,
+      visibleArcs,
+      townIndex,
+      hoveredArc,
+      hoveredCountry,
+    ],
   );
 
   return (
