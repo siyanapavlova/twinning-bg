@@ -12,6 +12,8 @@ import createCountriesLayer, {
 } from "../layers/CountriesLayer.ts";
 import Legend from "./Legend.tsx";
 import twinning from "../data/twinning";
+import DisplaySelection from "./DisplaySelection.tsx";
+import type { CheckedState } from "./DisplayCheckbox";
 // import countryCounts from "../data/countryCounts.ts";
 // import { Map } from "react-map-gl/maplibre";
 
@@ -111,6 +113,8 @@ const TwinTownsMap = () => {
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
   const [townSelection, setTownSelection] = useState<Boolean>(false);
   const [countrySelection, setCountrySelection] = useState<Boolean>(false);
+  const [showAllTowns, setShowAllTowns] = useState<CheckedState>(false);
+  const [showCountries, setShowCountries] = useState<CheckedState>(true);
 
   const updateVisible = (townID: string) => {
     const visibleArcs = arcs.filter(
@@ -172,6 +176,7 @@ const TwinTownsMap = () => {
         selectedTown: selectedTown,
         townSelection: townSelection,
         countrySelection: countrySelection,
+        showAllTowns: showAllTowns,
         onClick: (town) => {
           updateVisible(town.id);
           setTownSelection(true);
@@ -209,6 +214,7 @@ const TwinTownsMap = () => {
       selectedTown,
       activeTowns,
       allTownsActive,
+      showAllTowns,
     ],
   );
 
@@ -274,6 +280,10 @@ const TwinTownsMap = () => {
           mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
         ></Map> */}
       </DeckGL>
+      <DisplaySelection
+        onChangeTownSelection={(checked) => setShowAllTowns(checked)}
+        onChangeCountrySelection={(checked) => setShowCountries(checked)}
+      ></DisplaySelection>
       <Legend min={minTwins} max={maxTwins} ticks={4} colorScale={tealScale} />
     </>
   );
