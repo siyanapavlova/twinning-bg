@@ -19,10 +19,15 @@ const createCountriesLayer = ({data, onClick}: Props) =>
     new GeoJsonLayer<CountryFeature>({
         id: "arcs",
         data: data,
-        stroked: false,
+        stroked: true,
         filled: true,
         pickable: true,
+
         getFillColor: [160, 160, 180, 200],
+        getLineColor: [100, 100, 100, 200],
+        getLineWidth: 1,
+        lineWidthUnits: "pixels",
+
         onClick: (info) => {
           if (info.object) {
             onClick(info.object);
