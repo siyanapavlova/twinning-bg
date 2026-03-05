@@ -8,13 +8,15 @@ import createTwinningLayer from "../layers/TwinningLayer";
 import countries from "../data/countries.ts";
 import createCountriesLayer, {
   type CountryFeature,
+  type CountryFeatureWithId,
 } from "../layers/CountriesLayer.ts";
 import Legend from "./Legend.tsx";
 import countryCounts from "../data/countryCounts.ts";
 
 const tealScale = (t: number): [number, number, number] => {
   // const min = [220, 240, 240]; // old
-  const min = [200, 220, 220];
+  // const min = [200, 220, 220]; // newer
+  const min = [210, 230, 230];
   const max = [0, 120, 120];
 
   return [
@@ -98,7 +100,7 @@ const TwinTownsMap = () => {
         selectedCountry: selectedCountry ? selectedCountry : "",
         hoveredCountry: hoveredCountry,
         colorScale: tealScale,
-        onClick: (country: CountryFeature) => {
+        onClick: (country: CountryFeatureWithId) => {
           updateVisibleByCountry(country.id);
           setSelectedCountry(country.properties.name);
         },
