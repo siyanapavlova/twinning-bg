@@ -1,15 +1,25 @@
 import { DeckGL } from "@deck.gl/react";
 import type { MapViewState } from "@deck.gl/core";
 import rawTowns from "../data/towns";
-import { Map } from "react-map-gl/maplibre";
 import arcs from "../data/twinning";
 import { useCallback, useMemo, useState } from "react";
 import createTownsLayer from "../layers/TownsLayer";
 import createTwinningLayer from "../layers/TwinningLayer";
-import { GeoJsonLayer } from "deck.gl";
 import countries from "../data/countries.ts";
-import createCountriesLayer from "../layers/CountriesLayer.ts";
-import type { FeatureCollection, Geometry } from "geojson";
+import createCountriesLayer, {
+  type CountryFeature,
+} from "../layers/CountriesLayer.ts";
+
+const tealScale = (t: number): [number, number, number] => {
+  const min = [220, 240, 240];
+  const max = [0, 120, 120];
+
+  return [
+    Math.round(min[0] + t * (max[0] - min[0])),
+    Math.round(min[1] + t * (max[1] - min[1])),
+    Math.round(min[2] + t * (max[2] - min[2])),
+  ];
+};
 
 export interface Town {
   id: string;
@@ -49,6 +59,7 @@ const towns: Town[] = rawTowns.map((t) => ({
 const TwinTownsMap = () => {
   // const [selected, setSelected] = useState<Town | Country | null>(null);
   const [selected, setSelected] = useState<string>();
+  const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [visibleArcs, setVisibleArcs] = useState<Arc[]>([]);
   const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
 
@@ -79,9 +90,10 @@ const TwinTownsMap = () => {
     () => [
       createCountriesLayer({
         data: countries,
-        onClick: (country) => {
-          console.log(country.id);
-          updateVisibleByCountry(country.id);
+        selectedCountry: selectedCountry ? selectedCountry : "",
+        onClick: (country: CountryFeature) => {
+          updateVisibleByCountry(country.properties.id);
+          setSelectedCountry(country.properties.name);
         },
       }),
 
@@ -104,7 +116,7 @@ const TwinTownsMap = () => {
         townIndex: townIndex,
       }),
     ],
-    [countries, visibleArcs, townIndex],
+    [countries, selectedCountry, visibleArcs, townIndex],
   );
 
   return (

@@ -5,7 +5,7 @@ import countryCounts from "../data/countryCounts";
 export interface CountryProperties {
   id: string;
   name: string;
-  coordinates: number[]
+  coordinates: number[],
 }
 
 export type CountryFeature =
@@ -13,6 +13,7 @@ export type CountryFeature =
 
 interface Props {
   data: FeatureCollection<Geometry, CountryProperties>;
+  selectedCountry: string;
   onClick: (country: CountryFeature) => void;
 }
 
@@ -50,9 +51,9 @@ const tealScale = (t: number): [number, number, number] => {
   ];
 };
 
-const createCountriesLayer = ({data, onClick}: Props) => 
+const createCountriesLayer = ({data, selectedCountry, onClick}: Props) =>
     new GeoJsonLayer<CountryProperties>({
-        id: "arcs",
+        id: "countries",
         data: data,
         stroked: true,
         filled: true,
@@ -60,6 +61,7 @@ const createCountriesLayer = ({data, onClick}: Props) =>
 
         // getFillColor: [160, 160, 180, 200],
         getFillColor: (country) => {
+          if (country.properties.name === selectedCountry) return [255, 255, 150];
           if (countryCounts[country.properties.name]) {
             const count = countryCounts[country.properties.name];
             return tealScale(logNormalize(count));
@@ -68,9 +70,16 @@ const createCountriesLayer = ({data, onClick}: Props) =>
           return [230, 230, 250];
 
         },
+
+        updateTriggers: {
+          getFillColor: selectedCountry,
+        },
+
         getLineColor: [255, 255, 255],
         getLineWidth: 1,
         lineWidthUnits: "pixels",
+        autoHighlight: true,
+        highlightColor: [240, 240, 150],
 
         onClick: (info) => {
           if (info.object) {
