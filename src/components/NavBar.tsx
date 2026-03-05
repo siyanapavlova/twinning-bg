@@ -1,8 +1,14 @@
-import { Heading } from "@chakra-ui/react";
+import { Flex, Heading } from "@chakra-ui/react";
 import "./navbar.css";
+import About from "./About";
 
 const NavBar = () => {
-  return <Heading>Twinning BG</Heading>;
+  return (
+    <Flex justify="space-between">
+      <Heading>Twinning BG</Heading>
+      <About />
+    </Flex>
+  );
 };
 
 export default NavBar;
