@@ -80,8 +80,8 @@ const TwinTownsMap = () => {
   const [hoveredArc, setHoveredArc] = useState<Arc | null>(null);
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
 
-  // to stop dragging after town click
-  const [dragBlocked, setDragBlocked] = useState(false);
+  // to stop dragging on click of town
+  // const [dragBlocked, setDragBlocked] = useState(false);
 
   // const onReset = useCallback(() => setViewState(INITIAL_VIEW_STATE), []);
 
@@ -129,8 +129,8 @@ const TwinTownsMap = () => {
         hoveredTown: hoveredTown,
         selectedTown: selectedTown,
         onClick: (town) => {
-          setDragBlocked(true);
           updateVisible(town.id);
+          // setDragBlocked(true); // block drag during click
           // setViewState((v) => ({
           //   ...v,
           //   longitude: town.coordinates[0],
@@ -141,6 +141,7 @@ const TwinTownsMap = () => {
         },
         onHover: (town: Town | null) => {
           setHoveredTown(town?.name ?? null);
+          // setDragBlocked(Boolean(town)); // block drag while pointer is over a town
         },
       }),
 
@@ -174,15 +175,14 @@ const TwinTownsMap = () => {
             setViewState(viewState);
           }
         }}
-        controller={{
-          dragPan: !dragBlocked,
-          dragRotate: true,
-        }}
-        onInteractionStateChange={({ isDragging }) => {
-          if (!isDragging) {
-            setDragBlocked(false);
-          }
-        }}
+        controller
+        // controller={{
+        //   dragPan: !dragBlocked, // disable dragging when hovering/clicking a town
+        //   dragRotate: true,
+        // }}
+        // onInteractionStateChange={({ isDragging }) => {
+        //   if (!isDragging) setDragBlocked(false); // allow drag again
+        // }}
         layers={layers}
         getTooltip={({ object }) => {
           if (!object) return null;
