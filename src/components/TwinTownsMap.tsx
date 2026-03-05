@@ -186,6 +186,7 @@ const TwinTownsMap = () => {
         //   if (!isDragging) setDragBlocked(false); // allow drag again
         // }}
         layers={layers}
+        pickingRadius={10}
         getTooltip={({ object }) => {
           if (!object) return null;
           if (object.name) return object.name;

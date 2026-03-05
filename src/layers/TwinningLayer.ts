@@ -22,12 +22,18 @@ const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) => {
           townIndex[d.from].coordinates as [number, number],
         getTargetPosition: (d: Arc) =>
           townIndex[d.to].coordinates as [number, number],
-        getWidth: 10,
+        getWidth: 8,
         getSourceColor: [0,0,0,0],
         getTargetColor: [0,0,0,0],
         greatCircle: true,
         pickable: true,
         onHover: (info) => onHover(info.object ?? null),
+
+        // to disable depth buffering
+        parameters: {
+          depthWrite: false,
+          depthTest: false,
+        },
     }),
     new ArcLayer({
         id: "arcs-render",
