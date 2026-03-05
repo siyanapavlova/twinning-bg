@@ -2,7 +2,7 @@ import { DeckGL } from "@deck.gl/react";
 import type { MapViewState } from "@deck.gl/core";
 import rawTowns from "../data/towns";
 import arcs from "../data/twinning";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import createTownsLayer from "../layers/TownsLayer";
 import createTwinningLayer from "../layers/TwinningLayer";
 import countries from "../data/countries.ts";
@@ -16,7 +16,6 @@ import type {
 import Legend from "./Legend.tsx";
 import twinning from "../data/twinning";
 import DisplaySelection from "./DisplaySelection.tsx";
-// import countryCounts from "../data/countryCounts.ts";
 // import { Map } from "react-map-gl/maplibre";
 
 const tooltipStyle = {
@@ -85,6 +84,25 @@ const countryCounts = countryCountByRelationNumber;
 const minTwins = Math.min.apply(null, Object.values(countryCounts));
 const maxTwins = Math.max.apply(null, Object.values(countryCounts));
 
+const logNormalize = (value: number): number => {
+  // Safety check
+  if (value <= 0) return 0;
+
+  const logMin = Math.log(minTwins);
+  const logMax = Math.log(maxTwins);
+  const logValue = Math.log(value);
+
+  return (logValue - logMin) / (logMax - logMin);
+};
+
+const countryColours = Object.entries(countryCounts).reduce(
+  (p, [k, v]) => ({
+    ...p,
+    [k]: tealScale(logNormalize(v)),
+  }),
+  {},
+);
+
 const TwinTownsMap = () => {
   // const [selected, setSelected] = useState<Town | Country | null>(null);
   const [selectedTown, setSelectedTown] = useState<string | null>(null);
@@ -101,13 +119,13 @@ const TwinTownsMap = () => {
   const [showAllTowns, setShowAllTowns] = useState<boolean>(false);
   const [showCountries, setShowCountries] = useState<boolean>(true);
 
-  const [fontReady, setFontReady] = useState<boolean>(false);
+  // const [fontReady, setFontReady] = useState<boolean>(false);
 
-  useEffect(() => {
-    document.fonts.load('12px "RobotoDeckGL"').then(() => {
-      setFontReady(true);
-    });
-  }, []);
+  // useEffect(() => {
+  //   document.fonts.load('12px "RobotoDeckGL"').then(() => {
+  //     setFontReady(true);
+  //   });
+  // }, []);
 
   const updateVisible = (townID: string) => {
     const visibleArcs = arcs.filter(
@@ -148,12 +166,10 @@ const TwinTownsMap = () => {
       createCountriesLayer({
         data: countries,
         countryCounts: countryCounts,
-        minCount: minTwins,
-        maxCount: maxTwins,
+        countryColours: countryColours,
         selectedCountry: selectedCountry ? selectedCountry : "",
         hoveredCountry: hoveredCountry,
         showCountries: showCountries,
-        colorScale: tealScale,
         onClick: (country: CountryFeatureWithId) => {
           updateVisibleByCountry(country.properties.name);
           setSelectedCountry(country.properties.name);
@@ -175,8 +191,8 @@ const TwinTownsMap = () => {
         townSelection: townSelection,
         countrySelection: countrySelection,
         showAllTowns: showAllTowns,
-        zoom: viewState.zoom,
-        fontReady: fontReady,
+        // zoom: viewState.zoom,
+        // fontReady: fontReady,
         onClick: (town) => {
           updateVisible(town.id);
           setTownSelection(true);
@@ -204,10 +220,9 @@ const TwinTownsMap = () => {
       }),
     ],
     [
-      countries,
+      // countries,
       selectedCountry,
       visibleArcs,
-      townIndex,
       hoveredArc,
       hoveredCountry,
       hoveredTown,
@@ -216,8 +231,8 @@ const TwinTownsMap = () => {
       allTownsActive,
       showAllTowns,
       showCountries,
-      viewState.zoom,
-      fontReady,
+      // viewState.zoom,
+      // fontReady,
     ],
   );
 

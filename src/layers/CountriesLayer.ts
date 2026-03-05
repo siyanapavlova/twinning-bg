@@ -6,14 +6,12 @@ import type { FeatureCollection, Geometry } from 'geojson';
 interface Props {
   data: FeatureCollection<Geometry, CountryProperties>;
   countryCounts: { [k: string]: number };
-  minCount: number,
-  maxCount: number,
+  countryColours: { [k: string]: [number, number, number]}
   selectedCountry: string | null;
   hoveredCountry: string | null;
   showCountries: boolean,
   onClick: (country: CountryFeatureWithId) => void;
   onHover: (country: CountryFeature | null) => void;
-  colorScale: (t: number) => [number, number, number];
 }
 
 
@@ -25,17 +23,7 @@ interface Props {
 //   return [v, v, v];
 // }
 
-const createCountriesLayer = ({data, countryCounts, minCount, maxCount, selectedCountry, hoveredCountry, showCountries, colorScale, onClick, onHover}: Props) => {
-  const logNormalize = (value: number): number => {
-  // Safety check
-  if (value <= 0) return 0;
-
-  const logMin = Math.log(minCount);
-  const logMax = Math.log(maxCount);
-  const logValue = Math.log(value);
-
-  return (logValue - logMin) / (logMax - logMin);
-};
+const createCountriesLayer = ({data, countryCounts, countryColours, selectedCountry, hoveredCountry, showCountries, onClick, onHover}: Props) => {
 
   return new GeoJsonLayer<CountryProperties>({
         id: "countries",
@@ -48,11 +36,8 @@ const createCountriesLayer = ({data, countryCounts, minCount, maxCount, selected
         getFillColor: (country) => {
           if (country.properties.name === selectedCountry) return [247, 200, 96];
           if (country.properties.name === hoveredCountry) return [240, 240, 200];
-          if (!showCountries) return [200, 200, 220];
-          if (countryCounts[country.properties.name]) {
-            const count = countryCounts[country.properties.name];
-            return colorScale(logNormalize(count));
-          }
+          if (!showCountries && countryCounts[country.properties.name]) return [200, 200, 220];
+          if (countryCounts[country.properties.name]) return countryColours[country.properties.name];
           return [230, 230, 250];
         },
 

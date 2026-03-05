@@ -11,8 +11,8 @@ interface Props {
     townSelection: boolean,
     countrySelection: boolean,
     showAllTowns: boolean,
-    zoom: number,
-    fontReady: boolean,
+    // zoom: number,
+    // fontReady: boolean,
     onClick: (town: Town) => void;
     onHover: (town: Town | null) => void;
 }
@@ -29,8 +29,8 @@ const createTownsLayer = ({
     townSelection,
     countrySelection,
     showAllTowns,
-    zoom,
-    fontReady,
+    // zoom,
+    // fontReady,
     onHover,
     onClick
   }: Props) => {
