@@ -1,45 +1,37 @@
-import React, { useRef, useEffect } from "react";
-import maplibregl from "maplibre-gl";
-// import "maplibre-gl/dist/maplibre-gl.css";
-// import "./map.css";
-import { Map } from "react-map-gl/maplibre";
-import type { ViewState } from "react-map-gl/maplibre";
-
-// Values and types.
 import { DeckGL } from "@deck.gl/react";
-import { GeoJsonLayer } from "@deck.gl/layers";
+import { type MapViewState } from "@deck.gl/core";
+import towns from "../data/towns";
+import { ScatterplotLayer } from "@deck.gl/layers";
+import { Map } from "react-map-gl/maplibre";
 
-// Types only.
-import type { DeckGLRef } from "@deck.gl/react";
-import type { GeoJsonLayerProps } from "@deck.gl/layers";
-
-const INITIAL_VIEW_STATE: ViewState = {
+const INITIAL_VIEW_STATE: MapViewState = {
   longitude: 90,
   latitude: 20,
   zoom: 2,
   pitch: 0,
   bearing: 0,
-  padding: { top: 0, bottom: 0, left: 0, right: 0 },
 };
 
 const TwinMap = () => {
+  const layers = [
+    new ScatterplotLayer({
+      id: "towns",
+      data: towns,
+      getPosition: (t) => t.coordinates,
+      getRadius: 50000,
+      radiusMaxPixels: 4,
+      getFillColor: [100, 100, 100],
+    }),
+  ];
+
   return (
-    <div
-      style={{
-        position: "absolute",
-        height: "100%",
-        width: "100%",
-        // top: 0,
-        // left: 0,
-        // background: "linear-gradient(0, #000, #223)",
-      }}
-    >
+    <DeckGL initialViewState={INITIAL_VIEW_STATE} controller layers={layers}>
       <Map
         id="map"
         initialViewState={INITIAL_VIEW_STATE}
         mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
       ></Map>
-    </div>
+    </DeckGL>
   );
 };
 
