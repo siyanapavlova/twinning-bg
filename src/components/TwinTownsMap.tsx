@@ -12,6 +12,7 @@ import createCountriesLayer, {
 } from "../layers/CountriesLayer.ts";
 import Legend from "./Legend.tsx";
 import countryCounts from "../data/countryCounts.ts";
+// import { Map } from "react-map-gl/maplibre";
 
 const tooltipStyle = {
   backgroundColor: "rgba(0,0,0,0.8)",
@@ -142,7 +143,7 @@ const TwinTownsMap = () => {
           // }));
         },
         onHover: (town: Town | null) => {
-          setHoveredTown(town?.name ?? null);
+          setHoveredTown(town?.id ?? null);
           // setDragBlocked(Boolean(town)); // block drag while pointer is over a town
         },
       }),
@@ -216,7 +217,13 @@ const TwinTownsMap = () => {
             setVisibleArcs([]);
           }
         }}
-      ></DeckGL>
+      >
+        {/* <Map
+          id="map"
+          initialViewState={INITIAL_VIEW_STATE}
+          mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
+        ></Map> */}
+      </DeckGL>
       <Legend min={1} max={140} ticks={4} colorScale={tealScale} />
     </>
   );

@@ -43,11 +43,11 @@ const createTownsLayer = ({data, hoveredTown, selectedTown, onHover, onClick}: P
       pickable: false,
       getPosition: (t) => t.coordinates,
       getRadius: (town) => {
-        return town.name === hoveredTown || town.id === selectedTown ? 7 : 3;
+        return town.id === hoveredTown || town.id === selectedTown ? 7 : 2;
       },
       radiusUnits: "pixels",
       getFillColor: (town) => {
-        return town.name === hoveredTown || town.id === selectedTown ? [182, 55, 84] : [100, 100, 100];
+        return town.id === hoveredTown || town.id === selectedTown ? [182, 55, 84] : [100, 100, 100];
       },
       updateTriggers: {
         getFillColor: [hoveredTown, selectedTown],
