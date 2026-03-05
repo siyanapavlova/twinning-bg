@@ -21,8 +21,8 @@ const counts = Object.values(countryCounts);
 const minCount = Math.min(...counts);
 const maxCount = Math.max(...counts);
 
-const normalize = (value: number) =>
-  (value - minCount) / (maxCount - minCount);
+// const normalize = (value: number) =>
+//   (value - minCount) / (maxCount - minCount);
 
 const logNormalize = (value: number): number => {
   // Safety check
@@ -35,10 +35,10 @@ const logNormalize = (value: number): number => {
   return (logValue - logMin) / (logMax - logMin);
 };
 
-const colorScale = (t: number): [number, number, number] => {
-  const v = Math.round(255 * (1 - t));
-  return [v, v, v];
-}
+// const colorScale = (t: number): [number, number, number] => {
+//   const v = Math.round(255 * (1 - t));
+//   return [v, v, v];
+// }
 
 const tealScale = (t: number): [number, number, number] => {
   const min = [220, 240, 240];
@@ -79,7 +79,7 @@ const createCountriesLayer = ({data, selectedCountry, onClick}: Props) =>
         getLineWidth: 1,
         lineWidthUnits: "pixels",
         autoHighlight: true,
-        highlightColor: [240, 240, 150],
+        highlightColor: [240, 240, 200],
 
         onClick: (info) => {
           if (info.object) {

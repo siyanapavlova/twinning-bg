@@ -8,18 +8,19 @@ import createTwinningLayer from "../layers/TwinningLayer";
 import countries from "../data/countries.ts";
 import createCountriesLayer, {
   type CountryFeature,
+  type CountryProperties,
 } from "../layers/CountriesLayer.ts";
 
-const tealScale = (t: number): [number, number, number] => {
-  const min = [220, 240, 240];
-  const max = [0, 120, 120];
+// const tealScale = (t: number): [number, number, number] => {
+//   const min = [220, 240, 240];
+//   const max = [0, 120, 120];
 
-  return [
-    Math.round(min[0] + t * (max[0] - min[0])),
-    Math.round(min[1] + t * (max[1] - min[1])),
-    Math.round(min[2] + t * (max[2] - min[2])),
-  ];
-};
+//   return [
+//     Math.round(min[0] + t * (max[0] - min[0])),
+//     Math.round(min[1] + t * (max[1] - min[1])),
+//     Math.round(min[2] + t * (max[2] - min[2])),
+//   ];
+// };
 
 export interface Town {
   id: string;
@@ -92,7 +93,7 @@ const TwinTownsMap = () => {
         data: countries,
         selectedCountry: selectedCountry ? selectedCountry : "",
         onClick: (country: CountryFeature) => {
-          updateVisibleByCountry(country.properties.id);
+          updateVisibleByCountry(country.id);
           setSelectedCountry(country.properties.name);
         },
       }),
