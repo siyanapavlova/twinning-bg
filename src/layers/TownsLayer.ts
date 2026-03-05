@@ -17,7 +17,7 @@ interface Props {
     onHover: (town: Town | null) => void;
 }
 
-// const ACTIVE_ALPHA = 255;
+const ACTIVE_ALPHA = 180;
 const DIM_ALPHA = 100;
 
 const createTownsLayer = ({
@@ -69,10 +69,10 @@ const createTownsLayer = ({
       radiusUnits: "pixels",
       getFillColor: (town) => {
         if (town.id === hoveredTown || town.id === selectedTown) return [182, 55, 84];
-        if (allTownsActive) return [100, 100, 100];
+        if (allTownsActive) return [90, 5, 34, ACTIVE_ALPHA]; //[100, 100, 100];
         if (activeTowns.includes(town) && (townSelection || town.country === "Bulgaria")) return [247, 200, 96];
         if (activeTowns.includes(town) && countrySelection) return [182, 55, 84];
-        return [100, 100, 100, DIM_ALPHA];
+        return [90, 5, 34, DIM_ALPHA];
       },
       updateTriggers: {
         getFillColor: [hoveredTown, selectedTown, activeTowns, allTownsActive],

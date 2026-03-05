@@ -57,7 +57,7 @@ const towns: Town[] = rawTowns.map((t) => ({
 
 const townIndex = Object.fromEntries(towns.map((t) => [t.id, t]));
 
-const countryCountByRelationNumber = twinning
+const relationNumberPerCountry = twinning
   .map((t) => townIndex[t.to].country)
   .reduce(
     (occurences, item) => {
@@ -67,22 +67,22 @@ const countryCountByRelationNumber = twinning
     {} as { [k: string]: number },
   );
 
-// console.log(countryCountByRelationNumber);
+const townNumberPerCountry = towns
+  .map((t) => t.country)
+  .reduce(
+    (occurences, item) => {
+      occurences[item] = (occurences[item] || 0) + 1;
+      return occurences;
+    },
+    {} as { [k: string]: number },
+  );
 
-// const countryCounts = towns
-//   .map((t) => t.country)
-//   .reduce(
-//     (occurences, item) => {
-//       occurences[item] = (occurences[item] || 0) + 1;
-//       return occurences;
-//     },
-//     {} as { [k: string]: number },
-//   );
+delete townNumberPerCountry["Bulgaria"];
 
-const countryCounts = countryCountByRelationNumber;
+console.log(townNumberPerCountry);
 
-const minTwins = Math.min.apply(null, Object.values(countryCounts));
-const maxTwins = Math.max.apply(null, Object.values(countryCounts));
+const minTwins = Math.min.apply(null, Object.values(relationNumberPerCountry));
+const maxTwins = Math.max.apply(null, Object.values(relationNumberPerCountry));
 
 const logNormalize = (value: number): number => {
   // Safety check
@@ -95,12 +95,12 @@ const logNormalize = (value: number): number => {
   return (logValue - logMin) / (logMax - logMin);
 };
 
-const countryColours = Object.entries(countryCounts).reduce(
+const countryColours = Object.entries(relationNumberPerCountry).reduce(
   (p, [k, v]) => ({
     ...p,
     [k]: tealScale(logNormalize(v)),
   }),
-  {},
+  {} as { [k: string]: [number, number, number] },
 );
 
 const TwinTownsMap = () => {
@@ -165,7 +165,7 @@ const TwinTownsMap = () => {
     () => [
       createCountriesLayer({
         data: countries,
-        countryCounts: countryCounts,
+        relationNumberPerCountry: relationNumberPerCountry,
         countryColours: countryColours,
         selectedCountry: selectedCountry ? selectedCountry : "",
         hoveredCountry: hoveredCountry,
@@ -257,9 +257,9 @@ const TwinTownsMap = () => {
             };
           if (object.properties && object.properties.name) {
             const name = object.properties.name;
-            if (countryCounts[name])
+            if (relationNumberPerCountry[name])
               return {
-                html: `<b>${name}</b><br />Twin relations: ${countryCounts[name]}`,
+                html: `<b>${name}</b><br />Towns: ${townNumberPerCountry[name]}<br />Relations: ${relationNumberPerCountry[name]}`,
                 style: tooltipStyle,
               };
             else
@@ -280,7 +280,7 @@ const TwinTownsMap = () => {
             !info.object ||
             (info.object &&
               info.object.properties &&
-              !countryCounts[info.object.properties.name])
+              !relationNumberPerCountry[info.object.properties.name])
           ) {
             setSelectedCountry(null);
             setSelectedTown(null);

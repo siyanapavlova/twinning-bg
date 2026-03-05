@@ -5,7 +5,7 @@ import type { FeatureCollection, Geometry } from 'geojson';
 
 interface Props {
   data: FeatureCollection<Geometry, CountryProperties>;
-  countryCounts: { [k: string]: number };
+  relationNumberPerCountry: { [k: string]: number };
   countryColours: { [k: string]: [number, number, number]}
   selectedCountry: string | null;
   hoveredCountry: string | null;
@@ -23,7 +23,7 @@ interface Props {
 //   return [v, v, v];
 // }
 
-const createCountriesLayer = ({data, countryCounts, countryColours, selectedCountry, hoveredCountry, showCountries, onClick, onHover}: Props) => {
+const createCountriesLayer = ({data, relationNumberPerCountry, countryColours, selectedCountry, hoveredCountry, showCountries, onClick, onHover}: Props) => {
 
   return new GeoJsonLayer<CountryProperties>({
         id: "countries",
@@ -36,8 +36,8 @@ const createCountriesLayer = ({data, countryCounts, countryColours, selectedCoun
         getFillColor: (country) => {
           if (country.properties.name === selectedCountry) return [247, 200, 96];
           if (country.properties.name === hoveredCountry) return [240, 240, 200];
-          if (!showCountries && countryCounts[country.properties.name]) return [200, 200, 220];
-          if (countryCounts[country.properties.name]) return countryColours[country.properties.name];
+          if (!showCountries && relationNumberPerCountry[country.properties.name]) return [200, 200, 220];
+          if (relationNumberPerCountry[country.properties.name]) return countryColours[country.properties.name];
           return [230, 230, 250];
         },
 
@@ -53,7 +53,7 @@ const createCountriesLayer = ({data, countryCounts, countryColours, selectedCoun
           if (info.object) {
             const name = info.object?.properties.name;
 
-            if (!name || !countryCounts[name]) {
+            if (!name || !relationNumberPerCountry[name]) {
               onHover(null);
               return;
             }
@@ -67,7 +67,7 @@ const createCountriesLayer = ({data, countryCounts, countryColours, selectedCoun
         onClick: (info) => {
           const name = info.object?.properties.name;
 
-          if (!name || !countryCounts[name]) {
+          if (!name || !relationNumberPerCountry[name]) {
             return; // ignore
           }
 
