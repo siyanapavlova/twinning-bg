@@ -2,8 +2,8 @@ import { ScatterplotLayer } from "deck.gl";
 import type { Town } from "../components/TwinTownsMap";
 
 interface Props {
-    data: Town[],
-    activeTowns: string[],
+    townData: Town[],
+    activeTowns: Town[],
     allTownsActive: boolean,
     hoveredTown: string | null,
     selectedTown: string | null,
@@ -17,10 +17,22 @@ interface Props {
 // const ACTIVE_ALPHA = 255;
 const DIM_ALPHA = 100;
 
-const createTownsLayer = ({data, activeTowns, allTownsActive, hoveredTown, selectedTown, townSelection, countrySelection, showAllTowns, onHover, onClick}: Props) => {return [
-    showAllTowns && new ScatterplotLayer({
+const createTownsLayer = ({
+    townData,
+    activeTowns,
+    allTownsActive,
+    hoveredTown,
+    selectedTown,
+    townSelection,
+    countrySelection,
+    showAllTowns,
+    onHover,
+    onClick
+  }: Props) => {return [
+
+    new ScatterplotLayer({
         id: "towns-pick",
-        data,
+        data: showAllTowns ? townData : activeTowns,
         pickable: true,
         pickingRadius: 100,
         getPosition: (t) => t.coordinates,
@@ -32,22 +44,22 @@ const createTownsLayer = ({data, activeTowns, allTownsActive, hoveredTown, selec
 
         onHover: (info) => onHover(info.object ?? null),
     }),
-    showAllTowns && new ScatterplotLayer({
+    new ScatterplotLayer({
       id: "towns-render",
-      data,
+      data: showAllTowns ? townData : activeTowns,
       pickable: false,
       getPosition: (t) => t.coordinates,
       getRadius: (town) => {
         if (town.id === hoveredTown || town.id === selectedTown) return 7;
-        if (activeTowns.includes(town.id)) return 3;
+        if (activeTowns.includes(town)) return 3;
         return 2;
       },
       radiusUnits: "pixels",
       getFillColor: (town) => {
         if (town.id === hoveredTown || town.id === selectedTown) return [182, 55, 84];
         if (allTownsActive) return [100, 100, 100];
-        if (activeTowns.includes(town.id) && (townSelection || town.country === "Bulgaria")) return [247, 200, 96];
-        if (activeTowns.includes(town.id) && countrySelection) return [182, 55, 84];
+        if (activeTowns.includes(town) && (townSelection || town.country === "Bulgaria")) return [247, 200, 96];
+        if (activeTowns.includes(town) && countrySelection) return [182, 55, 84];
         return [100, 100, 100, DIM_ALPHA];
       },
       updateTriggers: {

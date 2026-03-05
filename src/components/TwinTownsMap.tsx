@@ -103,7 +103,7 @@ const TwinTownsMap = () => {
   // const [selected, setSelected] = useState<Town | Country | null>(null);
   const [selectedTown, setSelectedTown] = useState<string | null>(null);
   const [hoveredTown, setHoveredTown] = useState<string | null>(null);
-  const [activeTowns, setActiveTowns] = useState<string[]>([]);
+  const [activeTowns, setActiveTowns] = useState<Town[]>([]);
   const [allTownsActive, setAllTownsActive] = useState<boolean>(true);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [visibleArcs, setVisibleArcs] = useState<Arc[]>([]);
@@ -119,12 +119,14 @@ const TwinTownsMap = () => {
     const visibleArcs = arcs.filter(
       (a) => a.from === townID || a.to === townID,
     );
-    const activeTowns = visibleArcs.map((a) => [a.to, a.from]).flat();
+    const activeTowns = visibleArcs
+      .map((a) => [townIndex[a.to], townIndex[a.from]])
+      .flat();
 
     setSelectedTown(townID);
     setSelectedCountry(null);
     setAllTownsActive(false);
-    setActiveTowns([...activeTowns, townID]);
+    setActiveTowns([...activeTowns, townIndex[townID]]);
     setVisibleArcs(visibleArcs);
   };
 
@@ -138,7 +140,9 @@ const TwinTownsMap = () => {
         townsFromCountry.includes(a.from) || townsFromCountry.includes(a.to),
     );
 
-    const activeTowns = visibleArcs.map((a) => [a.to, a.from]).flat();
+    const activeTowns = visibleArcs
+      .map((a) => [townIndex[a.to], townIndex[a.from]])
+      .flat();
 
     setVisibleArcs(visibleArcs);
     setAllTownsActive(false);
@@ -168,7 +172,7 @@ const TwinTownsMap = () => {
       }),
 
       createTownsLayer({
-        data: towns,
+        townData: towns,
         activeTowns: activeTowns,
         allTownsActive: allTownsActive,
         hoveredTown: hoveredTown,
