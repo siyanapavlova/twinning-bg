@@ -63,11 +63,6 @@ const INITIAL_VIEW_STATE: MapViewState = {
   bearing: 0,
 };
 
-// to ensure towns.coodinates is typed correctly
-// because otherwise the import assumes a type based on the data
-// and infers coordinates to be numbers[], but that causes issues later
-// in the Arcs layer because its getSourcePosition prop expects something
-// that is explicitly typed as [number, number]
 const towns: Town[] = rawTowns.map((t) => ({
   ...t,
   coordinates: [t.coordinates[0], t.coordinates[1]],
@@ -100,7 +95,6 @@ const TwinTownsMap = () => {
   };
 
   const updateVisibleByCountry = (info: string) => {
-    console.log(info);
     const townsFromCountry = towns
       .filter((t) => t.country === info)
       .map((t) => t.id);
@@ -191,23 +185,27 @@ const TwinTownsMap = () => {
         pickingRadius={10}
         getTooltip={({ object }) => {
           if (!object) return null;
-          if (object.name) return object.name;
+          if (object.name && object.country)
+            return {
+              html: `<b>${object.name}</b>,  ${object.country}`,
+              style: tooltipStyle,
+            };
           if (object.properties && object.properties.name) {
             const name = object.properties.name;
             if (countryCounts[name])
               return {
-                html: `<b>${name}</b><br />Twins: ${countryCounts[name]}`,
+                html: `<b>${name}</b><br />Twin relations: ${countryCounts[name]}`,
                 style: tooltipStyle,
               };
             else
               return {
-                html: `<b>${name}</b><br>No twins`,
+                html: `<b>${name}</b><br>No twin relations`,
                 style: tooltipStyle,
               };
           }
           if (object.from)
             return {
-              html: `<b>BG town</b>: ${object.from}<br /><b>Twin town</b>: ${object.to}`,
+              html: `<b>BG town</b>: ${object.from}<br /><b>Twin town</b>: ${townIndex[object.to].name}<br /><b>Twin country</b>: ${townIndex[object.to].country}`,
               style: tooltipStyle,
             };
           return null;
@@ -215,6 +213,7 @@ const TwinTownsMap = () => {
         onClick={(info) => {
           if (!info.object || !countryCounts[info.object.properties.name]) {
             setSelectedCountry(null);
+            setSelectedTown(null);
             setVisibleArcs([]);
           }
         }}

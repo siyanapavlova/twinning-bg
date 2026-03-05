@@ -12,7 +12,7 @@ const BASE_WIDTH = 1;
 const HOVER_WIDTH = 4;
 
 const ACTIVE_ALPHA = 255;
-const DIM_ALPHA = 150;
+const DIM_ALPHA = 100;
 
 const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) => {return [
   new ArcLayer({

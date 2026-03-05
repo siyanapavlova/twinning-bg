@@ -10,6 +10,9 @@ interface Props {
     onHover: (town: Town | null) => void;
 }
 
+const ACTIVE_ALPHA = 255;
+const DIM_ALPHA = 100;
+
 const createTownsLayer = ({data, hoveredTown, selectedTown, onHover, onClick}: Props) => {return [
     new ScatterplotLayer({
         id: "towns-pick",
