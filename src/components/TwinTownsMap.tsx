@@ -104,7 +104,7 @@ const TwinTownsMap = () => {
     const visibleArcs = arcs.filter(
       (a) => a.from === townID || a.to === townID,
     );
-    const activeTowns = visibleArcs.map((a) => a.to);
+    const activeTowns = visibleArcs.map((a) => [a.to, a.from]).flat();
 
     setSelectedTown(townID);
     setSelectedCountry(null);

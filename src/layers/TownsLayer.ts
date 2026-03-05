@@ -35,18 +35,16 @@ const createTownsLayer = ({data, activeTowns, allTownsActive, hoveredTown, selec
       pickable: false,
       getPosition: (t) => t.coordinates,
       getRadius: (town) => {
-        if (town.id === hoveredTown) return 7;
+        if (town.id === hoveredTown || town.id === selectedTown) return 7;
         if (activeTowns.includes(town.id)) return 3;
-        return town.id === selectedTown ? 7 : 2;
-        // return town.id === hoveredTown || town.id === selectedTown ? 7 : 2;
+        return 2;
       },
       radiusUnits: "pixels",
       getFillColor: (town) => {
-        if (town.id === hoveredTown) return [182, 55, 84];
+        if (town.id === hoveredTown || town.id === selectedTown) return [182, 55, 84];
         if (allTownsActive) return [100, 100, 100];
-        if (!activeTowns.includes(town.id)) return [100, 100, 100, DIM_ALPHA];
-        return town.id === selectedTown ? [182, 55, 84] : [100, 100, 100, ACTIVE_ALPHA];
-        // return town.id === hoveredTown || town.id === selectedTown ? [182, 55, 84] : [100, 100, 100, ACTIVE_ALPHA];
+        if (activeTowns.includes(town.id)) return [247, 200, 96];
+        return [100, 100, 100, DIM_ALPHA];
       },
       updateTriggers: {
         getFillColor: [hoveredTown, selectedTown, activeTowns, allTownsActive],
