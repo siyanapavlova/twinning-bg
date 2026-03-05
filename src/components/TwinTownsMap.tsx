@@ -12,7 +12,8 @@ import createCountriesLayer, {
 import Legend from "./Legend.tsx";
 
 const tealScale = (t: number): [number, number, number] => {
-  const min = [220, 240, 240];
+  // const min = [220, 240, 240]; // old
+  const min = [200, 220, 220];
   const max = [0, 120, 120];
 
   return [

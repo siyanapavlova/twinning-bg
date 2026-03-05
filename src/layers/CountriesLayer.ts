@@ -70,9 +70,19 @@ const createCountriesLayer = ({data, selectedCountry, colorScale, onClick}: Prop
         highlightColor: [240, 240, 200],
 
         onClick: (info) => {
-          if (info.object) {
-            onClick(info.object);
+                    const name = info.object?.properties.name;
+
+          if (!name || !countryCounts[name]) {
+            return; // ignore
           }
+
+          onClick(info.object);
+
+
+
+          // if (info.object) {
+          //   onClick(info.object);
+          // }
         },
     });
 

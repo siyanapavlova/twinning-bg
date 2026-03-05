@@ -29,7 +29,7 @@ const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) =>
         updateTriggers: {
           getWidth: hoveredArc,
           getSourceColor: hoveredArc,
-  getTargetColor: hoveredArc
+          getTargetColor: hoveredArc
         },
 
         getSourceColor: d => {
