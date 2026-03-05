@@ -49,41 +49,44 @@ const TwinTownsMap = () => {
     setVisibleArcs(arcs.filter((a) => a.from === info || a.to === info));
   };
 
-  const layers = [
-    new ScatterplotLayer({
-      id: "towns",
-      data: towns,
-      pickable: true,
-      getPosition: (t) => t.coordinates,
-      getRadius: 50000,
-      radiusMaxPixels: 4,
-      getFillColor: [100, 100, 100],
-      onClick: (info) => {
-        if (info.object) {
-          updateVisible(info.object.id);
-          setViewState((v) => ({
-            ...v,
-            longitude: info.object.coordinates[0],
-            latitude: info.object.coordinates[1],
-            zoom: 3,
-            transitionDuration: 800,
-          }));
-        }
-      },
-    }),
-    new ArcLayer<Arc>({
-      id: "arcs",
-      data: visibleArcs,
-      getSourcePosition: (d: Arc) =>
-        townIndex[d.from].coordinates as [number, number],
-      getTargetPosition: (d: Arc) =>
-        townIndex[d.to].coordinates as [number, number],
-      // getWidth: () => 2 + Math.sin(time) * 1.5,
-      getSourceColor: [23, 20, 201],
-      getTargetColor: [227, 186, 20],
-      greatCircle: true,
-    }),
-  ];
+  const layers = useMemo(
+    () => [
+      new ScatterplotLayer({
+        id: "towns",
+        data: towns,
+        pickable: true,
+        getPosition: (t) => t.coordinates,
+        getRadius: 50000,
+        radiusMaxPixels: 4,
+        getFillColor: [100, 100, 100],
+        onClick: (info) => {
+          if (info.object) {
+            updateVisible(info.object.id);
+            setViewState((v) => ({
+              ...v,
+              longitude: info.object.coordinates[0],
+              latitude: info.object.coordinates[1],
+              zoom: 3,
+              transitionDuration: 800,
+            }));
+          }
+        },
+      }),
+      new ArcLayer<Arc>({
+        id: "arcs",
+        data: visibleArcs,
+        getSourcePosition: (d: Arc) =>
+          townIndex[d.from].coordinates as [number, number],
+        getTargetPosition: (d: Arc) =>
+          townIndex[d.to].coordinates as [number, number],
+        // getWidth: () => 2 + Math.sin(time) * 1.5,
+        getSourceColor: [23, 20, 201],
+        getTargetColor: [227, 186, 20],
+        greatCircle: true,
+      }),
+    ],
+    [visibleArcs, townIndex],
+  );
 
   return (
     <DeckGL
