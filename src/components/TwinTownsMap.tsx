@@ -11,7 +11,7 @@ import createCountriesLayer, {
   type CountryFeatureWithId,
 } from "../layers/CountriesLayer.ts";
 import Legend from "./Legend.tsx";
-import countryCounts from "../data/countryCounts.ts";
+// import countryCounts from "../data/countryCounts.ts";
 // import { Map } from "react-map-gl/maplibre";
 
 const tooltipStyle = {
@@ -68,6 +68,21 @@ const towns: Town[] = rawTowns.map((t) => ({
   coordinates: [t.coordinates[0], t.coordinates[1]],
 }));
 
+const countryCounts = towns
+  .map((t) => t.country)
+  .reduce(
+    (occurences, item) => {
+      occurences[item] = (occurences[item] || 0) + 1;
+      return occurences;
+    },
+    {} as { [k: string]: number },
+  );
+
+delete countryCounts["Bulgaria"];
+
+const minTwins = Math.min.apply(null, Object.values(countryCounts));
+const maxTwins = Math.max.apply(null, Object.values(countryCounts));
+
 const TwinTownsMap = () => {
   // const [selected, setSelected] = useState<Town | Country | null>(null);
   const [selectedTown, setSelectedTown] = useState<string | null>(null);
@@ -79,8 +94,6 @@ const TwinTownsMap = () => {
   const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
   const [hoveredArc, setHoveredArc] = useState<Arc | null>(null);
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
-
-  // const onReset = useCallback(() => setViewState(INITIAL_VIEW_STATE), []);
 
   const townIndex = useMemo(
     () => Object.fromEntries(towns.map((t) => [t.id, t])),
@@ -121,6 +134,9 @@ const TwinTownsMap = () => {
     () => [
       createCountriesLayer({
         data: countries,
+        countryCounts: countryCounts,
+        minCount: minTwins,
+        maxCount: maxTwins,
         selectedCountry: selectedCountry ? selectedCountry : "",
         hoveredCountry: hoveredCountry,
         colorScale: tealScale,
@@ -238,7 +254,7 @@ const TwinTownsMap = () => {
           mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
         ></Map> */}
       </DeckGL>
-      <Legend min={1} max={140} ticks={4} colorScale={tealScale} />
+      <Legend min={minTwins} max={maxTwins} ticks={4} colorScale={tealScale} />
     </>
   );
 };

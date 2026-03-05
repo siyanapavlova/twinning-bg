@@ -1,6 +1,5 @@
 import {GeoJsonLayer } from "deck.gl";
 import type { FeatureCollection, Geometry, Feature } from 'geojson';
-import countryCounts from "../data/countryCounts";
 
 export interface CountryProperties {
   id: string;
@@ -16,6 +15,9 @@ export type CountryFeatureWithId =
 
 interface Props {
   data: FeatureCollection<Geometry, CountryProperties>;
+  countryCounts: { [k: string]: number };
+  minCount: number,
+  maxCount: number,
   selectedCountry: string | null;
   hoveredCountry: string | null;
   onClick: (country: CountryFeatureWithId) => void;
@@ -23,14 +25,17 @@ interface Props {
   colorScale: (t: number) => [number, number, number];
 }
 
-const counts = Object.values(countryCounts);
-const minCount = Math.min(...counts);
-const maxCount = Math.max(...counts);
 
 // const normalize = (value: number) =>
 //   (value - minCount) / (maxCount - minCount);
 
-const logNormalize = (value: number): number => {
+// const colorScale = (t: number): [number, number, number] => {
+//   const v = Math.round(255 * (1 - t));
+//   return [v, v, v];
+// }
+
+const createCountriesLayer = ({data, countryCounts, minCount, maxCount, selectedCountry, hoveredCountry, colorScale, onClick, onHover}: Props) => {
+  const logNormalize = (value: number): number => {
   // Safety check
   if (value <= 0) return 0;
 
@@ -41,13 +46,7 @@ const logNormalize = (value: number): number => {
   return (logValue - logMin) / (logMax - logMin);
 };
 
-// const colorScale = (t: number): [number, number, number] => {
-//   const v = Math.round(255 * (1 - t));
-//   return [v, v, v];
-// }
-
-const createCountriesLayer = ({data, selectedCountry, hoveredCountry, colorScale, onClick, onHover}: Props) =>
-    new GeoJsonLayer<CountryProperties>({
+  return new GeoJsonLayer<CountryProperties>({
         id: "countries",
         data: data,
         stroked: true,
@@ -100,6 +99,6 @@ const createCountriesLayer = ({data, selectedCountry, hoveredCountry, colorScale
         transitions: {
           getFillColor: 100,
         }
-    });
+    })};
 
 export default createCountriesLayer;
