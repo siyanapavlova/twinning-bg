@@ -1,4 +1,4 @@
-const conutryCounts: Record<string, number> = {
+const countryCounts: Record<string, number> = {
     "Turkey": 140,
     "Russia": 128,
     "Greece": 107,
@@ -68,4 +68,4 @@ const conutryCounts: Record<string, number> = {
     "South Africa": 1
 }
 
-export default conutryCounts;
+export default countryCounts;

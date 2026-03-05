@@ -10,6 +10,7 @@ import createCountriesLayer, {
   type CountryFeature,
 } from "../layers/CountriesLayer.ts";
 import Legend from "./Legend.tsx";
+import countryCounts from "../data/countryCounts.ts";
 
 const tealScale = (t: number): [number, number, number] => {
   // const min = [220, 240, 240]; // old
@@ -151,13 +152,13 @@ const TwinTownsMap = () => {
         controller
         layers={layers}
         getTooltip={({ object }) => object?.name}
-      >
-        {/* <Map
-        id="map"
-        initialViewState={INITIAL_VIEW_STATE}
-        mapStyle="https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json"
-      ></Map> */}
-      </DeckGL>
+        onClick={(info) => {
+          if (!info.object || !countryCounts[info.object.properties.name]) {
+            setSelectedCountry(null);
+            setVisibleArcs([]);
+          }
+        }}
+      ></DeckGL>
       <Legend min={1} max={140} ticks={4} colorScale={tealScale} />
     </>
   );
