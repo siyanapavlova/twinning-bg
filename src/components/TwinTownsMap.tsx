@@ -71,7 +71,7 @@ const towns: Town[] = rawTowns.map((t) => ({
 
 const townIndex = Object.fromEntries(towns.map((t) => [t.id, t]));
 
-const countryCountryByRelationNumber = twinning
+const countryCountByRelationNumber = twinning
   .map((t) => townIndex[t.to].country)
   .reduce(
     (occurences, item) => {
@@ -81,9 +81,7 @@ const countryCountryByRelationNumber = twinning
     {} as { [k: string]: number },
   );
 
-console.log(countryCountryByRelationNumber);
-
-// console.log(countryCountryByRelationNumber);
+// console.log(countryCountByRelationNumber);
 
 // const countryCounts = towns
 //   .map((t) => t.country)
@@ -95,7 +93,7 @@ console.log(countryCountryByRelationNumber);
 //     {} as { [k: string]: number },
 //   );
 
-const countryCounts = countryCountryByRelationNumber;
+const countryCounts = countryCountByRelationNumber;
 
 delete countryCounts["Bulgaria"];
 

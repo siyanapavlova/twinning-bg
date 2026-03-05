@@ -31,7 +31,9 @@ const Legend = ({ min, max, ticks, colorScale }: Props) => {
         borderRadius: 10,
       }}
     >
-      <p style={{ marginTop: 1, marginBottom: 5, fontSize: 13 }}>Twin counts</p>
+      <p style={{ marginTop: 1, marginBottom: 5, fontSize: 13 }}>
+        Twin relations
+      </p>
       <div
         style={{
           marginBottom: 2,
