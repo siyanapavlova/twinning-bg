@@ -95,8 +95,6 @@ const countryCountByRelationNumber = twinning
 
 const countryCounts = countryCountByRelationNumber;
 
-delete countryCounts["Bulgaria"];
-
 const minTwins = Math.min.apply(null, Object.values(countryCounts));
 const maxTwins = Math.max.apply(null, Object.values(countryCounts));
 

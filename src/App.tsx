@@ -7,9 +7,9 @@ const App = () => {
   return (
     <div className="App">
       <Flex direction="column" height="100vh">
-        {/* <Box height="50px" zIndex={10}> */}
-        <NavBar></NavBar>
-        {/* </Box> */}
+        <Box bgColor="gray.800" color="white" padding={1}>
+          <NavBar></NavBar>
+        </Box>
         <Box flex="1" position="relative">
           <TwinTownsMap />
         </Box>

@@ -1413,6 +1413,10 @@ export default [
     },
     {
         "from": "Mizia",
+        "to": "Q2721161"
+    },
+    {
+        "from": "Mizia",
         "to": "Q747470"
     },
     {

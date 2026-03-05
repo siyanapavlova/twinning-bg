@@ -4644,6 +4644,15 @@ export default [
         ]
     },
     {
+        "id": "Q2721161",
+        "name": "V\u00e2rtoape",
+        "country": "Romania",
+        "coordinates": [
+            25.199708,
+            44.185381
+        ]
+    },
+    {
         "id": "Q747470",
         "name": "Dimitrovgrad",
         "country": "Serbia",
