@@ -109,11 +109,13 @@ const TwinTownsMap = () => {
   const [allTownsActive, setAllTownsActive] = useState<boolean>(true);
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [visibleArcs, setVisibleArcs] = useState<Arc[]>([]);
+  const [selectedArc, setSelectedArc] = useState<Arc | null>(null);
   const [viewState, setViewState] = useState<MapViewState>(INITIAL_VIEW_STATE);
   const [hoveredArc, setHoveredArc] = useState<Arc | null>(null);
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
   const [townSelection, setTownSelection] = useState<boolean>(false);
   const [countrySelection, setCountrySelection] = useState<boolean>(false);
+  const [arcSelection, setArcSelection] = useState<boolean>(false);
   const [showAllTowns, setShowAllTowns] = useState<boolean>(false);
   const [showCountries, setShowCountries] = useState<boolean>(true);
 
@@ -172,8 +174,10 @@ const TwinTownsMap = () => {
           updateVisibleByCountry(country.properties.name);
           setSelectedCountry(country.properties.name);
           setSelectedTown(null);
+          setSelectedArc(null);
           setCountrySelection(true);
           setTownSelection(false);
+          setArcSelection(false);
         },
         onHover: (country: CountryFeature | null) => {
           setHoveredCountry(country?.properties.name ?? null);
@@ -188,6 +192,7 @@ const TwinTownsMap = () => {
         selectedTown: selectedTown,
         townSelection: townSelection,
         countrySelection: countrySelection,
+        arcSelection: arcSelection,
         showAllTowns: showAllTowns,
         // zoom: viewState.zoom,
         // fontReady: fontReady,
@@ -195,6 +200,8 @@ const TwinTownsMap = () => {
           updateVisible(town.id);
           setTownSelection(true);
           setCountrySelection(false);
+          setArcSelection(false);
+          setSelectedArc(null);
           // setViewState((v) => ({
           //   ...v,
           //   longitude: town.coordinates[0],
@@ -212,8 +219,19 @@ const TwinTownsMap = () => {
         data: visibleArcs,
         townIndex: townIndex,
         hoveredArc: hoveredArc,
+        selectedArc: selectedArc,
         onHover: (arc: Arc | null) => {
           setHoveredArc(arc);
+        },
+        onClick: (arc: Arc) => {
+          setSelectedArc(arc);
+          setTownSelection(false);
+          setCountrySelection(false);
+          setVisibleArcs([arc]);
+          setSelectedCountry(null);
+          setSelectedTown(null);
+          setActiveTowns([townIndex[arc.to], townIndex[arc.from]]);
+          setArcSelection(true);
         },
       }),
     ],
@@ -229,6 +247,8 @@ const TwinTownsMap = () => {
       allTownsActive,
       showAllTowns,
       showCountries,
+      selectedArc,
+      arcSelection,
       // viewState.zoom,
       // fontReady,
     ],
@@ -282,11 +302,13 @@ const TwinTownsMap = () => {
           ) {
             setSelectedCountry(null);
             setSelectedTown(null);
+            setSelectedArc(null);
             setVisibleArcs([]);
             setActiveTowns([]);
             setAllTownsActive(true);
             setTownSelection(false);
             setCountrySelection(false);
+            setArcSelection(false);
           }
         }}
       >

@@ -20,6 +20,8 @@ const About = () => {
 
   const futurePlans = [
     "Search",
+    "Displaying town names",
+    "Displaying country names",
     "Displaying the Bulgarian towns with no twins",
     "Displaying population size",
     "Browsing by partnership contract type",
@@ -146,7 +148,7 @@ const About = () => {
               <br />
               <br />
               <br />
-              Planned upcoming releases will cover the following:
+              Upcoming releases will cover the following:
               <List.Root gap="1" variant="plain" marginTop={2}>
                 {futurePlans.map((plan, index) => (
                   <List.Item key={index}>

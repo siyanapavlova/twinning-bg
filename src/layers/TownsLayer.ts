@@ -10,6 +10,7 @@ interface Props {
     selectedTown: string | null,
     townSelection: boolean,
     countrySelection: boolean,
+    arcSelection: boolean,
     showAllTowns: boolean,
     // zoom: number,
     // fontReady: boolean,
@@ -18,7 +19,7 @@ interface Props {
 }
 
 const ACTIVE_ALPHA = 180;
-const DIM_ALPHA = 100;
+const DIM_ALPHA = 60;
 
 const createTownsLayer = ({
     data,
@@ -28,6 +29,7 @@ const createTownsLayer = ({
     selectedTown,
     townSelection,
     countrySelection,
+    arcSelection,
     showAllTowns,
     // zoom,
     // fontReady,
@@ -71,7 +73,7 @@ const createTownsLayer = ({
         if (town.id === hoveredTown || town.id === selectedTown) return [182, 55, 84];
         if (allTownsActive) return [90, 5, 34, ACTIVE_ALPHA]; //[100, 100, 100];
         if (activeTowns.includes(town) && (townSelection || town.country === "Bulgaria")) return [247, 200, 96];
-        if (activeTowns.includes(town) && countrySelection) return [182, 55, 84];
+        if (activeTowns.includes(town) && (countrySelection || arcSelection)) return [182, 55, 84];
         return [90, 5, 34, DIM_ALPHA];
       },
       updateTriggers: {

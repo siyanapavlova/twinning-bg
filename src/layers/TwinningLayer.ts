@@ -5,7 +5,9 @@ interface Props {
     data: Arc[],
     townIndex: Record<string, Town>;
     hoveredArc: Arc | null;
+    selectedArc: Arc | null;
     onHover: (arc: Arc | null) => void;
+    onClick: (arc: Arc) => void;
 }
 
 const BASE_WIDTH = 1;
@@ -14,7 +16,7 @@ const HOVER_WIDTH = 4;
 const ACTIVE_ALPHA = 255;
 const DIM_ALPHA = 100;
 
-const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) => {return [
+const createTwinningLayer = ({data, townIndex, hoveredArc, selectedArc, onHover, onClick}: Props) => {return [
   new ArcLayer({
         id: "arcs-pick",
         data: data,
@@ -28,6 +30,7 @@ const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) => {
         greatCircle: true,
         pickable: true,
         onHover: (info) => onHover(info.object ?? null),
+        onClick: (info) => onClick(info.object ?? null),
 
         // to disable depth buffering
         parameters: {
@@ -43,11 +46,15 @@ const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) => {
         getTargetPosition: (d: Arc) =>
           townIndex[d.to].coordinates as [number, number],
 
-        getWidth: d => hoveredArc && d.from === hoveredArc.from && d.to === hoveredArc.to ? HOVER_WIDTH : BASE_WIDTH,
+        getWidth: (arc) => {
+          if (hoveredArc && arc.from === hoveredArc.from && arc.to === hoveredArc.to) return HOVER_WIDTH;
+          if (arc === selectedArc) return 2;
+          return BASE_WIDTH;
+        },
         widthUnits: "pixels",
 
         updateTriggers: {
-          getWidth: hoveredArc,
+          getWidth: [hoveredArc, selectedArc],
           getSourceColor: hoveredArc,
           getTargetColor: hoveredArc
         },
@@ -61,7 +68,6 @@ const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) => {
                 ? ACTIVE_ALPHA
                 : DIM_ALPHA;
 
-          // return [182, 55, 84, alpha]; // magenta-ish
           return [96, 63, 132, alpha]; // purple
         },
         getTargetColor:  d => {
@@ -71,8 +77,7 @@ const createTwinningLayer = ({data, townIndex, hoveredArc, onHover}: Props) => {
               : d.from === hoveredArc.from && d.to === hoveredArc.to
                 ? ACTIVE_ALPHA
                 : DIM_ALPHA;
-          
-          // return [182, 55, 84, alpha]; // magenta-ish
+                
           return [96, 63, 132, alpha]; // purple
 
         },
