@@ -194,7 +194,7 @@ const TwinTownsMap = () => {
         countrySelection: countrySelection,
         arcSelection: arcSelection,
         showAllTowns: showAllTowns,
-        // zoom: viewState.zoom,
+        zoom: viewState.zoom,
         // fontReady: fontReady,
         onClick: (town) => {
           updateVisible(town.id);
@@ -249,7 +249,7 @@ const TwinTownsMap = () => {
       showCountries,
       selectedArc,
       arcSelection,
-      // viewState.zoom,
+      viewState.zoom,
       // fontReady,
     ],
   );

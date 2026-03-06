@@ -12,7 +12,7 @@ interface Props {
     countrySelection: boolean,
     arcSelection: boolean,
     showAllTowns: boolean,
-    // zoom: number,
+    zoom: number,
     // fontReady: boolean,
     onClick: (town: Town) => void;
     onHover: (town: Town | null) => void;
@@ -31,7 +31,7 @@ const createTownsLayer = ({
     countrySelection,
     arcSelection,
     showAllTowns,
-    // zoom,
+    zoom,
     // fontReady,
     onHover,
     onClick
@@ -64,9 +64,9 @@ const createTownsLayer = ({
       pickable: false,
       getPosition: (t) => t.coordinates,
       getRadius: (town) => {
-        if (town.id === hoveredTown || town.id === selectedTown) return 7;
-        if (activeTowns.includes(town)) return 3;
-        return 2;
+        if (town.id === hoveredTown || town.id === selectedTown) return Math.max(7, zoom * 1.2);
+        if (activeTowns.includes(town)) return Math.max(3, zoom);
+        return zoom * 0.7;
       },
       radiusUnits: "pixels",
       getFillColor: (town) => {
@@ -78,7 +78,7 @@ const createTownsLayer = ({
       },
       updateTriggers: {
         getFillColor: [hoveredTown, selectedTown, activeTowns, allTownsActive],
-        getRadius: [hoveredTown, selectedTown, activeTowns, allTownsActive]
+        getRadius: [hoveredTown, selectedTown, activeTowns, allTownsActive, zoom]
       },
 
       transitions: {
