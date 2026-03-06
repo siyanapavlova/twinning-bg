@@ -2,8 +2,13 @@ import TwinTownsMap from "./components/TwinTownsMap";
 import NavBar from "./components//NavBar";
 import "./App.css";
 import { Box, Flex } from "@chakra-ui/react";
+import { useEffect } from "react";
 
 const App = () => {
+  useEffect(() => {
+    document.title = "Twinning BG";
+  }, []);
+
   return (
     <div className="App">
       <Flex direction="column" height="100vh">
