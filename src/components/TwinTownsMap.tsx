@@ -212,6 +212,7 @@ const TwinTownsMap = () => {
         },
         onHover: (town: Town | null) => {
           setHoveredTown(town?.id ?? null);
+          setHoveredCountry(town?.country ?? null);
         },
       }),
 
