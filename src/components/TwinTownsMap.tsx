@@ -1,8 +1,8 @@
 import { DeckGL } from "@deck.gl/react";
-import type { MapViewState } from "@deck.gl/core";
+import { MapView, type MapViewState } from "@deck.gl/core";
 import rawTowns from "../data/towns";
 import arcs from "../data/twinning";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import createTownsLayer from "../layers/TownsLayer";
 import createTwinningLayer from "../layers/TwinningLayer";
 import countries from "../data/countries.ts";
@@ -46,8 +46,8 @@ const INITIAL_VIEW_STATE: MapViewState = {
   longitude: 10,
   latitude: 47,
   zoom: 2,
-  pitch: 0,
   bearing: 0,
+  minZoom: 1,
 };
 
 const towns: Town[] = rawTowns.map((t) => ({
