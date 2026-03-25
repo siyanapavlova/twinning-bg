@@ -1,17 +1,16 @@
-
-import type { Geometry, Feature } from 'geojson';
+import type { Geometry, Feature } from "geojson";
 
 export interface CountryProperties {
   id: string;
   name: string;
-  coordinates: number[],
+  coordinates: number[];
 }
 
-export type CountryFeature =
-  Feature<Geometry, CountryProperties>;
+export type CountryFeature = Feature<Geometry, CountryProperties>;
 
-export type CountryFeatureWithId =
-  Feature<Geometry, CountryProperties> & { id: string };
+export type CountryFeatureWithId = Feature<Geometry, CountryProperties> & {
+  id: string;
+};
 
 export interface Town {
   id: string;
@@ -28,4 +27,5 @@ export interface Country {
 export interface Arc {
   from: string;
   to: string;
+  distance: number;
 }

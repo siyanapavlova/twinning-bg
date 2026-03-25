@@ -1,8 +1,7 @@
 import { DeckGL } from "@deck.gl/react";
-import { MapView, type MapViewState } from "@deck.gl/core";
+import { type MapViewState } from "@deck.gl/core";
 import rawTowns from "../data/towns";
-import arcs from "../data/twinning";
-import { useCallback, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import createTownsLayer from "../layers/TownsLayer";
 import createTwinningLayer from "../layers/TwinningLayer";
 import countries from "../data/countries.ts";
@@ -16,6 +15,7 @@ import type {
 import Legend from "./Legend.tsx";
 import twinning from "../data/twinning";
 import DisplaySelection from "./DisplaySelection.tsx";
+import * as turf from "@turf/turf";
 // import { Map } from "react-map-gl/maplibre";
 
 const tooltipStyle = {
@@ -100,6 +100,18 @@ const countryColours = Object.entries(relationNumberPerCountry).reduce(
   }),
   {} as { [k: string]: [number, number, number] },
 );
+
+const arcs: Arc[] = twinning.map((arc) => ({
+  ...arc,
+  distance: turf.distance(
+    townIndex[arc.to].coordinates,
+    townIndex[arc.from].coordinates,
+    { units: "kilometers" },
+  ),
+}));
+
+const maxDist = Math.max(...arcs.map((a) => a.distance));
+const minDist = Math.min(...arcs.map((a) => a.distance));
 
 const TwinTownsMap = () => {
   // const [selected, setSelected] = useState<Town | Country | null>(null);
@@ -221,6 +233,8 @@ const TwinTownsMap = () => {
         townIndex: townIndex,
         hoveredArc: hoveredArc,
         selectedArc: selectedArc,
+        maxDist: maxDist,
+        minDist: minDist,
         onHover: (arc: Arc | null) => {
           setHoveredArc(arc);
         },
