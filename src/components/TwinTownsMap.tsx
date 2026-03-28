@@ -1,7 +1,7 @@
 import { DeckGL } from "@deck.gl/react";
 import { type MapViewState } from "@deck.gl/core";
 import rawTowns from "../data/towns";
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import createTownsLayer from "../layers/TownsLayer";
 import createTwinningLayer from "../layers/TwinningLayer";
 import countries from "../data/countries.ts";
@@ -16,6 +16,8 @@ import Legend from "./Legend.tsx";
 import twinning from "../data/twinning";
 import DisplaySelection from "./DisplaySelection.tsx";
 import * as turf from "@turf/turf";
+import SelectedEntityInfobox from "./SelectedEntityInfobox.tsx";
+import { Box } from "@chakra-ui/react";
 // import { Map } from "react-map-gl/maplibre";
 
 const tooltipStyle = {
@@ -130,6 +132,8 @@ const TwinTownsMap = () => {
   const [arcSelection, setArcSelection] = useState<boolean>(false);
   const [showAllTowns, setShowAllTowns] = useState<boolean>(false);
   const [showCountries, setShowCountries] = useState<boolean>(true);
+
+  const twinTownRef = useRef<HTMLDivElement | null>(null);
 
   // const [fontReady, setFontReady] = useState<boolean>(false);
 
@@ -269,8 +273,20 @@ const TwinTownsMap = () => {
     ],
   );
 
+  const selectedEntity = selectedTown ? townIndex[selectedTown] : null;
+
   return (
-    <>
+    <Box
+      ref={twinTownRef}
+      position="relative"
+      height="100%"
+      width="100%"
+      overflow="hidden"
+    >
+      <SelectedEntityInfobox
+        selectedEntity={selectedEntity}
+        containerRef={twinTownRef}
+      ></SelectedEntityInfobox>
       <DeckGL
         viewState={viewState}
         onViewStateChange={({ viewState }) => {
@@ -345,7 +361,7 @@ const TwinTownsMap = () => {
           colorScale={tealScale}
         />
       )}
-    </>
+    </Box>
   );
 };
 

@@ -6,7 +6,7 @@ import { Box, Flex } from "@chakra-ui/react";
 const App = () => {
   return (
     <div className="App">
-      <Flex direction="column" height="100vh">
+      <Flex height="100vh">
         <Box bgColor="gray.800" color="white" padding={1}>
           <NavBar></NavBar>
         </Box>

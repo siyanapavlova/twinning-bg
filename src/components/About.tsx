@@ -7,8 +7,11 @@ import {
   Table,
   List,
   Center,
+  Text,
+  Icon,
 } from "@chakra-ui/react";
 import { LuCircleDashed, LuExternalLink } from "react-icons/lu";
+import { FaInfoCircle } from "react-icons/fa";
 
 const About = () => {
   const tableData = [
@@ -38,7 +41,10 @@ const About = () => {
     >
       <Dialog.Trigger asChild>
         <Button variant="plain" size="sm" color="white">
-          About
+          <Icon marginBottom={1}>
+            <FaInfoCircle />
+          </Icon>
+          <Text>About</Text>
         </Button>
       </Dialog.Trigger>
       <Portal>
