@@ -17,15 +17,18 @@ export interface Town {
   name: string;
   country: string;
   coordinates: [number, number];
+  type: "town";
 }
 
 export interface Country {
   id: string;
   name: string;
+  type: "country";
 }
 
 export interface Arc {
   from: string;
   to: string;
   distance: number;
+  type: "arc";
 }

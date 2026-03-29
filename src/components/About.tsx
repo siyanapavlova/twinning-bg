@@ -97,7 +97,7 @@ const About = () => {
               twins as of 25th August 2023. For each entry, the original data
               includes, among others: name of the Bulgarian municipality, name
               of the twinned entity (in most cases town, village or
-              municipality), country of the twinned entity, type of partnetship,
+              municipality), country of the twinned entity, type of partnership,
               partnership areas.
               <br />
               <br />

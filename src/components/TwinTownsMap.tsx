@@ -55,6 +55,7 @@ const INITIAL_VIEW_STATE: MapViewState = {
 const towns: Town[] = rawTowns.map((t) => ({
   ...t,
   coordinates: [t.coordinates[0], t.coordinates[1]],
+  type: "town",
 }));
 
 const townIndex = Object.fromEntries(towns.map((t) => [t.id, t]));
@@ -110,6 +111,7 @@ const arcs: Arc[] = twinning.map((arc) => ({
     townIndex[arc.from].coordinates,
     { units: "kilometers" },
   ),
+  type: "arc",
 }));
 
 const maxDist = Math.max(...arcs.map((a) => a.distance));
