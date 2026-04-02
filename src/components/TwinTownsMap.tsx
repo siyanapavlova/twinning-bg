@@ -276,6 +276,11 @@ const TwinTownsMap = () => {
   );
 
   const selectedEntity = selectedTown ? townIndex[selectedTown] : null;
+  const relations = selectedTown
+    ? activeTowns.filter((t) => {
+        return t !== selectedEntity;
+      })
+    : null;
 
   return (
     <Box
@@ -287,6 +292,7 @@ const TwinTownsMap = () => {
     >
       <SelectedEntityInfobox
         selectedEntity={selectedEntity}
+        relations={relations}
         containerRef={twinTownRef}
       ></SelectedEntityInfobox>
       <DeckGL

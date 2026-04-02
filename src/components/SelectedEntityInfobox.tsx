@@ -3,10 +3,15 @@ import { CloseButton, Drawer, Portal, Text } from "@chakra-ui/react";
 
 interface Props {
   selectedEntity: Arc | Town | Country | null;
+  relations: Town[] | null;
   containerRef: React.RefObject<HTMLDivElement | null>;
 }
 
-const SelectedEntityInfobox = ({ selectedEntity, containerRef }: Props) => {
+const SelectedEntityInfobox = ({
+  selectedEntity,
+  relations,
+  containerRef,
+}: Props) => {
   const isOpen = !!selectedEntity;
 
   return (
@@ -26,15 +31,26 @@ const SelectedEntityInfobox = ({ selectedEntity, containerRef }: Props) => {
           <Drawer.Content rounded="md">
             <Drawer.Header>
               <Drawer.Title>
-                Selected {selectedEntity ? selectedEntity.type : ""}
+                {selectedEntity && selectedEntity.type === "town"
+                  ? selectedEntity.name + ", " + selectedEntity.country
+                  : ""}
               </Drawer.Title>
             </Drawer.Header>
             <Drawer.Body>
-              <Text>
-                {selectedEntity && selectedEntity.type === "town"
-                  ? selectedEntity.name
-                  : ""}
-              </Text>
+              {selectedEntity &&
+                selectedEntity.type === "town" &&
+                relations && (
+                  <Text paddingBottom={3}>{relations.length} twins</Text>
+                )}
+              {relations &&
+                relations.map((t) => (
+                  <Text paddingY={1}>
+                    {t.name},{" "}
+                    <Text color="gray.500" as="span">
+                      {t.country}
+                    </Text>
+                  </Text>
+                ))}
             </Drawer.Body>
             <Drawer.CloseTrigger asChild>
               <CloseButton size="sm" />

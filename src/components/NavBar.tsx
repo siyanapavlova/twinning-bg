@@ -1,5 +1,4 @@
 import { Flex, Heading, HStack, Image, List } from "@chakra-ui/react";
-import "./navbar.css";
 import About from "./About";
 import logo from "../assets/logo.png";
 
