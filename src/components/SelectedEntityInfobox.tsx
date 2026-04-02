@@ -1,16 +1,18 @@
 import type { Arc, Country, Town } from "@/types";
-import { CloseButton, Drawer, Portal, Text } from "@chakra-ui/react";
+import { Box, CloseButton, Drawer, Portal, Text } from "@chakra-ui/react";
 
 interface Props {
   selectedEntity: Arc | Town | Country | null;
   relations: Town[] | null;
   containerRef: React.RefObject<HTMLDivElement | null>;
+  onTownInfoHover: (arc: Town | null) => void;
 }
 
 const SelectedEntityInfobox = ({
   selectedEntity,
   relations,
   containerRef,
+  onTownInfoHover,
 }: Props) => {
   const isOpen = !!selectedEntity;
 
@@ -48,12 +50,19 @@ const SelectedEntityInfobox = ({
                 )}
               {relations &&
                 relations.map((t) => (
-                  <Text paddingY={1}>
-                    {t.name},{" "}
-                    <Text color="gray.500" as="span">
-                      {t.country}
+                  <Box
+                    key={t.id}
+                    _hover={{ fontWeight: "bold", cursor: "pointer" }}
+                    onMouseEnter={() => onTownInfoHover(t)}
+                    onMouseLeave={() => onTownInfoHover(null)}
+                  >
+                    <Text paddingY={1}>
+                      {t.name},{" "}
+                      <Text color="gray.500" as="span">
+                        {t.country}
+                      </Text>
                     </Text>
-                  </Text>
+                  </Box>
                 ))}
             </Drawer.Body>
             <Drawer.CloseTrigger asChild>

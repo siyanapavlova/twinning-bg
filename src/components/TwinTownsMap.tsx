@@ -294,6 +294,14 @@ const TwinTownsMap = () => {
         selectedEntity={selectedEntity}
         relations={relations}
         containerRef={twinTownRef}
+        onTownInfoHover={(t) => {
+          setHoveredTown(t?.id ?? null);
+          if (t) {
+            setHoveredArc(
+              visibleArcs.filter((a) => a.to === t.id || a.from === t.id)[0],
+            );
+          } else setHoveredArc(null);
+        }}
       ></SelectedEntityInfobox>
       <DeckGL
         viewState={viewState}
