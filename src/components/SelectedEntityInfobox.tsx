@@ -28,7 +28,11 @@ const SelectedEntityInfobox = ({
           pointerEvents="none"
           style={{ position: "absolute" }}
         >
-          <Drawer.Content rounded="md">
+          <Drawer.Content
+            rounded="md"
+            bg="white/80"
+            backdropFilter="blur(10px)"
+          >
             <Drawer.Header>
               <Drawer.Title>
                 {selectedEntity && selectedEntity.type === "town"
