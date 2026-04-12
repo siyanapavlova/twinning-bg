@@ -1,4 +1,4 @@
-import { Flex, Heading, HStack, Image, List, Stack } from "@chakra-ui/react";
+import { Flex, Heading, HStack, Image, List } from "@chakra-ui/react";
 import About from "./About";
 import logo from "../assets/logo.png";
 
@@ -10,30 +10,32 @@ import { IoIosStats } from "react-icons/io";
 const NavBar = () => {
   return (
     <Flex justify="space-between" direction="column">
-      <HStack padding={3} marginRight={3}>
-        <Image
-          src={logo}
-          alt="Twinning BG Logo"
-          height="17px"
-          marginBottom={2}
-        />
-        <Heading size="md">Twinning BG</Heading>
-      </HStack>
+      <NavLink to="/twinning-bg/">
+        <HStack padding={3} marginRight={3}>
+          <Image
+            src={logo}
+            alt="Twinning BG Logo"
+            height="17px"
+            marginBottom={2}
+          />
+          <Heading size="md">Twinning BG</Heading>
+        </HStack>
+      </NavLink>
       <List.Root>
         <List.Item>
           <NavLink to="/twinning-bg/">
-            <Stack direction="row" alignItems="center">
+            <HStack alignItems="center">
               <FiMap />
               Map
-            </Stack>
+            </HStack>
           </NavLink>
         </List.Item>
         <List.Item>
           <NavLink to="/twinning-bg/stats">
-            <Stack direction="row" alignItems="center">
+            <HStack alignItems="center">
               <IoIosStats />
               Statistics
-            </Stack>
+            </HStack>
           </NavLink>
         </List.Item>
         <List.Item>
