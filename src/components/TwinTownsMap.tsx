@@ -60,7 +60,7 @@ const towns: Town[] = rawTowns.map((t) => ({
 
 const townIndex = Object.fromEntries(towns.map((t) => [t.id, t]));
 
-const relationNumberPerCountry = twinning
+export const relationNumberPerCountry = twinning
   .map((t) => townIndex[t.to].country)
   .reduce(
     (occurences, item) => {
@@ -70,7 +70,7 @@ const relationNumberPerCountry = twinning
     {} as { [k: string]: number },
   );
 
-const townNumberPerCountry = towns
+export const townNumberPerCountry = towns
   .map((t) => t.country)
   .reduce(
     (occurences, item) => {
