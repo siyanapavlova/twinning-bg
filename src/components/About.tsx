@@ -30,6 +30,9 @@ const About = () => {
     "Browsing by partnership contract type",
     "Browsing by partnership area",
     "Dark mode",
+    "Statistics: charts about distance between twins",
+    "Statistics: scatterplot of population size vs number of twins for Bulgarian towns",
+    "Statistics: distribution of foreign towns based on number of twins",
   ];
 
   return (
