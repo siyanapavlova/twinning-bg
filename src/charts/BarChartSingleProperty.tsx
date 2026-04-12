@@ -7,20 +7,20 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import {
-  townNumberPerCountry,
-  relationNumberPerCountry,
-} from "@/components/TwinTownsMap";
 
-const data = Object.entries(relationNumberPerCountry)
-  .sort((a, b) => b[1] - a[1])
-  .map(([country, relationCount]) => ({
-    country,
-    relations: relationCount,
-    towns: townNumberPerCountry[country] || 0,
-  }));
+interface Props {
+  data: { country: string; property: number }[];
+  propertyName: string;
+  fillColor: string;
+  activeBarColor: string;
+}
 
-const CountriesBarChart = () => {
+const BarChartSingleProperty = ({
+  data,
+  propertyName,
+  fillColor,
+  activeBarColor,
+}: Props) => {
   return (
     <BarChart
       style={{
@@ -59,21 +59,14 @@ const CountriesBarChart = () => {
       <Tooltip cursor={false} />
       <Legend verticalAlign="top" height={36} />
       <Bar
-        dataKey="relations"
-        name="Relations"
-        fill="#007878"
-        activeBar={{ fill: "#F7C860" }}
-        radius={[10, 10, 0, 0]}
-      />
-      <Bar
-        dataKey="towns"
-        name="Towns"
-        fill="#00acac"
-        activeBar={{ fill: "#F0F0C8" }}
+        dataKey="property"
+        name={propertyName}
+        fill={fillColor}
+        activeBar={{ fill: activeBarColor }}
         radius={[10, 10, 0, 0]}
       />
     </BarChart>
   );
 };
 
-export default CountriesBarChart;
+export default BarChartSingleProperty;
